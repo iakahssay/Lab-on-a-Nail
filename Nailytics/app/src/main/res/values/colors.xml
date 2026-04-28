@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--              WAS HERE BEFORE                      -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+<!--                  SEMANTIC LAYER                          -->
+    <!-- Transparent / overlays -->
+    <color name="transparent_white">#BFFFFFFF</color>
+    <color name="light_gray_overlay_5">#05F9F9F9</color>
+    <color name="gray_overlay_light">#14787880</color>
+    <color name="green_overlay_light">#1A34C759</color>
+    <color name="red_overlay_light">#1AFF3B30</color>
+    <color name="orange_overlay_soft">#1AFF8B03</color>
+    <color name="orange_overlay">#1AFF9500</color>
+    <color name="gray_overlay_medium">#1F787880</color>
+    <color name="blue_overlay_light">#26007AFF</color>
+    <color name="dark_gray_overlay_soft">#2E3C3C43</color>
+    <color name="light_gray_overlay">#33F7F7F7</color>
+    <color name="orange_overlay_medium">#33FF9500</color>
+    <color name="indigo_overlay">#365856D6</color>
+
+    <!-- Dark overlays -->
+    <color name="black_overlay_25">#40000000</color>
+    <color name="black_overlay_30">#4D000000</color>
+    <color name="dark_gray_overlay">#4D3C3C43</color>
+    <color name="red_overlay">#54FF1A1A</color>
+    <color name="gray_overlay_dark">#57545456</color>
+    <color name="gray_overlay_heavy">#8C808080</color>
+    <color name="deep_rose_overlay">#8FA70E3D</color>
+    <color name="dark_gray_overlay_strong">#993C3C43</color>
+    <color name="navy_overlay">#9E14202E</color>
+
+    <!-- Greens -->
+    <color name="lime_green_overlay">#B23BDA40</color>
+    <color name="lime_green">#FF3BDA40</color>
+    <color name="system_green">#FF34C759</color>
+
+    <!-- Whites -->
+    <color name="white_overlay">#BFFFFFFF</color>
+
+    <!-- Reds / pinks -->
+    <color name="deep_rose">#FFA70E3D</color>
+    <color name="deep_rose_light">#C9A70E3D</color>
+    <color name="berry_red">#D1621340</color>
+    <color name="wine_red">#D1811537</color>
+    <color name="magenta_rose">#FFAD447A</color>
+    <color name="system_red">#FFFF3B30</color>
+    <color name="bright_red">#FFC90303</color>
+
+    <!-- Blues -->
+    <color name="system_blue">#FF007AFF</color>
+    <color name="slate_blue">#FF5856D6</color>
+    <color name="teal_blue">#DB366877</color>
+
+    <!-- Dark tones -->
+    <color name="deep_navy">#FF131036</color>
+    <color name="charcoal">#FF1B2128</color>
+    <color name="dark_charcoal">#FF212121</color>
+    <color name="medium_dark_gray">#FF383838</color>
+
+    <!-- Grays & Whites -->
+    <color name="gray_500">#FF767676</color>
+    <color name="gray_450">#FF7E7E83</color>
+    <color name="gray_400">#FF8E8E93</color>
+    <color name="gray_350">#FF999999</color>
+    <color name="gray_300">#FFB1B1B1</color>
+    <color name="gray_250">#FFC6C6C8</color>
+    <color name="gray_200">#FFD9D9D9</color>
+    <color name="gray_180">#FFDDDBDB</color>
+    <color name="gray_150">#FFE0E0E0</color>
+    <color name="gray_120">#FFE5E5EA</color>
+    <color name="gray_100">#FFEEEEEE</color>
+    <color name="gray_90">#FFF2F2F7</color>
+    <color name="gray_80">#FFF7F7F7</color>
+
+    <!-- Accent -->
+    <color name="bright_orange">#FFFF9500</color>
+    <color name="alert_orange">#FFFF8B03</color>
+    <color name="bright_red_alert">#FFFF3B30</color>
+    <color name="accent_red">#FFE20004</color>
+
+    <!-- App theme colors -->
+    <color name="primary">@color/purple_700</color>
+    <color name="primary_light">@color/purple_500</color>
+    <color name="secondary">@color/system_blue</color>  <!-- was teal_blue -->
+    <color name="accent">@color/bright_orange</color>
+
+
+<!--                  SEMANTIC LAYER                          -->
+    <!-- Background colors -->
+    <color name="background_main">@color/gray_80</color>
+    <color name="background_card">@color/white</color>
+    <color name="background_light">@color/gray_90</color>
+    <color name="background_dark">@color/charcoal</color>
+
+    <!-- Text colors -->
+    <color name="text_primary">@color/black</color>
+    <color name="text_secondary">@color/gray_500</color>
+    <color name="text_muted">@color/gray_400</color>
+    <color name="text_on_dark">@color/white</color>
+    <color name="text_error">@color/system_red</color>
+    <color name="text_success">@color/system_green</color>
+
+    <!-- Borders and dividers -->
+    <color name="border_light">@color/gray_150</color>
+    <color name="border_medium">@color/gray_250</color>
+    <color name="divider">@color/gray_120</color>
+
+    <!-- Status colors -->
+    <color name="success">@color/system_green</color>
+    <color name="success_light">@color/green_overlay_light</color>
+    <color name="warning">@color/bright_orange</color>
+    <color name="warning_light">@color/orange_overlay</color>
+    <color name="error">@color/system_red</color>
+    <color name="error_light">@color/red_overlay_light</color>
+    <color name="info">@color/system_blue</color>
+    <color name="info_light">@color/blue_overlay_light</color>
+
+    <!-- Buttons -->
+    <color name="button_primary_bg">@color/deep_rose</color>
+    <color name="button_primary_text">@color/white</color>
+    <color name="button_secondary_bg">@color/gray_90</color>
+    <color name="button_secondary_text">@color/deep_rose</color>
+    <color name="button_disabled_bg">@color/gray_200</color>
+    <color name="button_disabled_text">@color/gray_400</color>
+
+    <!-- Inputs -->
+    <color name="input_background">@color/transparent_white</color>
+    <color name="input_border">@color/gray_250</color>
+    <color name="input_hint">@color/gray_400</color>
+    <color name="input_text">@color/dark_charcoal</color>
+
+    <!-- Navigation -->
+    <color name="nav_background">@color/transparent_white</color>
+    <color name="nav_selected">@color/primary_light</color>
+    <color name="nav_unselected">@color/gray_400</color>
+
+</resources>

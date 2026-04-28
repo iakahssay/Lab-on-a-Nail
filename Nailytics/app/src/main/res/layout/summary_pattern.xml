@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='utf-8'?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#FFF2F2F7">
+
+    
+
+    
+    <LinearLayout android:id="@+id/navigation_bar___iphone__compact_size_class_" android:orientation="vertical" android:layout_width="430dp" android:layout_height="98dp" android:layout_marginStart="0dp" android:layout_marginTop="0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+
+        
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/materials" android:layout_width="430dp" android:layout_height="98dp">
+
+            
+            <LinearLayout android:id="@+id/chrome" android:orientation="vertical" android:layout_width="430dp" android:layout_height="98dp" android:background="#BFFFFFFF" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        
+        <LinearLayout android:id="@+id/contents" android:orientation="vertical" android:layout_width="430dp" android:layout_height="44dp">
+
+            
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/title_and_controls" android:layout_width="430dp" android:layout_height="44dp">
+
+                
+                <LinearLayout android:id="@+id/leading" android:orientation="horizontal" android:layout_width="31dp" android:layout_height="44dp" android:layout_marginStart="0dp" android:layout_marginTop="0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" android:paddingLeft="8dp" android:paddingTop="11dp" android:paddingRight="0dp" android:paddingBottom="11dp">
+
+                    
+                    <LinearLayout android:id="@+id/__button_1" android:orientation="horizontal" android:layout_width="23dp" android:layout_height="22dp">
+
+                        
+                        <TextView android:id="@+id/chevron" android:text="􀆉" android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="start" android:textStyle="bold" android:fontFamily="SF Pro" android:layout_width="17dp" android:layout_height="22dp" />
+
+                        
+                        <TextView android:id="@+id/label" android:text=" " android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="0dp" android:layout_height="22dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                
+                <TextView android:id="@+id/title" android:text="Nailytics" android:textSize="17sp" android:textColor="#FF000000" android:gravity="center_horizontal" android:textStyle="bold" android:fontFamily="SF Pro" android:layout_width="69dp" android:layout_height="22dp" android:layout_marginStart="179dp" android:layout_marginTop="11dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_bar___iphone" android:layout_width="430dp" android:layout_height="75dp" android:layout_marginStart="0dp" android:layout_marginTop="857dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+
+        
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/chrome_material" android:layout_width="430dp" android:layout_height="75dp">
+
+            
+            <LinearLayout android:id="@+id/chrome" android:orientation="vertical" android:layout_width="430dp" android:layout_height="75dp" android:background="#BFFFFFFF" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        
+        <LinearLayout android:id="@+id/tab_bar_buttons" android:orientation="horizontal" android:layout_width="430dp" android:layout_height="40dp">
+
+            
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_1" android:layout_width="143dp" android:layout_height="40dp">
+
+                
+                <TextView android:id="@+id/label" android:text="Home" android:textSize="10sp" android:textColor="#FF999999" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+                
+                <TextView android:id="@+id/symbol" android:text="􀎞" android:textSize="18sp" android:textColor="#FF999999" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_2" android:layout_width="143dp" android:layout_height="40dp">
+
+                
+                <TextView android:id="@+id/label" android:text="Summary" android:textSize="10sp" android:textColor="#FF5856D6" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+                
+                <TextView android:id="@+id/symbol" android:text="􀐾" android:textSize="18sp" android:textColor="#FF5856D6" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_4" android:layout_width="143dp" android:layout_height="40dp">
+
+                
+                <TextView android:id="@+id/label" android:text="Profile" android:textSize="10sp" android:textColor="#FF999999" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+                
+                <TextView android:id="@+id/symbol" android:text="􀉭" android:textSize="18sp" android:textColor="#FF999999" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    
+    <LinearLayout android:id="@+id/frame_1000004593" android:orientation="vertical" android:layout_width="398dp" android:layout_height="729dp" android:layout_marginStart="16dp" android:layout_marginTop="114dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+
+        
+        <LinearLayout android:id="@+id/frame_1000004550" android:orientation="horizontal" android:layout_width="398dp" android:layout_height="48dp" android:background="@drawable/bg_rounded_frame_1000004550" android:paddingLeft="12dp" android:paddingTop="6dp" android:paddingRight="12dp" android:paddingBottom="6dp">
+
+            
+            <TextView android:id="@+id/__" android:text="􀁞" android:textSize="13sp" android:textColor="#FFFF3B30" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="16dp" android:layout_height="18dp" />
+
+            
+            <TextView android:id="@+id/disclaimer__this_is_not_a_medical_diagnosis__for_an_accurate_assessment__please_consult_a_licensed_healthcare_professional_" android:text="Disclaimer: This is not a medical diagnosis. For an accurate assessment, please consult a licensed healthcare professional." android:textSize="11sp" android:textColor="#FFFF3B30" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="346dp" android:layout_height="36dp" />
+        </LinearLayout>
+
+        
+        <LinearLayout android:id="@+id/frame_1000004583" android:orientation="vertical" android:layout_width="398dp" android:layout_height="310dp">
+
+            
+            <TextView android:id="@+id/every_weekend_there_is_a_decrease_in_your_ph_levels_" android:text="Every weekend there is a decrease in your pH levels:" android:textSize="14sp" android:textColor="#FF000000" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="398dp" android:layout_height="22dp" />
+
+            
+            <TextView android:id="@+id/pattern" android:text="Pattern" android:textSize="22sp" android:textColor="#FF1B2128" android:gravity="start" android:textStyle="bold" android:fontFamily="SF Pro" android:layout_width="398dp" android:layout_height="28dp" />
+
+            
+            <TextView android:id="@+id/dec_8__2025___jan_8__2026" android:text="Dec 8, 2025 - Jan 8, 2026" android:textSize="10sp" android:textColor="#FF8E8E93" android:gravity="start" android:fontFamily="Inter" android:layout_width="398dp" android:layout_height="18dp" />
+
+            
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/graph" android:layout_width="398dp" android:layout_height="224dp" android:background="@drawable/bg_rounded_graph">
+
+                
+                <View android:id="@+id/group_1000003952" android:layout_width="359dp" android:layout_height="188dp" android:layout_marginStart="19dp" android:layout_marginTop="21dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+                
+                <View android:id="@+id/group_1000003953" android:layout_width="36dp" android:layout_height="18dp" android:layout_marginStart="95dp" android:layout_marginTop="120dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+                
+                <View android:id="@+id/group_1000003954" android:layout_width="36dp" android:layout_height="18dp" android:layout_marginStart="271dp" android:layout_marginTop="120dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        
+        <LinearLayout android:id="@+id/frame_1000004592" android:orientation="vertical" android:layout_width="398dp" android:layout_height="89dp">
+
+            
+            <TextView android:id="@+id/what_this_means" android:text="What this means" android:textSize="22sp" android:textColor="#FF000000" android:gravity="start" android:textStyle="bold" android:fontFamily="SF Pro" android:layout_width="398dp" android:layout_height="22dp" />
+
+            
+            <TextView android:id="@+id/lower_saliva_ph_on_weekends_may_occur_due_to_changes_in_routine__such_as_diet__alcohol_intake__sleep_patterns__or_acid_reflux_" android:text="Lower saliva pH on weekends may occur due to changes in routine, such as diet, alcohol intake, sleep patterns, or acid reflux. " android:textSize="14sp" android:textColor="#FF000000" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="398dp" android:layout_height="60dp" />
+
+            
+            <LinearLayout android:id="@+id/button" android:orientation="horizontal" android:layout_width="95dp" android:layout_height="27dp" android:background="@drawable/bg_rounded_button" android:paddingLeft="8.511165618896484dp" android:paddingTop="3.404466390609741dp" android:paddingRight="8.511165618896484dp" android:paddingBottom="3.404466390609741dp">
+
+                
+                <TextView android:id="@+id/label" android:text="Learn More" android:textSize="15sp" android:textColor="#FF007AFF" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="78dp" android:layout_height="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        
+        <LinearLayout android:id="@+id/frame_1000004591" android:orientation="vertical" android:layout_width="398dp" android:layout_height="216dp">
+
+            
+            <TextView android:id="@+id/ask_your_doctor" android:text="Ask your doctor" android:textSize="20sp" android:textColor="#FF000000" android:gravity="start" android:textStyle="bold" android:fontFamily="SF Pro" android:layout_width="398dp" android:layout_height="25dp" />
+
+            
+            <TextView android:id="@+id/could_this_pattern_indicate_an_underlying_condition_i_should_be_concerned_about__here_is_my_family_history__could_my_habits__diet__alcohol__sleep__or_stress__be_contributing_to_these_changes__what_adjustments_would_help__are_there_specific_foods_in_my_culture_that_i_should_avoid_or_can_still_include_in_my_diet__here_are_some__what_other_biomarkers__symptoms__or_warning_signs_should_i_monitor__and_when_should_i_seek_medical_or_dental_care_" android:text="Could this pattern indicate an underlying condition I should be concerned about? Here is my family history… Could my habits (diet, alcohol, sleep, or stress) be contributing to these changes? What adjustments would help? Are there specific foods in my culture that I should avoid or can still include in my diet? Here are some… What other biomarkers, symptoms, or warning signs should I monitor, and when should I seek medical or dental care?" android:textSize="13.5sp" android:textColor="#FF000000" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="398dp" android:layout_height="180dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

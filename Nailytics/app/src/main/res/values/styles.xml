@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    <style name="TextStyle_17sp">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_13sp">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_34sp">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_10sp">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#FF5856D6</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_18sp">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FF5856D6</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_20sp">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_15sp">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#FF5856D6</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_14.954774856567383sp">
+        <item name="android:textSize">14.954774856567383sp</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_16sp">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_15.007444381713867sp">
+        <item name="android:textSize">15.007444381713867sp</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_15.945409774780273sp">
+        <item name="android:textSize">15.945409774780273sp</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_14.468981742858887sp">
+        <item name="android:textSize">14.468981742858887sp</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_13.617865562438965sp">
+        <item name="android:textSize">13.617865562438965sp</item>
+        <item name="android:textColor">#FF000000</item>
+    </style>
+    <style name="TextStyle_37.77777862548828sp">
+        <item name="android:textSize">37.77777862548828sp</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_14.5sp">
+        <item name="android:textSize">14.5sp</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_14sp">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_14.796297073364258sp">
+        <item name="android:textSize">14.796297073364258sp</item>
+        <item name="android:textColor">#FF5856D6</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_9.066667556762695sp">
+        <item name="android:textSize">9.066667556762695sp</item>
+        <item name="android:textColor">#FFFF3B30</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_22sp">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#FF1B2128</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_subheader_10sp">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#FF8E8E93</item>
+        <item name="android:fontFamily">Inter</item>
+    </style>
+    <style name="TextStyle_9.02497673034668sp">
+        <item name="android:textSize">9.02497673034668sp</item>
+        <item name="android:textColor">#CC3BDA40</item>
+        <item name="android:fontFamily">Roboto</item>
+    </style>
+    <style name="TextStyle_11sp">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#FFFF3B30</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_9sp">
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">#9E14202E</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+    <style name="TextStyle_13.5sp">
+        <item name="android:textSize">13.5sp</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:fontFamily">SF Pro</item>
+    </style>
+-->
+
+
+<!-- Exported Figma Text Styles - cleaned but names preserved -->
+
+    <style name="TextStyle_17">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_13">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_34">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_10">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/slate_blue</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/slate_blue</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_15">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/slate_blue</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_14.954774856567383">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_15.007444381713867">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_15.945409774780273">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_14.468981742858887">
+        <item name="android:textSize">14.5sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_13.617865562438965">
+        <item name="android:textSize">13.5sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_37">
+        <item name="android:textSize">38sp</item>
+        <item name="android:textColor">@color/text_on_dark</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_14.5">
+        <item name="android:textSize">14.5sp</item>
+        <item name="android:textColor">@color/text_on_dark</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_14">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_14.796297073364258">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/slate_blue</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_9.066667556762695">
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">@color/error</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_22">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_subheader_10">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/text_muted</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_9.02497673034668">
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">@color/lime_green_overlay</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_11">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/error</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_9">
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">@color/navy_overlay</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="TextStyle_13.5">
+        <item name="android:textSize">13.5sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+</resources>
