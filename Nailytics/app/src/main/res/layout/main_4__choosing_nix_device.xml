@@ -442,8 +442,8 @@
         </LinearLayout>
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_bar___iphone" android:layout_width="410dp" android:layout_height="83dp" android:layout_marginStart="0dp" android:layout_marginTop="849dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
 
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_bar___iphone" android:layout_width="410dp" android:layout_height="83dp" android:layout_marginStart="0dp" android:layout_marginTop="849dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/chrome_material"
@@ -467,7 +467,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
         <LinearLayout
             android:id="@+id/tab_bar_buttons"
@@ -597,4 +596,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

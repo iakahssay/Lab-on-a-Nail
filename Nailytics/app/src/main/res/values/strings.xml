@@ -19,7 +19,7 @@
     <string name="ph_6_0">pH 6.0</string>
     <string name="ph_7_0">pH 7.0</string>
     <string name="ph_8_0">pH 8.0</string>
-    <string name="normal_ph_levels_range_between">Normal pH levels range between 6.8–7.4.</string>
+    <string name="normal_ph_levels_range_info">Normal pH levels range between 6.8–7.4.</string>
     <string name="choose_nix_sensor_device_">Choose Nix Sensor Device:</string>
     <string name="nix_spectro_1">Nix Spectro 1</string>
     <string name="nix_spectro_2">Nix Spectro 2</string>
@@ -31,13 +31,17 @@
     </string>
     <string name="added_to_your_health_history_">Added to your Health History.</string>
     <string name="recommended_actions">Recommended Actions</string>
-    <string name="rinse___retest__rinse_your_mou">
-        Rinse &amp; Retest: Rinse your mouth with water and retest in 30–60 minutes, avoiding food or acidic drinks beforehand.
-        Hydrate: Drinking water helps restore saliva’s natural buffering ability.
-        Notice Patterns: Frequent low pH readings may be associated with acid reflux, dry mouth, or dietary habits.
-        Seek Care if Persistent: Frequent acidity may increase the risk of enamel erosion and oral discomfort; consider
-        consulting a dentist or healthcare provider if you experience persistent acidic readings, tooth sensitivity, or
-        heartburn.
+    <string name="recommended_actions_body">
+        • Rinse &amp; Retest: Rinse your mouth with water and retest in\n\t
+          30–60 minutes, avoiding food or acidic drinks beforehand.\n
+        • Hydrate: Drinking water helps restore saliva’s natural buffering\n\t
+          ability.\n
+        • Notice Patterns: Frequent low pH readings may be associated\n\t
+          with acid reflux, dry mouth, or dietary habits.\n
+        • Seek Care if Persistent: Frequent acidity may increase the risk\n\t
+          of enamel erosion and oral discomfort; consider consulting a\n\t
+          dentist or healthcare provider if you experience persistent\n\t
+          acidic readings, tooth sensitivity, or heartburn.
     </string>
     <string name="s">S</string>
     <string name="add_profile_photo">Add profile photo</string>

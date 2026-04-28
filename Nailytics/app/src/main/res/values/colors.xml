@@ -95,7 +95,7 @@
 
 <!--                  SEMANTIC LAYER                          -->
     <!-- Background colors -->
-    <color name="background_main">@color/gray_80</color>
+    <color name="background_main">@color/gray_90</color>
     <color name="background_card">@color/white</color>
     <color name="background_light">@color/gray_90</color>
     <color name="background_dark">@color/charcoal</color>
