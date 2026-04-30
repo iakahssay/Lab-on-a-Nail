@@ -124,7 +124,7 @@
                     <LinearLayout android:id="@+id/frame_1000004577" android:orientation="vertical" android:layout_width="101dp" android:layout_height="89dp">
 
                         
-                        <LinearLayout android:id="@+id/frame_1000004580" android:orientation="horizontal" android:layout_width="46dp" android:layout_height="16dp" android:background="@drawable/bg_rounded_frame_1000004580" android:paddingLeft="6.40000057220459dp" android:paddingTop="2.133333444595337dp" android:paddingRight="6.40000057220459dp" android:paddingBottom="2.133333444595337dp">
+                        <LinearLayout android:id="@+id/frame_1000004580" android:orientation="horizontal" android:layout_width="46dp" android:layout_height="16dp" android:background="@drawable/profile_bg_rounded_frame" android:paddingLeft="6.40000057220459dp" android:paddingTop="2.133333444595337dp" android:paddingRight="6.40000057220459dp" android:paddingBottom="2.133333444595337dp">
 
                             
                             <TextView android:id="@+id/normal" android:text="Normal " android:textSize="9.066667556762695sp" android:textColor="#FF34C759" android:gravity="start" android:textStyle="bold" android:fontFamily="SF Pro" android:layout_width="33dp" android:layout_height="12dp" />
@@ -145,7 +145,7 @@
                     <LinearLayout android:id="@+id/frame_1000004577" android:orientation="vertical" android:layout_width="101dp" android:layout_height="89dp">
 
                         
-                        <LinearLayout android:id="@+id/frame_1000004580" android:orientation="horizontal" android:layout_width="46dp" android:layout_height="16dp" android:background="@drawable/bg_rounded_frame_1000004580" android:paddingLeft="6.40000057220459dp" android:paddingTop="2.133333444595337dp" android:paddingRight="6.40000057220459dp" android:paddingBottom="2.133333444595337dp">
+                        <LinearLayout android:id="@+id/frame_1000004580" android:orientation="horizontal" android:layout_width="46dp" android:layout_height="16dp" android:background="@drawable/profile_bg_rounded_frame" android:paddingLeft="6.40000057220459dp" android:paddingTop="2.133333444595337dp" android:paddingRight="6.40000057220459dp" android:paddingBottom="2.133333444595337dp">
 
                             
                             <TextView android:id="@+id/normal" android:text="Normal " android:textSize="9.066667556762695sp" android:textColor="#FF34C759" android:gravity="start" android:textStyle="bold" android:fontFamily="SF Pro" android:layout_width="33dp" android:layout_height="12dp" />

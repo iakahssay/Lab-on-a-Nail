@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="@color/slate_purple" />
+    <!-- Note: corners radius is not needed for 'oval' as it's automatically circular -->
+
+</shape>

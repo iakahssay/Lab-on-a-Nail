@@ -1,14 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background_main">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main">
 
-
+<!-- NAV BAR SECTION-->
     <LinearLayout
-        android:id="@+id/navigation_bar___iphone__compact_size_class_"
-        android:orientation="vertical"
+        android:id="@+id/navigation_bar"
         android:layout_width="410dp"
         android:layout_height="88dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/analyte_section"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -17,7 +24,6 @@
             android:id="@+id/materials"
             android:layout_width="410dp"
             android:layout_height="88dp">
-
 
             <LinearLayout
                 android:id="@+id/chrome"
@@ -30,88 +36,62 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" >
+                app:layout_constraintVertical_bias="0.0">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/title_and_controls"
-                    android:layout_width="410dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/title_and_controls"
+                android:layout_width="410dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="45dp">
+
+
+                <LinearLayout
+                    android:id="@+id/leading"
+                    android:layout_width="44dp"
                     android:layout_height="44dp"
-                    android:layout_marginTop="45dp">
+                    android:orientation="horizontal"
+                    android:paddingTop="11dp"
+                    android:paddingBottom="11dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/title"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
 
-
-                    <LinearLayout
-                        android:id="@+id/leading"
-                        android:layout_width="44dp"
-                        android:layout_height="44dp"
-                        android:orientation="horizontal"
-                        android:paddingTop="11dp"
-                        android:paddingBottom="11dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/title"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0">
-
-                        <ImageView
-                            android:id="@+id/chevron"
-                            android:layout_width="22dp"
-                            android:layout_height="22dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginBottom="14dp"
-                            android:gravity="start"
-                            android:rotation="0"
-                            android:src="@drawable/ic_chevron"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-                        </ImageView>
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/title"
-                        android:layout_width="69dp"
+                    <ImageView
+                        android:id="@+id/chevron"
+                        android:layout_width="22dp"
                         android:layout_height="22dp"
-                        android:layout_marginTop="11dp"
-                        android:gravity="center_horizontal"
-                        android:text="Nailytics"
-                        android:textColor="@color/text_primary"
-                        android:textSize="17sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="14dp"
+                        android:gravity="start"
+                        android:rotation="0"
+                        android:src="@drawable/ic_chevron"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                        app:layout_constraintTop_toTopOf="parent">
+                    </ImageView>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="69dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="11dp"
+                    android:gravity="center_horizontal"
+                    android:text="Nailytics"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </LinearLayout>
 
-
-    <TextView
-        android:id="@+id/looking_for_nix_sensor_device__"
-        android:layout_width="398dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="416dp"
-        android:gravity="center_horizontal"
-        android:text="Looking for Nix Sensor Device.."
-        android:textColor="#FF000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <LinearLayout
-        android:id="@+id/loading_image_1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="472dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+<!-- ANALYTE COLOR CHART SECTION-->
     <LinearLayout
         android:id="@+id/analyte_section"
         android:layout_width="398dp"
@@ -348,10 +328,47 @@
         </LinearLayout>
     </LinearLayout>
 
+<!-- LOADING TEXT SECTION-->
+    <TextView
+        android:id="@+id/looking_for_nix_sensor_device__"
+        android:layout_width="398dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="416dp"
+        android:gravity="center_horizontal"
+        android:text="Looking for Nix Sensor Device.."
+        android:textColor="#FF000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tab_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
+<!-- LOADING IMAGE SECTION-->
+    <LinearLayout
+        android:id="@+id/loading_image_1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="472dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tab_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.162" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_bar___iphone" android:layout_width="410dp" android:layout_height="83dp" android:layout_marginStart="0dp" android:layout_marginTop="849dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
-
+    <!-- TAB SECTION -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tab_bar"
+        android:layout_width="410dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="849dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/chrome_material"
@@ -375,7 +392,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
         <LinearLayout
             android:id="@+id/tab_bar_buttons"
@@ -403,7 +419,7 @@
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Home"
-                    android:textColor="#FF5856D6"
+                    android:textColor="@color/slate_purple"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -412,8 +428,8 @@
 
                 <ImageView
                     android:id="@+id/symbol"
-                    android:layout_width="90dp"
-                    android:layout_height="21dp"
+                    android:layout_width="83dp"
+                    android:layout_height="25dp"
                     android:layout_marginTop="1dp"
                     android:gravity="center_horizontal"
                     android:src="@drawable/ic_home_active"
@@ -506,4 +522,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

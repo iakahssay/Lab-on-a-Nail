@@ -51,7 +51,7 @@
     </LinearLayout>
 
     
-    <LinearLayout android:id="@+id/frame_1000004580" android:orientation="vertical" android:layout_width="402dp" android:layout_height="44dp" android:layout_marginStart="14dp" android:layout_marginTop="114dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" android:background="@drawable/bg_rounded_frame_1000004580">
+    <LinearLayout android:id="@+id/frame_1000004580" android:orientation="vertical" android:layout_width="402dp" android:layout_height="44dp" android:layout_marginStart="14dp" android:layout_marginTop="114dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" android:background="@drawable/profile_bg_rounded_frame">
 
         
         <LinearLayout android:id="@+id/row" android:orientation="horizontal" android:layout_width="402dp" android:layout_height="44dp">

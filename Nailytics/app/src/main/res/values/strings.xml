@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MyApp</string>
-    <string name="prompt">This is a prompt message.</string>
-    <string name="__">􀈂</string>
-    <string name="title">Nailytics</string>
-    <string name="search_glyph">􀊫</string>
-    <string name="placeholder_label">Search</string>
-    <string name="dictation">􀊱</string>
-    <string name="label">Tab Name</string>
-    <string name="symbol">􀋃</string>
     <string name="this_app_helps_you_monitor_you">This app helps you monitor your health by analyzing the color of the fake nail’s biosensor.</string>
     <string name="ready_to_begin__click_the_butt">Ready to begin? Click the button below to start the health check now!</string>
+
+    <string name="looking_for_nix_sensor_device_">Looking for Nix Sensor Device..</string>
     <string name="nix_connected">Nix Spectro 1 connected.</string>
     <string name="change_device"><u>Change device</u></string>
 
@@ -19,17 +12,38 @@
     <string name="ph_6_0">pH 6.0</string>
     <string name="ph_7_0">pH 7.0</string>
     <string name="ph_8_0">pH 8.0</string>
+
     <string name="normal_ph_levels_range_info">Normal pH levels range between 6.8–7.4.</string>
+
     <string name="choose_nix_sensor_device_">Choose Nix Sensor Device:</string>
     <string name="nix_spectro_1">Nix Spectro 1</string>
     <string name="nix_spectro_2">Nix Spectro 2</string>
+
+    <!--CHANGING ANALYTE COLOR VALUE-->
+    <string name="choose_a_color_using_the_interactive_picker">
+        Choose a color using the interactive picker.
+        Copy the HEX or RGB value and enter it below.
+    </string>
+
+    <string name="hex">HEX</string>
+    <string name="hex_val">#9B123A</string>
+    <string name="R">R</string>
+    <string name="r_val">155</string>
+    <string name="G">G</string>
+    <string name="g_val">18</string>
+    <string name="B">B</string>
+    <string name="b_val">58</string>
+
+    <!-- RESULTS PAGE -->
     <string name="result">Result</string>
     <string name="ph__4___highly_acidic">pH: 4 - Highly Acidic </string>
     <string name="your_saliva_is_more_acidic_tha">
         Your saliva is more acidic than the typical healthy range. This can occur temporarily due to recent
         food or drink, dehydration, stress, or acid reflux.
     </string>
+
     <string name="added_to_your_health_history_">Added to your Health History.</string>
+
     <string name="recommended_actions">Recommended Actions</string>
     <string name="recommended_actions_body">
         • Rinse &amp; Retest: Rinse your mouth with water and retest in\n\t
@@ -43,38 +57,35 @@
           dentist or healthcare provider if you experience persistent\n\t
           acidic readings, tooth sensitivity, or heartburn.
     </string>
+
+    <!--PROFILE PAGE-->
+    <string name="not_a_member">Not a member?</string>
+    <string name="register_now"><u>Register now</u></string>
+
     <string name="s">S</string>
     <string name="add_profile_photo">Add profile photo</string>
-    <string name="details">Details</string>
-    <string name="detail">sophia@gmail.com</string>
-    <string name="info">􀅴</string>
-    <string name="checkmark">􀆅</string>
-    <string name="drill_in">􀆊</string>
-    <string name="grabber">􀌇</string>
-    <string name="looking_for_nix_sensor_device_">Looking for Nix Sensor Device..</string>
-    <string name="choose_a_color_using_the_interactive_picker">
-        Choose a color using the interactive picker.
-        Copy the HEX or RGB value and enter it below.
-    </string>
-    <string name="hex">HEX</string>
-    <string name="_9b123a">#9B123A</string>
-    <string name="r">R</string>
-    <string name="_155">155</string>
-    <string name="g">G</string>
-    <string name="_18">18</string>
-    <string name="b">B</string>
-    <string name="_58">58</string>
-    <string name="not_a_member__register_now">Not a member? Register now</string>
-    <string name="nailytics">Nailytics</string>
+    <string name="email">lcbennet@gmail.com</string>
+    <string name="gender">Female</string>
+    <string name="bday">05/25/1961</string>
+    <string name="name">Lexie Bennett</string>
+    <string name="height">5\'2</string>
+    <string name="weight">112 lbs</string>
+    <string name="bmi">19.2</string>
+
+
+    <!--LOGOUT POP-UP-->
     <string name="are_you_sure_you_want_to_log_o">Are you sure you want to log out?</string>
-    <string name="average_results">Average results</string>
+
+    <!--SUMMARY PAGE-->
+    <string name="average_results">Average Results</string>
     <string name="above_range">Above Range</string>
-    <string name="_175_5_mm">175.5 mM</string>
-    <string name="glucose_levels__saliva__">Glucose levels (saliva)             </string>
+    <string name="average_glucose_levels">175.5 mM</string>
+    <string name="glucose_levels_saliva">Glucose levels (saliva)</string>
     <string name="normal">Normal </string>
     <string name="_7_00">7.00</string>
     <string name="_60_mg">60 mg</string>
-    <string name="nitrate_levels__urine_">Nitrate levels  (urine)              </string>
+    <string name="nitrate_levels__urine_">Nitrate levels  (urine)</string>
+
     <string name="charts">Charts</string>
     <string name="average">Average</string>
     <string name="_6_5">6.5</string>
@@ -85,12 +96,14 @@
     <string name="_7_0">7.0</string>
     <string name="_5_5">5.5</string>
     <string name="_5_0">5.0</string>
+
     <string name="your_ph_levels__saliva__have_s">Your pH levels (saliva) have shown an increase in the past 2 weeks.</string>
     <string name="disclaimer__this_is_not_a_medi">
         Disclaimer: This is not a medical diagnosis. For an accurate assessment, please consult a licensed healthcare
         professional.
     </string>
     <string name="every_weekend_there_is_a_decre">Every weekend there is a decrease in your pH levels:</string>
+
     <string name="pattern">Pattern</string>
     <string name="dec_8__2025___jan_8__2026">Dec 8, 2025 - Jan 8, 2026</string>
     <string name="fri">Fri</string>
@@ -101,11 +114,13 @@
     <string name="wed">Wed</string>
     <string name="thu">Thu</string>
     <string name="_4_8">4.8</string>
+
     <string name="what_this_means">What this means</string>
     <string name="lower_saliva_ph_on_weekends_ma">
         Lower saliva pH on weekends may occur due to changes in routine, such as diet, alcohol intake, sleep patterns,
         or acid reflux.
     </string>
+
     <string name="ask_your_doctor">Ask your doctor</string>
     <string name="could_this_pattern_indicate_an">
         Could this pattern indicate an underlying condition I should be concerned about? Here is my family history…

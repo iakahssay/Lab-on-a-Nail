@@ -3,12 +3,13 @@
 
 
     <LinearLayout
-        android:id="@+id/navigation_bar___iphone__compact_size_class_"
-        android:orientation="vertical"
+        android:id="@+id/navigation_bar_iphone_compact_size_class"
         android:layout_width="410dp"
         android:layout_height="88dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/analyte_section"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -494,7 +495,7 @@
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Home"
-                    android:textColor="#FF5856D6"
+                    android:textColor="@color/slate_purple"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -503,8 +504,8 @@
 
                 <ImageView
                     android:id="@+id/symbol"
-                    android:layout_width="90dp"
-                    android:layout_height="21dp"
+                    android:layout_width="83dp"
+                    android:layout_height="25dp"
                     android:layout_marginTop="1dp"
                     android:gravity="center_horizontal"
                     android:src="@drawable/ic_home_active"

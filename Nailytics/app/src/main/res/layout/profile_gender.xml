@@ -26,15 +26,15 @@
                     <LinearLayout android:id="@+id/__button_1" android:orientation="horizontal" android:layout_width="23dp" android:layout_height="22dp">
 
                         
-                        <TextView android:id="@+id/chevron" android:text="􀆉" android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="start" android:textStyle="bold" android:fontFamily="SF Pro" android:layout_width="17dp" android:layout_height="22dp" />
+                        <TextView android:id="@+id/chevron" android:text="􀆉" android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="start" android:textStyle="bold"   android:layout_width="17dp" android:layout_height="22dp" />
 
                         
-                        <TextView android:id="@+id/label" android:text=" " android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="0dp" android:layout_height="22dp" />
+                        <TextView android:id="@+id/label" android:text=" " android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="start"   android:layout_width="0dp" android:layout_height="22dp" />
                     </LinearLayout>
                 </LinearLayout>
 
                 
-                <TextView android:id="@+id/title" android:text="Gender" android:textSize="17sp" android:textColor="#FF000000" android:gravity="center_horizontal" android:textStyle="bold" android:fontFamily="SF Pro" android:layout_width="60dp" android:layout_height="22dp" android:layout_marginStart="183dp" android:layout_marginTop="11dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <TextView android:id="@+id/title" android:text="Gender" android:textSize="17sp" android:textColor="#FF000000" android:gravity="center_horizontal" android:textStyle="bold"   android:layout_width="60dp" android:layout_height="22dp" android:layout_marginStart="183dp" android:layout_marginTop="11dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
 
                 
                 <LinearLayout android:id="@+id/trailing" android:orientation="horizontal" android:layout_width="55dp" android:layout_height="44dp" android:layout_marginStart="375dp" android:layout_marginTop="0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" android:paddingLeft="0dp" android:paddingTop="11dp" android:paddingRight="16dp" android:paddingBottom="11dp">
@@ -43,7 +43,7 @@
                     <LinearLayout android:id="@+id/__button_1" android:orientation="horizontal" android:layout_width="39dp" android:layout_height="22dp">
 
                         
-                        <TextView android:id="@+id/label" android:text="Save" android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="end" android:textStyle="bold" android:fontFamily="SF Pro" android:layout_width="39dp" android:layout_height="22dp" />
+                        <TextView android:id="@+id/label" android:text="Save" android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="end" android:textStyle="bold"   android:layout_width="39dp" android:layout_height="22dp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -57,20 +57,20 @@
         <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="382dp" android:layout_height="48dp" android:paddingLeft="0dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
 
             
-            <TextView android:id="@+id/title" android:text="Male" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="370dp" android:layout_height="22dp" />
+            <TextView android:id="@+id/title" android:text="Male" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start"   android:layout_width="370dp" android:layout_height="22dp" />
         </LinearLayout>
 
         
         <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="382dp" android:layout_height="48dp" android:paddingLeft="0dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
 
             
-            <TextView android:id="@+id/title" android:text="Female" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="322dp" android:layout_height="22dp" />
+            <TextView android:id="@+id/title" android:text="Female" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start"   android:layout_width="322dp" android:layout_height="22dp" />
 
             
             <LinearLayout android:id="@+id/frame_1000004344" android:orientation="horizontal" android:layout_width="16dp" android:layout_height="22dp">
 
                 
-                <TextView android:id="@+id/drill_in" android:text="􀆅" android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="center" android:textStyle="bold" android:fontFamily="SF Pro" android:layout_width="16dp" android:layout_height="22dp" />
+                <TextView android:id="@+id/drill_in" android:text="􀆅" android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="center" android:textStyle="bold"   android:layout_width="16dp" android:layout_height="22dp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -78,35 +78,35 @@
         <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="382dp" android:layout_height="48dp" android:paddingLeft="0dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
 
             
-            <TextView android:id="@+id/title" android:text="Non-binary" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="370dp" android:layout_height="22dp" />
+            <TextView android:id="@+id/title" android:text="Non-binary" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start"   android:layout_width="370dp" android:layout_height="22dp" />
         </LinearLayout>
 
         
         <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="382dp" android:layout_height="48dp" android:paddingLeft="0dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
 
             
-            <TextView android:id="@+id/title" android:text="Transgender male" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="370dp" android:layout_height="22dp" />
+            <TextView android:id="@+id/title" android:text="Transgender male" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start"   android:layout_width="370dp" android:layout_height="22dp" />
         </LinearLayout>
 
         
         <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="382dp" android:layout_height="48dp" android:paddingLeft="0dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
 
             
-            <TextView android:id="@+id/title" android:text="Transgender female" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="370dp" android:layout_height="22dp" />
+            <TextView android:id="@+id/title" android:text="Transgender female" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start"   android:layout_width="370dp" android:layout_height="22dp" />
         </LinearLayout>
 
         
         <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="382dp" android:layout_height="48dp" android:paddingLeft="0dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
 
             
-            <TextView android:id="@+id/title" android:text="Prefer not to say" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="370dp" android:layout_height="22dp" />
+            <TextView android:id="@+id/title" android:text="Prefer not to say" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start"   android:layout_width="370dp" android:layout_height="22dp" />
         </LinearLayout>
 
         
         <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="382dp" android:layout_height="48dp" android:paddingLeft="0dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
 
             
-            <TextView android:id="@+id/title" android:text="Prefer to self-describe" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="370dp" android:layout_height="22dp" />
+            <TextView android:id="@+id/title" android:text="Prefer to self-describe" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start"   android:layout_width="370dp" android:layout_height="22dp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -127,30 +127,30 @@
             <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_1" android:layout_width="143dp" android:layout_height="40dp">
 
                 
-                <TextView android:id="@+id/label" android:text="Home" android:textSize="10sp" android:textColor="#FF999999" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <TextView android:id="@+id/label" android:text="Home" android:textSize="10sp" android:textColor="#FF999999" android:gravity="center_horizontal"   android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
 
                 
-                <TextView android:id="@+id/symbol" android:text="􀎞" android:textSize="18sp" android:textColor="#FF999999" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <TextView android:id="@+id/symbol" android:text="􀎞" android:textSize="18sp" android:textColor="#FF999999" android:gravity="center_horizontal"   android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             
             <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_2" android:layout_width="143dp" android:layout_height="40dp">
 
                 
-                <TextView android:id="@+id/label" android:text="Summary" android:textSize="10sp" android:textColor="#FF999999" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <TextView android:id="@+id/label" android:text="Summary" android:textSize="10sp" android:textColor="#FF999999" android:gravity="center_horizontal"   android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
 
                 
-                <TextView android:id="@+id/symbol" android:text="􀐾" android:textSize="18sp" android:textColor="#FF999999" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <TextView android:id="@+id/symbol" android:text="􀐾" android:textSize="18sp" android:textColor="#FF999999" android:gravity="center_horizontal"   android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             
             <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_4" android:layout_width="143dp" android:layout_height="40dp">
 
                 
-                <TextView android:id="@+id/label" android:text="Profile" android:textSize="10sp" android:textColor="#FF5856D6" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <TextView android:id="@+id/label" android:text="Profile" android:textSize="10sp" android:textColor="#FF5856D6" android:gravity="center_horizontal"   android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
 
                 
-                <TextView android:id="@+id/symbol" android:text="􀉭" android:textSize="18sp" android:textColor="#FF5856D6" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <TextView android:id="@+id/symbol" android:text="􀉭" android:textSize="18sp" android:textColor="#FF5856D6" android:gravity="center_horizontal"   android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
