@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <solid android:color="@color/gray_150" />
-    <corners android:radius="40dp" />
-</shape>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Outer soft border -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="40dp" />
+            <solid android:color="#F4F4F8" />
+            <stroke
+                android:width="1.5dp"
+                android:color="@color/gray_200" />
+        </shape>
+    </item>
+
+    <!-- Inner glass fill -->
+    <item
+        android:left="1.5dp"
+        android:top="1.5dp"
+        android:right="1.5dp"
+        android:bottom="1.5dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="36dp" />
+            <!--Creates the 'glass' effect-->
+            <gradient
+                android:startColor="@color/gray_100"
+                android:centerColor="@color/gray_80"
+                android:endColor="#E8E8EF"
+                android:angle="250" />
+        </shape>
+    </item>
+
+</layer-list>

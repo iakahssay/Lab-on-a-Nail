@@ -1,243 +1,372 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_main">
 
-    <!-- Top navigation bar -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/profile_name_nav_bar"
-        android:layout_width="0dp"
-        android:layout_height="98dp"
-        android:background="#BFFFFFFF"
+    <!-- NAV BAR SECTION -->
+    <LinearLayout
+        android:id="@+id/profile_nav_bar"
+        android:layout_width="410dp"
+        android:layout_height="88dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/profile_name_section"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/profile_name_back_button"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:gravity="center"
-            android:text="‹"
-            android:textColor="@color/primary"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nav_materials"
+            android:layout_width="410dp"
+            android:layout_height="88dp">
 
-        <TextView
-            android:id="@+id/profile_name_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Name"
-            android:textColor="@color/text_primary"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/profile_name_back_button" />
+            <LinearLayout
+                android:id="@+id/chrome"
+                android:layout_width="410dp"
+                android:layout_height="88dp"
+                android:background="@color/transparent_white"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/profile_name_save_button"
-            android:layout_width="wrap_content"
-            android:layout_height="44dp"
-            android:gravity="center"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:text="Save"
-            android:textColor="@color/primary"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/title_and_controls"
+                    android:layout_width="410dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="45dp">
 
-    <!-- Profile name section -->
+                    <LinearLayout
+                        android:id="@+id/back_button"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="11dp"
+                        android:paddingBottom="11dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/title"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <ImageView
+                            android:id="@+id/chevron"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="14dp"
+                            android:gravity="start"
+                            android:rotation="0"
+                            android:src="@drawable/ic_chevron"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:gravity="center_horizontal"
+                        android:text="Name"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/save_button"
+                        android:layout_width="55dp"
+                        android:layout_height="22dp"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="end"
+                        android:text="Save"
+                        android:textColor="@color/slate_purple"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/title"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+    <!--Parent: width=386-->
+    <!-- name_row: 382, name_left: 170,  name_label: 171-->
+    <!-- name_right: 200, edit_users_name 182, -->
+    <!-- NAME SECTION  -->
     <LinearLayout
-        android:id="@+id/profile_name_card"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/profile_bg_rounded_frame"
+        android:id="@+id/profile_name_section"
+        android:layout_width="386dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="114dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="646dp"
+        android:background="@drawable/bg_rounded_white_corner_12_frame"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tab_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profile_name_nav_bar">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!-- First name row -->
+
         <LinearLayout
-            android:id="@+id/row_first_name"
-            android:layout_width="match_parent"
+            android:id="@+id/first_name_row"
+            android:layout_width="382dp"
             android:layout_height="44dp"
-            android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp">
+            android:paddingLeft="16dp">
 
-            <TextView
-                android:id="@+id/label_first_name"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|center_vertical"
-                android:text="First name"
-                android:textColor="@color/deep_navy"
-                android:textSize="17sp" />
+            <LinearLayout
+                android:id="@+id/first_name_left"
+                android:layout_width="170dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/value_first_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="end|center_vertical"
-                android:text="Sophia"
-                android:textColor="@color/text_primary"
-                android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/first_name_label"
+                    android:layout_width="171dp"
+                    android:layout_height="26dp"
+                    android:gravity="start"
+                    android:text="First name"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/first_name_right"
+                android:layout_width="200dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/first_name_value"
+                    android:layout_width="182dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="7dp"
+                    android:paddingEnd="10dp"
+                    android:gravity="end"
+                    android:text="@string/first_name"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp" />
+            </LinearLayout>
         </LinearLayout>
 
-        <!-- Divider between rows -->
         <View
-            android:id="@+id/divider_first_last_name"
+            android:id="@+id/name_divider"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="22dp"
             android:background="@color/gray_150" />
 
-        <!-- Last name row -->
+
         <LinearLayout
-            android:id="@+id/row_last_name"
-            android:layout_width="match_parent"
+            android:id="@+id/last_name_row"
+            android:layout_width="382dp"
             android:layout_height="44dp"
-            android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp">
+            android:paddingLeft="16dp">
 
-            <TextView
-                android:id="@+id/label_last_name"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|center_vertical"
-                android:text="Last name"
-                android:textColor="@color/deep_navy"
-                android:textSize="17sp" />
+           \
+            <LinearLayout
+                android:id="@+id/last_name_left"
+                android:layout_width="170dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/value_last_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="end|center_vertical"
-                android:text="Bennett"
-                android:textColor="@color/text_primary"
-                android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/last_name_label"
+                    android:layout_width="171dp"
+                    android:layout_height="26dp"
+                    android:gravity="start"
+                    android:text="Last name"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/last_name_right"
+                android:layout_width="200dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/last_name_value"
+                    android:layout_width="182dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="7dp"
+                    android:paddingEnd="10dp"
+                    android:gravity="end"
+                    android:text="@string/last_name"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Bottom tab bar -->
+
+    <!-- TAB SECTION -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/profile_name_tab_bar"
-        android:layout_width="0dp"
+        android:id="@+id/tab_bar"
+        android:layout_width="410dp"
         android:layout_height="83dp"
-        android:background="#BFFFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="849dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chrome_material"
+            android:layout_width="410dp"
+            android:layout_height="83dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/chrome_material2"
+                android:layout_width="420dp"
+                android:layout_height="63dp"
+                android:background="#BFFFFFFF"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
-            android:id="@+id/profile_name_tab_buttons"
-            android:layout_width="0dp"
+            android:id="@+id/tab_bar_buttons"
+            android:layout_width="410dp"
             android:layout_height="40dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginEnd="14dp"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-            <LinearLayout
-                android:id="@+id/profile_name_tab_home"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/profile_name_home_symbol"
-                    android:layout_width="wrap_content"
-                    android:layout_height="21dp"
-                    android:gravity="center"
-                    android:text="⌂"
-                    android:textColor="@color/nav_unselected"
-                    android:textSize="18sp" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_button"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
+
 
                 <TextView
-                    android:id="@+id/profile_name_home_label"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/home_label"
+                    android:layout_width="146dp"
                     android:layout_height="12dp"
-                    android:gravity="center"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
                     android:text="Home"
-                    android:textColor="@color/nav_unselected"
-                    android:textSize="10sp" />
-            </LinearLayout>
+                    android:textColor="#FF5856D6"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
-                android:id="@+id/profile_name_tab_summary"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/home_symbol"
+                    android:layout_width="83dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_home"
+                    app:layout_constraintBottom_toTopOf="@+id/home_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/summary_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
+
 
                 <TextView
-                    android:id="@+id/profile_name_summary_symbol"
-                    android:layout_width="wrap_content"
-                    android:layout_height="21dp"
-                    android:gravity="center"
-                    android:text="▥"
-                    android:textColor="@color/nav_unselected"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/profile_name_summary_label"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/summary_label"
+                    android:layout_width="146dp"
                     android:layout_height="12dp"
-                    android:gravity="center"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
                     android:text="Summary"
-                    android:textColor="@color/nav_unselected"
-                    android:textSize="10sp" />
-            </LinearLayout>
+                    android:textColor="@color/gray_350"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
-                android:id="@+id/profile_name_tab_profile"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/profile_name_profile_symbol"
-                    android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/summary_symbol"
+                    android:layout_width="90dp"
                     android:layout_height="21dp"
-                    android:gravity="center"
-                    android:text="◉"
-                    android:textColor="@color/nav_selected"
-                    android:textSize="18sp" />
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_summary"
+                    app:layout_constraintBottom_toTopOf="@+id/summary_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profile_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
+
 
                 <TextView
-                    android:id="@+id/profile_name_profile_label"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/profile_label"
+                    android:layout_width="146dp"
                     android:layout_height="12dp"
-                    android:gravity="center"
+                    android:layout_marginStart="-1dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
                     android:text="Profile"
-                    android:textColor="@color/nav_selected"
-                    android:textSize="10sp" />
-            </LinearLayout>
+                    android:textColor="@color/slate_purple"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/profile_symbol"
+                    android:layout_width="90dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_profile_active"
+                    app:layout_constraintBottom_toTopOf="@+id/profile_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

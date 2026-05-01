@@ -106,7 +106,7 @@
             android:layout_width="398dp"
             android:layout_height="32dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/bg_rounded_frame_1000004557"
+            android:background="@drawable/bg_rounded_white_corner_16_frame"
             android:orientation="horizontal"
             android:paddingLeft="16dp"
             android:paddingTop="0dp"
@@ -253,7 +253,7 @@
             android:layout_width="398dp"
             android:layout_height="36dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/bg_rounded_frame_1000004550"
+            android:background="@drawable/bg_rounded_gray90_corner_12_frame"
             android:orientation="horizontal"
             android:paddingLeft="8dp"
             android:paddingTop="8dp"
@@ -416,7 +416,6 @@
             android:layout_height="258dp"
             android:orientation="vertical">
 
-
             <TextView
                 android:id="@+id/recommended_actions"
                 android:layout_width="398dp"
@@ -428,8 +427,7 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="16dp"/>
 
-<!-- android:text="Rinse &amp; Retest: Rinse your mouth with water and retest in 30–60 minutes, avoiding food or acidic drinks beforehand. Hydrate: Drinking water helps restore saliva’s natural buffering ability. Notice Patterns: Frequent low pH readings may be associated with acid reflux, dry mouth, or dietary habits. Seek Care if Persistent: Frequent acidity may increase the risk of enamel erosion and oral discomfort; consider consulting a dentist or healthcare provider if you experience persistent acidic readings, tooth sensitivity, or heartburn."
-                -->
+
             <TextView
                 android:id="@+id/rinse___retest__rinse_your_mouth_with_water_and_retest_in_30_60_minutes__avoiding_food_or_acidic_drinks_beforehand__hydrate__drinking_water_helps_restore_saliva_s_natural_buffering_ability__notice_patterns__frequent_low_ph_readings_may_be_associated_with_acid_reflux__dry_mouth__or_dietary_habits__seek_care_if_persistent__frequent_acidity_may_increase_the_risk_of_enamel_erosion_and_oral_discomfort__consider_consulting_a_dentist_or_healthcare_provider_if_you_experience_persistent_acidic_readings__tooth_sensitivity__or_heartburn_"
                 android:layout_width="398dp"
@@ -440,13 +438,12 @@
                 android:textSize="13.617865562438965sp"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- android:background="@drawable/bg_rounded_button" -->
             <LinearLayout
                 android:id="@+id/button"
                 android:layout_width="95dp"
                 android:layout_height="27dp"
                 android:layout_gravity="center"
-                android:background="@drawable/bg_rounded_learn_more_button"
+                android:background="@drawable/bg_rounded_blue_learn_more_button"
                 android:orientation="horizontal"
                 android:paddingLeft="8.511165618896484dp"
                 android:paddingTop="3.404466390609741dp"
@@ -551,7 +548,7 @@
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Summary"
-                    android:textColor="#FF999999"
+                    android:textColor="@color/gray_350"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -586,7 +583,7 @@
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Profile"
-                    android:textColor="#FF999999"
+                    android:textColor="@color/gray_350"
                     android:textSize="10sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

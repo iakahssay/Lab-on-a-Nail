@@ -42,9 +42,6 @@
     <color name="lime_green">#FF3BDA40</color>
     <color name="system_green">#FF34C759</color>
 
-    <!-- Whites -->
-    <color name="white_overlay">#BFFFFFFF</color>
-
     <!-- Reds / pinks -->
     <color name="deep_rose">#FFA70E3D</color>
     <color name="deep_rose_light">#C9A70E3D</color>
@@ -72,7 +69,7 @@
     <color name="gray_350">#FF999999</color>
     <color name="gray_300">#FFB1B1B1</color>
     <color name="gray_250">#FFC6C6C8</color>
-    <color name="gray_200">#FFD9D9D9</color>
+    <color name="gray_200">#FFD9D9DC</color>
     <color name="gray_180">#FFDDDBDB</color>
     <color name="gray_150">#FFE0E0E0</color>
     <color name="gray_120">#FFE5E5EA</color>

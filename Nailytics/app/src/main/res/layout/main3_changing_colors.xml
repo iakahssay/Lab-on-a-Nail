@@ -112,7 +112,7 @@
                 android:layout_width="398dp"
                 android:layout_height="32dp"
                 android:layout_marginBottom="14dp"
-                android:background="@drawable/bg_rounded_frame_1000004557"
+                android:background="@drawable/bg_rounded_white_corner_16_frame"
                 android:orientation="horizontal"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -278,7 +278,7 @@
         android:layout_width="398dp"
         android:layout_height="548dp"
         android:layout_marginTop="152dp"
-        android:background="@drawable/bg_rounded_edit_color_modal"
+        android:background="@drawable/bg_rounded_gray90_corner_12_frame"
         android:orientation="vertical"
         android:paddingLeft="31dp"
         android:paddingTop="0dp"
@@ -312,7 +312,7 @@
                 android:id="@+id/update_target_info_body"
                 android:layout_width="364dp"
                 android:layout_height="40dp"
-                android:background="@drawable/bg_rounded_frame_1000004550"
+                android:background="@drawable/bg_rounded_gray90_corner_12_frame"
                 android:orientation="horizontal"
                 android:layout_marginBottom="10dp"
                 >
@@ -342,7 +342,7 @@
                 android:id="@+id/updatingColor"
                 android:layout_width="336dp"
                 android:layout_height="32dp"
-                android:background="@drawable/bg_rounded_frame_1000004557"
+                android:background="@drawable/bg_rounded_white_corner_16_frame"
                 android:orientation="horizontal"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -400,7 +400,7 @@
                 android:layout_height="231dp"
                 android:layout_marginStart="50dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/gradient_rectangle_0"
+                android:background="@drawable/main_change_color_gradient_color_modal_frame"
                 android:orientation="vertical"
                 >
 
@@ -411,7 +411,7 @@
                     android:scaleType="fitXY"
                     android:layout_marginTop="50dp"
                     android:layout_marginLeft="210dp"
-                    android:src="@drawable/bg_rounded_ellipse_2" />
+                    android:src="@drawable/bg_rounded_transparent_circle" />
             </LinearLayout>
 
 
@@ -464,7 +464,7 @@
                             android:id="@+id/rectangle_2"
                             android:layout_width="183dp"
                             android:layout_height="13dp"
-                            android:background="@drawable/gradient_rectangle_1"
+                            android:background="@drawable/main_change_color_gradient_raindbow_bg_bttn"
                             android:orientation="vertical"
                             >
 
@@ -474,7 +474,7 @@
                                 android:layout_height="12.8dp"
                                 android:scaleType="fitXY"
                                 android:layout_marginLeft="5dp"
-                                android:src="@drawable/bg_rounded_ellipse_2" />
+                                android:src="@drawable/bg_rounded_transparent_circle" />
                         </LinearLayout>
 
 
@@ -492,7 +492,7 @@
                             android:id="@+id/rectangle_2_2_4"
                             android:layout_width="183dp"
                             android:layout_height="13dp"
-                            android:background="@drawable/gradient_fade_out_0"
+                            android:background="@drawable/main_change_color_gradient_fade_out_bg_bttn"
                             android:orientation="vertical" >
 
                             <ImageView
@@ -501,7 +501,7 @@
                                 android:layout_height="13dp"
                                 android:scaleType="fitXY"
                                 android:layout_marginLeft="165dp"
-                                android:src="@drawable/bg_rounded_ellipse_2" />
+                                android:src="@drawable/bg_rounded_transparent_circle" />
                         </LinearLayout>
 
 
@@ -873,7 +873,7 @@
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Summary"
-                    android:textColor="#FF999999"
+                    android:textColor="@color/gray_350"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -908,7 +908,7 @@
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Profile"
-                    android:textColor="#FF999999"
+                    android:textColor="@color/gray_350"
                     android:textSize="10sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

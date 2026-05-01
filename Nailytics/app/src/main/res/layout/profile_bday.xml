@@ -1,144 +1,339 @@
-<?xml version='1.0' encoding='utf-8'?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#FFF2F2F7">
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main">
 
-    
+    <!-- NAV BAR SECTION -->
+    <LinearLayout
+        android:id="@+id/profile_nav_bar"
+        android:layout_width="410dp"
+        android:layout_height="88dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/bday_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    
-    <LinearLayout android:id="@+id/navigation_bar___iphone__compact_size_class_" android:orientation="vertical" android:layout_width="430dp" android:layout_height="98dp" android:layout_marginStart="0dp" android:layout_marginTop="0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nav_materials"
+            android:layout_width="410dp"
+            android:layout_height="88dp">
 
-        
-        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/materials" android:layout_width="430dp" android:layout_height="98dp">
+            <LinearLayout
+                android:id="@+id/chrome"
+                android:layout_width="410dp"
+                android:layout_height="88dp"
+                android:background="@color/transparent_white"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            
-            <LinearLayout android:id="@+id/chrome" android:orientation="vertical" android:layout_width="430dp" android:layout_height="98dp" android:background="#BFFFFFFF" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/title_and_controls"
+                    android:layout_width="410dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="45dp">
+
+                    <LinearLayout
+                        android:id="@+id/back_button"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="11dp"
+                        android:paddingBottom="11dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/title"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <ImageView
+                            android:id="@+id/chevron"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="14dp"
+                            android:gravity="start"
+                            android:rotation="0"
+                            android:src="@drawable/ic_chevron"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:gravity="center_horizontal"
+                        android:text="Birthday"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/save_button"
+                        android:layout_width="55dp"
+                        android:layout_height="22dp"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="end"
+                        android:text="Save"
+                        android:textColor="@color/slate_purple"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/title"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        
-        <LinearLayout android:id="@+id/contents" android:orientation="vertical" android:layout_width="430dp" android:layout_height="44dp">
-
-            
-            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/title_and_controls" android:layout_width="430dp" android:layout_height="44dp">
-
-                
-                <LinearLayout android:id="@+id/leading" android:orientation="horizontal" android:layout_width="31dp" android:layout_height="44dp" android:layout_marginStart="0dp" android:layout_marginTop="0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" android:paddingLeft="8dp" android:paddingTop="11dp" android:paddingRight="0dp" android:paddingBottom="11dp">
-
-                    
-                    <LinearLayout android:id="@+id/__button_1" android:orientation="horizontal" android:layout_width="23dp" android:layout_height="22dp">
-
-                        
-                        <TextView android:id="@+id/chevron" android:text="􀆉" android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="start" android:textStyle="bold" android:fontFamily="SF Pro" android:layout_width="17dp" android:layout_height="22dp" />
-
-                        
-                        <TextView android:id="@+id/label" android:text=" " android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="0dp" android:layout_height="22dp" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                
-                <TextView android:id="@+id/title" android:text="Birthday" android:textSize="17sp" android:textColor="#FF000000" android:gravity="center_horizontal" android:textStyle="bold" android:fontFamily="SF Pro" android:layout_width="68dp" android:layout_height="22dp" android:layout_marginStart="179dp" android:layout_marginTop="11dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-
-                
-                <LinearLayout android:id="@+id/trailing" android:orientation="horizontal" android:layout_width="55dp" android:layout_height="44dp" android:layout_marginStart="375dp" android:layout_marginTop="0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" android:paddingLeft="0dp" android:paddingTop="11dp" android:paddingRight="16dp" android:paddingBottom="11dp">
-
-                    
-                    <LinearLayout android:id="@+id/__button_1" android:orientation="horizontal" android:layout_width="39dp" android:layout_height="22dp">
-
-                        
-                        <TextView android:id="@+id/label" android:text="Save" android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="end" android:textStyle="bold" android:fontFamily="SF Pro" android:layout_width="39dp" android:layout_height="22dp" />
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
     </LinearLayout>
 
-    
-    <LinearLayout android:id="@+id/frame_1000004365" android:orientation="vertical" android:layout_width="398dp" android:layout_height="273dp" android:layout_marginStart="16dp" android:layout_marginTop="114dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" android:background="@drawable/bg_rounded_frame_1000004365">
 
-        
-        <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="398dp" android:layout_height="48dp" android:paddingLeft="16dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
+    <!-- BIRTHDAY SECTION SECTION -->
 
-            
-            <TextView android:id="@+id/title" android:text="Birthday" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start" android:fontFamily="SF Pro" android:layout_width="251dp" android:layout_height="22dp" />
+    <!-- TAB SECTION -->
+    <LinearLayout
+        android:id="@+id/bday_section"
+        android:layout_width="380dp"
+        android:layout_height="257dp"
+        android:layout_marginTop="114dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/bg_rounded_white_corner_12_frame"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tab_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.033">
 
-            
-            <LinearLayout android:id="@+id/frame_1000004344" android:orientation="horizontal" android:layout_width="87dp" android:layout_height="22dp">
+        <LinearLayout
+            android:id="@+id/profile_bday_birthday_row"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
 
-                
-                <TextView android:id="@+id/detail" android:text="12/02/1994" android:textSize="17sp" android:textColor="#FF7E7E83" android:gravity="end" android:fontFamily="SF Pro" android:layout_width="87dp" android:layout_height="22dp" />
+            <!--Parent: width=386, height=176-->
+            <!-- name_row: 382, name_left: 170,  name_label: 171-->
+            <!-- name_right: 200, edit_users_name 162, -->
+
+            <LinearLayout
+                android:id="@+id/profile_bday_birthday_left"
+                android:layout_width="180dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/profile_bday_birthday_label"
+                    android:layout_width="201dp"
+                    android:layout_height="26dp"
+                    android:gravity="start"
+                    android:text="Birthday"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profile_bday_birthday_right"
+                android:layout_width="210dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/profile_bday_birthday_value"
+                    android:layout_width="186dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="7dp"
+                    android:gravity="end"
+                    android:text="12/02/1994"
+                    android:textColor="@color/dark_gray_overlay_strong"
+                    android:textSize="17sp" />
             </LinearLayout>
         </LinearLayout>
 
-        
-        <LinearLayout android:id="@+id/date_and_time___wheels" android:orientation="vertical" android:layout_width="398dp" android:layout_height="213dp" android:background="@drawable/bg_rounded_selection" android:paddingLeft="20dp" android:paddingTop="18dp" android:paddingRight="20dp" android:paddingBottom="18dp">
+        <View
+            android:id="@+id/name_divider"
+            android:layout_width="386dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="40dp"
+            android:background="@color/gray_150" />
 
-            
-            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/material" android:layout_width="398dp" android:layout_height="213dp">
-
-                
-                <LinearLayout android:id="@+id/regular" android:layout_width="398dp" android:layout_height="213dp" android:background="#D1B3B3B3" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            
-            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/frame" android:layout_width="257dp" android:layout_height="177dp">
-
-                
-                <LinearLayout android:id="@+id/selection" android:layout_width="297dp" android:layout_height="35dp" android:layout_marginStart="-20dp" android:layout_marginTop="72dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" android:background="@drawable/bg_rounded_selection" />
-
-                
-                <LinearLayout android:id="@+id/date" android:layout_width="257dp" android:layout_height="179dp" android:layout_marginStart="0dp" android:layout_marginTop="0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-
-                
-                <LinearLayout android:id="@+id/selection" android:layout_width="297dp" android:layout_height="35dp" android:layout_marginStart="-20dp" android:layout_marginTop="72dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" android:background="@drawable/bg_rounded_selection" />
-
-                
-                <LinearLayout android:id="@+id/fade_out" android:layout_width="297dp" android:layout_height="72dp" android:layout_marginStart="-20dp" android:layout_marginTop="107dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-
-                
-                <LinearLayout android:id="@+id/fade_out" android:layout_width="297dp" android:layout_height="72dp" android:layout_marginStart="-20dp" android:layout_marginTop="0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_gray_overlay">
+            <ImageView
+                android:id="@+id/date_wheel"
+                android:layout_width="384dp"
+                android:layout_height="207dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/img_choosing_bday_date_foreground">
+            </ImageView>
         </LinearLayout>
     </LinearLayout>
 
-    
-    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_bar___iphone" android:layout_width="430dp" android:layout_height="83dp" android:layout_marginStart="0dp" android:layout_marginTop="849dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tab_bar"
+        android:layout_width="410dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="849dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        
-        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/chrome_material" android:layout_width="430dp" android:layout_height="83dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chrome_material"
+            android:layout_width="410dp"
+            android:layout_height="83dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-            
-            <LinearLayout android:id="@+id/chrome" android:orientation="vertical" android:layout_width="430dp" android:layout_height="83dp" android:background="#BFFFFFFF" />
+
+            <LinearLayout
+                android:id="@+id/chrome_material2"
+                android:layout_width="420dp"
+                android:layout_height="63dp"
+                android:background="#BFFFFFFF"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        
-        <LinearLayout android:id="@+id/tab_bar_buttons" android:orientation="horizontal" android:layout_width="430dp" android:layout_height="40dp">
+        <LinearLayout
+            android:id="@+id/tab_bar_buttons"
+            android:layout_width="410dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginEnd="14dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-            
-            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_1" android:layout_width="143dp" android:layout_height="40dp">
 
-                
-                <TextView android:id="@+id/label" android:text="Home" android:textSize="10sp" android:textColor="#FF999999" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_button"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
 
-                
-                <TextView android:id="@+id/symbol" android:text="􀎞" android:textSize="18sp" android:textColor="#FF999999" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/home_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Home"
+                    android:textColor="#FF5856D6"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/home_symbol"
+                    android:layout_width="83dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_home"
+                    app:layout_constraintBottom_toTopOf="@+id/home_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            
-            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_2" android:layout_width="143dp" android:layout_height="40dp">
 
-                
-                <TextView android:id="@+id/label" android:text="Summary" android:textSize="10sp" android:textColor="#FF999999" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/summary_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
 
-                
-                <TextView android:id="@+id/symbol" android:text="􀐾" android:textSize="18sp" android:textColor="#FF999999" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/summary_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Summary"
+                    android:textColor="@color/gray_350"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/summary_symbol"
+                    android:layout_width="90dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_summary"
+                    app:layout_constraintBottom_toTopOf="@+id/summary_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            
-            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_4" android:layout_width="143dp" android:layout_height="40dp">
 
-                
-                <TextView android:id="@+id/label" android:text="Profile" android:textSize="10sp" android:textColor="#FF5856D6" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profile_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
 
-                
-                <TextView android:id="@+id/symbol" android:text="􀉭" android:textSize="18sp" android:textColor="#FF5856D6" android:gravity="center_horizontal" android:fontFamily="SF Pro" android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/profile_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="-1dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Profile"
+                    android:textColor="@color/slate_purple"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/profile_symbol"
+                    android:layout_width="90dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_profile_active"
+                    app:layout_constraintBottom_toTopOf="@+id/profile_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

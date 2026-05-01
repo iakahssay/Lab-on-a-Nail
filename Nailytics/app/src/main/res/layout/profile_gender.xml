@@ -1,158 +1,533 @@
-<?xml version='1.0' encoding='utf-8'?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#FFF2F2F7">
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main">
 
-    
 
-    
-    <LinearLayout android:id="@+id/navigation_bar___iphone__compact_size_class_" android:orientation="vertical" android:layout_width="430dp" android:layout_height="98dp" android:layout_marginStart="0dp" android:layout_marginTop="0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+    <!-- NAV BAR SECTION -->
+    <LinearLayout
+        android:id="@+id/profile_nav_bar"
+        android:layout_width="410dp"
+        android:layout_height="88dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/profile_gender_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        
-        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/materials" android:layout_width="430dp" android:layout_height="98dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nav_materials"
+            android:layout_width="410dp"
+            android:layout_height="88dp">
 
-            
-            <LinearLayout android:id="@+id/chrome" android:orientation="vertical" android:layout_width="430dp" android:layout_height="98dp" android:background="#BFFFFFFF" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:id="@+id/chrome"
+                android:layout_width="410dp"
+                android:layout_height="88dp"
+                android:background="@color/transparent_white"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        
-        <LinearLayout android:id="@+id/contents" android:orientation="vertical" android:layout_width="430dp" android:layout_height="44dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/title_and_controls"
+                    android:layout_width="410dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="45dp">
 
-            
-            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/title_and_controls" android:layout_width="430dp" android:layout_height="44dp">
+                    <LinearLayout
+                        android:id="@+id/back_button"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="11dp"
+                        android:paddingBottom="11dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/title"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
 
-                
-                <LinearLayout android:id="@+id/leading" android:orientation="horizontal" android:layout_width="31dp" android:layout_height="44dp" android:layout_marginStart="0dp" android:layout_marginTop="0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" android:paddingLeft="8dp" android:paddingTop="11dp" android:paddingRight="0dp" android:paddingBottom="11dp">
-
-                    
-                    <LinearLayout android:id="@+id/__button_1" android:orientation="horizontal" android:layout_width="23dp" android:layout_height="22dp">
-
-                        
-                        <TextView android:id="@+id/chevron" android:text="􀆉" android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="start" android:textStyle="bold"   android:layout_width="17dp" android:layout_height="22dp" />
-
-                        
-                        <TextView android:id="@+id/label" android:text=" " android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="start"   android:layout_width="0dp" android:layout_height="22dp" />
+                        <ImageView
+                            android:id="@+id/chevron"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="14dp"
+                            android:gravity="start"
+                            android:rotation="0"
+                            android:src="@drawable/ic_chevron"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
                     </LinearLayout>
-                </LinearLayout>
 
-                
-                <TextView android:id="@+id/title" android:text="Gender" android:textSize="17sp" android:textColor="#FF000000" android:gravity="center_horizontal" android:textStyle="bold"   android:layout_width="60dp" android:layout_height="22dp" android:layout_marginStart="183dp" android:layout_marginTop="11dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:gravity="center_horizontal"
+                        android:text="Gender"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                
-                <LinearLayout android:id="@+id/trailing" android:orientation="horizontal" android:layout_width="55dp" android:layout_height="44dp" android:layout_marginStart="375dp" android:layout_marginTop="0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" android:paddingLeft="0dp" android:paddingTop="11dp" android:paddingRight="16dp" android:paddingBottom="11dp">
-
-                    
-                    <LinearLayout android:id="@+id/__button_1" android:orientation="horizontal" android:layout_width="39dp" android:layout_height="22dp">
-
-                        
-                        <TextView android:id="@+id/label" android:text="Save" android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="end" android:textStyle="bold"   android:layout_width="39dp" android:layout_height="22dp" />
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-    </LinearLayout>
-
-    
-    <LinearLayout android:id="@+id/frame_1000004345" android:orientation="vertical" android:layout_width="398dp" android:layout_height="336dp" android:layout_marginStart="16dp" android:layout_marginTop="114dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" android:background="@drawable/bg_rounded_frame_1000004345" android:paddingLeft="16dp" android:paddingTop="0dp" android:paddingRight="0dp" android:paddingBottom="0dp">
-
-        
-        <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="382dp" android:layout_height="48dp" android:paddingLeft="0dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
-
-            
-            <TextView android:id="@+id/title" android:text="Male" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start"   android:layout_width="370dp" android:layout_height="22dp" />
-        </LinearLayout>
-
-        
-        <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="382dp" android:layout_height="48dp" android:paddingLeft="0dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
-
-            
-            <TextView android:id="@+id/title" android:text="Female" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start"   android:layout_width="322dp" android:layout_height="22dp" />
-
-            
-            <LinearLayout android:id="@+id/frame_1000004344" android:orientation="horizontal" android:layout_width="16dp" android:layout_height="22dp">
-
-                
-                <TextView android:id="@+id/drill_in" android:text="􀆅" android:textSize="17sp" android:textColor="#FF5856D6" android:gravity="center" android:textStyle="bold"   android:layout_width="16dp" android:layout_height="22dp" />
+                    <TextView
+                        android:id="@+id/save_button"
+                        android:layout_width="55dp"
+                        android:layout_height="22dp"
+                        android:layout_marginStart="112dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="end"
+                        android:text="Save"
+                        android:textColor="@color/slate_purple"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/title"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <!-- GENDER OPTIONS SECTION -->
+    <!--Parent: width=386-->
+    <!-- name_row: 382, name_left: 170,  name_label: 171-->
+    <!-- name_right: 200, edit_users_name 182, -->
+    <!-- GENDER SECTION  -->
+    <LinearLayout
+        android:id="@+id/profile_gender_section"
+        android:layout_width="386dp"
+        android:layout_height="314dp"
+        android:layout_marginTop="114dp"
+        android:layout_marginBottom="414dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/bg_rounded_white_corner_12_frame"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tab_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/female_option"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/female_option_label"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Female"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/female_option_checkmark"
+                android:layout_width="24dp"
+                android:layout_height="26dp"
+                android:gravity="center"
+                android:text="✓"
+                android:textColor="@color/slate_purple"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
         </LinearLayout>
 
-        
-        <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="382dp" android:layout_height="48dp" android:paddingLeft="0dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
+        <View
+            android:id="@+id/female_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:background="@color/gray_150" />
 
-            
-            <TextView android:id="@+id/title" android:text="Non-binary" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start"   android:layout_width="370dp" android:layout_height="22dp" />
+        <LinearLayout
+            android:id="@+id/male_option"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/male_option_label"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Male"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/male_option_checkmark"
+                android:layout_width="24dp"
+                android:layout_height="26dp"
+                android:gravity="center"
+                android:text="✓"
+                android:textColor="@color/slate_purple"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
         </LinearLayout>
 
-        
-        <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="382dp" android:layout_height="48dp" android:paddingLeft="0dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
+        <View
+            android:id="@+id/male_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:background="@color/gray_150" />
 
-            
-            <TextView android:id="@+id/title" android:text="Transgender male" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start"   android:layout_width="370dp" android:layout_height="22dp" />
+        <LinearLayout
+            android:id="@+id/nonbinary_option"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/nonbinary_option_label"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Non-binary"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/nonbinary_option_checkmark"
+                android:layout_width="24dp"
+                android:layout_height="26dp"
+                android:gravity="center"
+                android:text="✓"
+                android:textColor="@color/slate_purple"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
         </LinearLayout>
 
-        
-        <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="382dp" android:layout_height="48dp" android:paddingLeft="0dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
+        <View
+            android:id="@+id/nonbinary_option_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:background="@color/gray_150" />
 
-            
-            <TextView android:id="@+id/title" android:text="Transgender female" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start"   android:layout_width="370dp" android:layout_height="22dp" />
+        <LinearLayout
+            android:id="@+id/transgender_female_option"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/transgender_female_option_label"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Transgender female"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/transgender_female_option_checkmark"
+                android:layout_width="24dp"
+                android:layout_height="26dp"
+                android:gravity="center"
+                android:text="✓"
+                android:textColor="@color/slate_purple"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
         </LinearLayout>
 
-        
-        <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="382dp" android:layout_height="48dp" android:paddingLeft="0dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
+        <View
+            android:id="@+id/transgender_female_option_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:background="@color/gray_150" />
 
-            
-            <TextView android:id="@+id/title" android:text="Prefer not to say" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start"   android:layout_width="370dp" android:layout_height="22dp" />
+        <LinearLayout
+            android:id="@+id/transgender_male_option"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/transgender_male_option_label"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Transgender male"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/transgender_male_option_checkmark"
+                android:layout_width="24dp"
+                android:layout_height="26dp"
+                android:gravity="center"
+                android:text="✓"
+                android:textColor="@color/slate_purple"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
         </LinearLayout>
 
-        
-        <LinearLayout android:id="@+id/list" android:orientation="horizontal" android:layout_width="382dp" android:layout_height="48dp" android:paddingLeft="0dp" android:paddingTop="14dp" android:paddingRight="12dp" android:paddingBottom="14dp">
+        <View
+            android:id="@+id/transgender_male_option_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:background="@color/gray_150" />
 
-            
-            <TextView android:id="@+id/title" android:text="Prefer to self-describe" android:textSize="17sp" android:textColor="#FF131036" android:gravity="start"   android:layout_width="370dp" android:layout_height="22dp" />
+        <LinearLayout
+            android:id="@+id/not_to_say_option"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/not_to_say_option_label"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Prefer not to say"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/not_to_say_option_checkmark"
+                android:layout_width="24dp"
+                android:layout_height="26dp"
+                android:gravity="center"
+                android:text="✓"
+                android:textColor="@color/slate_purple"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/not_to_say_option_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:background="@color/gray_150" />
+
+        <LinearLayout
+            android:id="@+id/self_describe_option"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/self_describe_option_label"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Prefer to self-describe"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/self_describe_option_checkmark"
+                android:layout_width="24dp"
+                android:layout_height="26dp"
+                android:gravity="center"
+                android:text="✓"
+                android:textColor="@color/slate_purple"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
         </LinearLayout>
     </LinearLayout>
 
-    
-    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_bar___iphone" android:layout_width="430dp" android:layout_height="83dp" android:layout_marginStart="0dp" android:layout_marginTop="849dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
 
-        
-        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/chrome_material" android:layout_width="430dp" android:layout_height="83dp">
+    <!-- TAB SECTION -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tab_bar"
+        android:layout_width="410dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="849dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-            
-            <LinearLayout android:id="@+id/chrome" android:orientation="vertical" android:layout_width="430dp" android:layout_height="83dp" android:background="#BFFFFFFF" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chrome_material"
+            android:layout_width="410dp"
+            android:layout_height="83dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/chrome_material2"
+                android:layout_width="420dp"
+                android:layout_height="63dp"
+                android:background="#BFFFFFFF"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        
-        <LinearLayout android:id="@+id/tab_bar_buttons" android:orientation="horizontal" android:layout_width="430dp" android:layout_height="40dp">
+        <LinearLayout
+            android:id="@+id/tab_bar_buttons"
+            android:layout_width="410dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginEnd="14dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-            
-            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_1" android:layout_width="143dp" android:layout_height="40dp">
 
-                
-                <TextView android:id="@+id/label" android:text="Home" android:textSize="10sp" android:textColor="#FF999999" android:gravity="center_horizontal"   android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_button"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
 
-                
-                <TextView android:id="@+id/symbol" android:text="􀎞" android:textSize="18sp" android:textColor="#FF999999" android:gravity="center_horizontal"   android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/home_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Home"
+                    android:textColor="#FF5856D6"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/home_symbol"
+                    android:layout_width="83dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_home"
+                    app:layout_constraintBottom_toTopOf="@+id/home_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            
-            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_2" android:layout_width="143dp" android:layout_height="40dp">
 
-                
-                <TextView android:id="@+id/label" android:text="Summary" android:textSize="10sp" android:textColor="#FF999999" android:gravity="center_horizontal"   android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/summary_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
 
-                
-                <TextView android:id="@+id/symbol" android:text="􀐾" android:textSize="18sp" android:textColor="#FF999999" android:gravity="center_horizontal"   android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/summary_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Summary"
+                    android:textColor="#FF999999"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/summary_symbol"
+                    android:layout_width="90dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_summary"
+                    app:layout_constraintBottom_toTopOf="@+id/summary_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            
-            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_4" android:layout_width="143dp" android:layout_height="40dp">
 
-                
-                <TextView android:id="@+id/label" android:text="Profile" android:textSize="10sp" android:textColor="#FF5856D6" android:gravity="center_horizontal"   android:layout_width="146dp" android:layout_height="12dp" android:layout_marginStart="-1dp" android:layout_marginTop="28dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profile_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
 
-                
-                <TextView android:id="@+id/symbol" android:text="􀉭" android:textSize="18sp" android:textColor="#FF5856D6" android:gravity="center_horizontal"   android:layout_width="90dp" android:layout_height="21dp" android:layout_marginStart="27dp" android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/profile_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="-1dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Profile"
+                    android:textColor="@color/slate_purple"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/profile_symbol"
+                    android:layout_width="90dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_profile_active"
+                    app:layout_constraintBottom_toTopOf="@+id/profile_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // Start with your first exported screen
-        setContentView(R.layout.main_1)
+        setContentView(R.layout.main1)
     }
 }

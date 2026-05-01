@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='utf-8'?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/analyte_dropdown_menu"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_analyte_dropdown_menu"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded_analyte_dropdown_menu"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        
+        <LinearLayout
+            android:id="@+id/item_blood_ph"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/label_blood_ph"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="pH levels (blood)"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/regular"
+            android:layout_width="250dp"
+            android:layout_height="176dp"
+            android:background="#D1B3B3B3" />
+
+
+        <LinearLayout
+            android:id="@+id/item_1"
+            android:layout_width="250dp"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingTop="0dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="0dp">
+
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="198dp"
+                android:layout_height="22dp"
+                android:gravity="start"
+                android:text="pH 5.0"
+                android:textColor="#FF000000"
+                android:textSize="17sp" />
+
+
+            <TextView
+                android:id="@+id/symbol"
+                android:layout_width="20dp"
+                android:layout_height="43dp"
+                android:gravity="center"
+                android:text="􀆅"
+                android:textColor="#FF000000"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/item_2"
+            android:layout_width="250dp"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingTop="0dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="0dp">
+
+
+            <TextView
+                android:id="@+id/label_2"
+                android:layout_width="218dp"
+                android:layout_height="22dp"
+                android:gravity="start"
+                android:text="pH 6.0"
+                android:textColor="#FF000000"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/item_3"
+            android:layout_width="250dp"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingTop="0dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="0dp">
+
+
+            <TextView
+                android:id="@+id/label_3"
+                android:layout_width="218dp"
+                android:layout_height="22dp"
+                android:gravity="start"
+                android:text="pH 7.0"
+                android:textColor="#FF000000"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/item_4"
+            android:layout_width="250dp"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingTop="0dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="0dp">
+
+
+            <TextView
+                android:id="@+id/label_4"
+                android:layout_width="218dp"
+                android:layout_height="22dp"
+                android:gravity="start"
+                android:text="pH 8.0"
+                android:textColor="#FF000000"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

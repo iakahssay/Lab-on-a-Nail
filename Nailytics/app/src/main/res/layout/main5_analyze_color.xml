@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background_main">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background_main">
 
 
     <LinearLayout
@@ -74,12 +72,12 @@
                         android:id="@+id/title"
                         android:layout_width="69dp"
                         android:layout_height="22dp"
-                        android:layout_marginTop="11dp"
                         android:gravity="center_horizontal"
                         android:text="Nailytics"
                         android:textColor="@color/text_primary"
                         android:textSize="17sp"
                         android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -89,32 +87,37 @@
 
     </LinearLayout>
 
+
     <LinearLayout
         android:id="@+id/analyte_section"
         android:layout_width="398dp"
         android:layout_height="247dp"
-        android:layout_marginTop="114dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166">
 
 
         <LinearLayout
-            android:id="@+id/frame_1000004557"
+            android:id="@+id/dropDownSection"
             android:layout_width="398dp"
             android:layout_height="32dp"
-            android:background="@drawable/bg_rounded_frame_1000004557"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_rounded_white_corner_16_frame"
             android:orientation="horizontal"
             android:paddingLeft="16dp"
             android:paddingTop="0dp"
             android:paddingRight="16dp"
             android:paddingBottom="0dp"
-            android:layout_marginBottom="24dp">
+            android:clickable="true"
+            android:focusable="true">
 
 
             <TextView
-                android:id="@+id/ph_levels__saliva_"
+                android:id="@+id/analyte_type"
                 android:layout_width="325dp"
                 android:layout_height="22dp"
                 android:gravity="start"
@@ -124,18 +127,16 @@
 
 
             <LinearLayout
-                android:id="@+id/add"
+                android:id="@+id/dropDownArrow"
                 android:layout_width="41dp"
                 android:layout_height="32dp"
                 android:orientation="horizontal"
                 android:paddingLeft="12dp"
-                android:paddingTop="0dp"
                 android:paddingRight="12dp"
-                android:paddingBottom="0dp">
-
+                android:layout_marginTop="6dp">
 
                 <ImageView
-                    android:id="@+id/dropDownArrow"
+                    android:id="@+id/chevron2"
                     android:layout_width="17dp"
                     android:layout_height="20dp"
                     android:gravity="start"
@@ -151,16 +152,16 @@
             android:id="@+id/frame_1000004563_2"
             android:layout_width="377dp"
             android:layout_height="105dp"
-            android:orientation="horizontal"
-            android:layout_marginStart="12dp">
+            android:layout_marginStart="12dp"
+            android:orientation="horizontal">
 
 
             <LinearLayout
                 android:id="@+id/frame_1000004558"
                 android:layout_width="88dp"
                 android:layout_height="110dp"
-                android:orientation="vertical"
-                android:layout_marginEnd="8dp">
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
 
 
                 <LinearLayout
@@ -188,8 +189,8 @@
                 android:id="@+id/frame_1000004559"
                 android:layout_width="88dp"
                 android:layout_height="111dp"
-                android:orientation="vertical"
-                android:layout_marginEnd="8dp">
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
 
 
                 <LinearLayout
@@ -197,7 +198,7 @@
                     android:layout_width="88dp"
                     android:layout_height="82dp"
                     android:background="#D1811537"
-                    android:orientation="vertical"/>
+                    android:orientation="vertical" />
 
 
                 <TextView
@@ -212,23 +213,23 @@
 
 
             <LinearLayout
-                android:id="@+id/ph_7_0"
+                android:id="@+id/frame_1000004560"
                 android:layout_width="88dp"
                 android:layout_height="111dp"
-                android:orientation="vertical"
-                android:layout_marginEnd="8dp">
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
 
 
                 <ImageView
-                    android:id="@+id/ph_7_0_color"
+                    android:id="@+id/rectangle_2_3"
                     android:layout_width="88dp"
                     android:layout_height="82dp"
                     android:background="#D1621340"
-                    android:orientation="vertical"/>
+                    android:orientation="vertical" />
 
 
                 <TextView
-                    android:id="@+id/ph_7_0_text"
+                    android:id="@+id/ph_7_0"
                     android:layout_width="88dp"
                     android:layout_height="21dp"
                     android:gravity="center_horizontal"
@@ -242,8 +243,8 @@
                 android:id="@+id/frame_1000004561"
                 android:layout_width="88dp"
                 android:layout_height="111dp"
-                android:orientation="vertical"
-                android:layout_marginEnd="8dp">
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
 
 
                 <LinearLayout
@@ -251,9 +252,7 @@
                     android:layout_width="88dp"
                     android:layout_height="82dp"
                     android:background="#DB366877"
-                    android:orientation="vertical">
-
-                </LinearLayout>
+                    android:orientation="vertical" />
 
 
                 <TextView
@@ -272,23 +271,23 @@
             android:id="@+id/frame_1000004550"
             android:layout_width="398dp"
             android:layout_height="56dp"
-            android:background="@drawable/bg_rounded_frame_1000004550"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_rounded_gray90_corner_12_frame"
             android:orientation="horizontal"
             android:paddingLeft="8dp"
             android:paddingTop="8dp"
             android:paddingRight="8dp"
-            android:paddingBottom="8dp"
-            android:layout_marginTop="24dp">
+            android:paddingBottom="8dp">
 
 
             <ImageView
                 android:id="@+id/info_icon"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginTop="2dp"
+                android:layout_marginEnd="8dp"
                 android:gravity="center_horizontal"
-                android:src="@drawable/ic_info"/>
+                android:src="@drawable/ic_info" />
 
 
             <TextView
@@ -326,236 +325,6 @@
     </LinearLayout>
 
 
-<!-- EXPANDED DROPDOWN MENU -->
-    <LinearLayout
-        android:id="@+id/menu"
-        android:layout_width="250dp"
-        android:layout_height="404dp"
-        android:background="@drawable/bg_rounded_analyte_dropdown_menu"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-        <LinearLayout
-            android:id="@+id/item_1"
-            android:layout_width="250dp"
-            android:layout_height="44dp"
-            android:orientation="horizontal"
-            android:paddingLeft="16dp"
-            android:paddingTop="0dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="0dp">
-
-
-            <TextView
-                android:id="@+id/label_11_3"
-                android:layout_width="218dp"
-                android:layout_height="22dp"
-                android:gravity="start"
-                android:text="pH levels (blood)"
-                android:textColor="#FF000000"
-                android:textSize="17sp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/item_2"
-            android:layout_width="250dp"
-            android:layout_height="44dp"
-            android:orientation="horizontal"
-            android:paddingLeft="16dp"
-            android:paddingTop="0dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="0dp">
-
-
-            <TextView
-                android:id="@+id/label_11_4"
-                android:layout_width="218dp"
-                android:layout_height="22dp"
-                android:gravity="start"
-                android:text="pH levels (urine)"
-                android:textColor="#FF000000"
-                android:textSize="17sp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/item_3"
-            android:layout_width="250dp"
-            android:layout_height="44dp"
-            android:orientation="horizontal"
-            android:paddingLeft="16dp"
-            android:paddingTop="0dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="0dp">
-
-
-            <TextView
-                android:id="@+id/label_11_5"
-                android:layout_width="198dp"
-                android:layout_height="22dp"
-                android:gravity="start"
-                android:text="pH levels (saliva)"
-                android:textColor="#FF000000"
-                android:textSize="17sp" />
-
-
-            <TextView
-                android:id="@+id/symbol_2"
-                android:layout_width="20dp"
-                android:layout_height="43dp"
-                android:gravity="center"
-                android:text="􀆅"
-                android:textColor="#FF000000"
-                android:textSize="17sp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/item_4"
-            android:layout_width="250dp"
-            android:layout_height="44dp"
-            android:orientation="horizontal"
-            android:paddingLeft="16dp"
-            android:paddingTop="0dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="0dp">
-
-
-            <TextView
-                android:id="@+id/label_11_6"
-                android:layout_width="218dp"
-                android:layout_height="22dp"
-                android:gravity="start"
-                android:text="Glucose levels (blood)"
-                android:textColor="#FF000000"
-                android:textSize="17sp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/item_5"
-            android:layout_width="250dp"
-            android:layout_height="52dp"
-            android:orientation="horizontal"
-            android:paddingLeft="16dp"
-            android:paddingTop="0dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="0dp">
-
-
-            <TextView
-                android:id="@+id/label_11_7"
-                android:layout_width="218dp"
-                android:layout_height="22dp"
-                android:gravity="start"
-                android:text="Glucose levels (urine)"
-                android:textColor="#FF000000"
-                android:textSize="17sp" />
-
-            <LinearLayout
-                android:id="@+id/regular2"
-                android:layout_width="250dp"
-                android:layout_height="404dp"
-                android:background="#D1B3B3B3"
-                android:orientation="vertical" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/item_6"
-            android:layout_width="250dp"
-            android:layout_height="44dp"
-            android:orientation="horizontal"
-            android:paddingLeft="16dp"
-            android:paddingTop="0dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="0dp">
-
-
-            <TextView
-                android:id="@+id/label_11_8"
-                android:layout_width="218dp"
-                android:layout_height="22dp"
-                android:gravity="start"
-                android:text="Glucose levels (saliva)"
-                android:textColor="#FF000000"
-                android:textSize="17sp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/item_7"
-            android:layout_width="250dp"
-            android:layout_height="44dp"
-            android:orientation="horizontal"
-            android:paddingLeft="16dp"
-            android:paddingTop="0dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="0dp">
-
-
-            <TextView
-                android:id="@+id/label_11_9"
-                android:layout_width="218dp"
-                android:layout_height="22dp"
-                android:gravity="start"
-                android:text="Nitrate levels (blood)"
-                android:textColor="#FF000000"
-                android:textSize="17sp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/item_8"
-            android:layout_width="250dp"
-            android:layout_height="44dp"
-            android:orientation="horizontal"
-            android:paddingLeft="16dp"
-            android:paddingTop="0dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="0dp">
-
-
-            <TextView
-                android:id="@+id/label_11_10"
-                android:layout_width="218dp"
-                android:layout_height="22dp"
-                android:gravity="start"
-                android:text="Nitrate levels (urine)"
-                android:textColor="#FF000000"
-                android:textSize="17sp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/item_9"
-            android:layout_width="250dp"
-            android:layout_height="44dp"
-            android:orientation="horizontal"
-            android:paddingLeft="16dp"
-            android:paddingTop="0dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="0dp">
-
-
-            <TextView
-                android:id="@+id/label_11_11"
-                android:layout_width="218dp"
-                android:layout_height="22dp"
-                android:gravity="start"
-                android:text="Nitrate levels (saliva)"
-                android:textColor="#FF000000"
-                android:textSize="17sp" />
-        </LinearLayout>
-    </LinearLayout>
-
-<!--  ANALYZE BODY-->
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frame_1000004595"
         android:layout_width="398dp"
@@ -589,7 +358,7 @@
             android:gravity="end"
             android:paddingRight="42dp"
             android:text="@string/change_device"
-            android:textColor="@color/primary"
+            android:textColor="@color/slate_purple"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/button_2"
             app:layout_constraintEnd_toEndOf="parent"
@@ -622,9 +391,8 @@
                 android:textColor="#FFFFFFFF"
                 android:textSize="17sp" />
         </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/tab_bar___iphone"
@@ -686,7 +454,7 @@
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Home"
-                    android:textColor="#FF5856D6"
+                    android:textColor="@color/slate_purple"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -695,8 +463,8 @@
 
                 <ImageView
                     android:id="@+id/symbol"
-                    android:layout_width="90dp"
-                    android:layout_height="21dp"
+                    android:layout_width="83dp"
+                    android:layout_height="25dp"
                     android:layout_marginTop="1dp"
                     android:gravity="center_horizontal"
                     android:src="@drawable/ic_home_active"
@@ -720,7 +488,7 @@
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Summary"
-                    android:textColor="#FF999999"
+                    android:textColor="@color/gray_350"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -755,7 +523,7 @@
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Profile"
-                    android:textColor="#FF999999"
+                    android:textColor="@color/gray_350"
                     android:textSize="10sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -775,5 +543,19 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!-- DIMMING OVERLAY FOR CLICKABLE DROPDOWN MENU -->
+    <View
+        android:id="@+id/screen_dim_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

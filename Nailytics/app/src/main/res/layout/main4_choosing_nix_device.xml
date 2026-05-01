@@ -72,12 +72,12 @@
                         android:id="@+id/title"
                         android:layout_width="69dp"
                         android:layout_height="22dp"
+                        android:layout_marginTop="11dp"
                         android:gravity="center_horizontal"
                         android:text="Nailytics"
                         android:textColor="@color/text_primary"
                         android:textSize="17sp"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -106,7 +106,7 @@
             android:layout_width="398dp"
             android:layout_height="32dp"
             android:layout_marginBottom="24dp"
-            android:background="@drawable/bg_rounded_frame_1000004557"
+            android:background="@drawable/bg_rounded_white_corner_16_frame"
             android:orientation="horizontal"
             android:paddingLeft="16dp"
             android:paddingTop="0dp"
@@ -272,7 +272,7 @@
             android:layout_width="398dp"
             android:layout_height="56dp"
             android:layout_marginTop="24dp"
-            android:background="@drawable/bg_rounded_frame_1000004550"
+            android:background="@drawable/bg_rounded_gray90_corner_12_frame"
             android:orientation="horizontal"
             android:paddingLeft="8dp"
             android:paddingTop="8dp"
@@ -324,85 +324,127 @@
         </LinearLayout>
     </LinearLayout>
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/frame_1000004595"
+    <TextView
+        android:id="@+id/choose_nix_sensor"
         android:layout_width="398dp"
-        android:layout_height="200dp"
+        android:layout_height="25dp"
+        android:gravity="start"
+        android:paddingLeft="12dp"
+        android:text="@string/choose_nix_sensor_device_"
+        android:textColor="#FF000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/frame_1000004575"
+        android:layout_width="398dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.549">
-
-        <TextView
-            android:id="@+id/nix_connected"
-            android:layout_width="398dp"
-            android:layout_height="22dp"
-            android:layout_marginBottom="27dp"
-            android:gravity="start"
-            android:paddingLeft="32dp"
-            android:text="@string/nix_connected"
-            android:textColor="@color/text_primary"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/button_2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/change_device"
-            android:layout_width="398dp"
-            android:layout_height="22dp"
-            android:layout_marginBottom="27dp"
-            android:gravity="end"
-            android:paddingRight="42dp"
-            android:text="@string/change_device"
-            android:textColor="@color/slate_purple"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/button_2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.604">
 
         <LinearLayout
-            android:id="@+id/button_2"
-            android:layout_width="243dp"
-            android:layout_height="50dp"
-            android:background="@drawable/bg_rounded_button"
+            android:id="@+id/frame_1000004573"
+            android:layout_width="398dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_rounded_white_corner_12_frame"
             android:orientation="horizontal"
-            android:paddingLeft="20dp"
-            android:paddingTop="14dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="14dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.326">
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp">
+
 
             <TextView
-                android:id="@+id/analyze_text"
-                android:layout_width="200dp"
+                android:id="@+id/nix_spectro_1"
+                android:layout_width="287dp"
                 android:layout_height="22dp"
-                android:text="Analyze"
-                android:textAlignment="center"
-                android:textColor="#FFFFFFFF"
+                android:gravity="start"
+                android:text="Nix Spectro 1"
+                android:textColor="#FF7E7E83"
                 android:textSize="17sp" />
+
+
+            <LinearLayout
+                android:id="@+id/button_3_2"
+                android:layout_width="79dp"
+                android:layout_height="28dp"
+                android:background="@drawable/bg_rounded_button"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="4dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="4dp">
+
+
+                <TextView
+                    android:id="@+id/label_4_3"
+                    android:layout_width="59dp"
+                    android:layout_height="20dp"
+                    android:gravity="start"
+                    android:text="Connect"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="15sp" />
+            </LinearLayout>
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/tab_bar___iphone"
-        android:layout_width="410dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="849dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:id="@+id/frame_1000004574"
+            android:layout_width="398dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_rounded_white_corner_12_frame"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp">
 
+
+            <TextView
+                android:id="@+id/nix_spectro_2"
+                android:layout_width="287dp"
+                android:layout_height="22dp"
+                android:gravity="start"
+                android:text="Nix Spectro 2"
+                android:textColor="#FF7E7E83"
+                android:textSize="17sp" />
+
+
+            <LinearLayout
+                android:id="@+id/button_3_3"
+                android:layout_width="79dp"
+                android:layout_height="28dp"
+                android:background="@drawable/bg_rounded_button"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="4dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="4dp">
+
+
+                <TextView
+                    android:id="@+id/label_4_4"
+                    android:layout_width="59dp"
+                    android:layout_height="20dp"
+                    android:gravity="start"
+                    android:text="Connect"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_bar___iphone" android:layout_width="410dp" android:layout_height="83dp" android:layout_marginStart="0dp" android:layout_marginTop="849dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/chrome_material"
@@ -426,7 +468,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
         <LinearLayout
             android:id="@+id/tab_bar_buttons"
@@ -488,7 +529,7 @@
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Summary"
-                    android:textColor="#FF999999"
+                    android:textColor="@color/gray_350"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -523,7 +564,7 @@
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Profile"
-                    android:textColor="#FF999999"
+                    android:textColor="@color/gray_350"
                     android:textSize="10sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -543,7 +584,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 <!-- DIMMING OVERLAY FOR CLICKABLE DROPDOWN MENU -->
     <View
         android:id="@+id/screen_dim_overlay"

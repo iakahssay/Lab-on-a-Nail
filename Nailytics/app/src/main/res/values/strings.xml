@@ -67,14 +67,16 @@
     <string name="email">lcbennet@gmail.com</string>
     <string name="gender">Female</string>
     <string name="bday">05/25/1961</string>
-    <string name="name">Lexie Bennett</string>
-    <string name="height">5\'2</string>
-    <string name="weight">112 lbs</string>
+    <string name="full_name">Lexie Bennett</string>
+    <string name="height">5\'4</string>
+    <string name="weight">112</string>
     <string name="bmi">19.2</string>
+    <string name="first_name">Lexie</string>
+    <string name="last_name">Bennett</string>
 
 
     <!--LOGOUT POP-UP-->
-    <string name="are_you_sure_you_want_to_log_o">Are you sure you want to log out?</string>
+    <string name="logout_prompt">Are you sure you want to log out?</string>
 
     <!--SUMMARY PAGE-->
     <string name="average_results">Average Results</string>
@@ -97,12 +99,12 @@
     <string name="_5_5">5.5</string>
     <string name="_5_0">5.0</string>
 
-    <string name="your_ph_levels__saliva__have_s">Your pH levels (saliva) have shown an increase in the past 2 weeks.</string>
-    <string name="disclaimer__this_is_not_a_medi">
+    <string name="summary_pattern_description">Your pH levels (saliva) have shown an increase in the past 2 weeks.</string>
+    <string name="medical_disclaimer">
         Disclaimer: This is not a medical diagnosis. For an accurate assessment, please consult a licensed healthcare
         professional.
     </string>
-    <string name="every_weekend_there_is_a_decre">Every weekend there is a decrease in your pH levels:</string>
+    <string name="pattern_description">Every weekend there is a decrease in your pH levels:</string>
 
     <string name="pattern">Pattern</string>
     <string name="dec_8__2025___jan_8__2026">Dec 8, 2025 - Jan 8, 2026</string>
@@ -116,16 +118,20 @@
     <string name="_4_8">4.8</string>
 
     <string name="what_this_means">What this means</string>
-    <string name="lower_saliva_ph_on_weekends_ma">
+    <string name="what_this_means_description">
         Lower saliva pH on weekends may occur due to changes in routine, such as diet, alcohol intake, sleep patterns,
         or acid reflux.
     </string>
 
     <string name="ask_your_doctor">Ask your doctor</string>
-    <string name="could_this_pattern_indicate_an">
-        Could this pattern indicate an underlying condition I should be concerned about? Here is my family history…
-        Could my habits (diet, alcohol, sleep, or stress) be contributing to these changes? What adjustments would help?
-        Are there specific foods in my culture that I should avoid or can still include in my diet? Here are some…
-        What other biomarkers, symptoms, or warning signs should I monitor, and when should I seek medical or dental care?
+    <string name="ask_your_doctor_description">
+        • Could this pattern indicate an underlying condition I should
+          \n\t be concerned about? Here is my family history…\n
+        • Could my habits (diet, alcohol, sleep, or stress) be
+          \n\t contributing to these changes? What adjustments would help?\n
+        • Are there specific foods in my culture that I should avoid
+          \n\t or can still include in my diet? Here are some…\n
+        • What other biomarkers, symptoms, or warning signs should I
+          \n\t monitor, and when should I seek medical or dental care?
     </string>
 </resources>

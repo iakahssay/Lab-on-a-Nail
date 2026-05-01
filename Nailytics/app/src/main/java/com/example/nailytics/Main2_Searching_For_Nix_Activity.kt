@@ -17,7 +17,7 @@ class Main2_Searching_For_Nix_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // Start with your first exported screen
-        setContentView(R.layout.main_2__searching_for_nix)
+        setContentView(R.layout.main2_searching_for_nix)
 
         findViewById<View>(R.id.dropDownSection).setOnClickListener {
             showAnalyteDropdown(it)
