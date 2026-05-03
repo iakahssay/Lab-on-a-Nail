@@ -41,7 +41,7 @@
 
 
                     <LinearLayout
-                        android:id="@+id/leading"
+                        android:id="@+id/back_button"
                         android:layout_width="44dp"
                         android:layout_height="44dp"
                         android:orientation="horizontal"
@@ -91,7 +91,7 @@
         android:id="@+id/body"
         android:layout_width="398dp"
         android:layout_height="730dp"
-        android:layout_marginTop="114dp"
+        android:layout_marginTop="94dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +100,7 @@
         <LinearLayout
             android:id="@+id/analyte_section"
             android:layout_width="398dp"
-            android:layout_height="170dp"
+            android:layout_height="180dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -125,7 +125,7 @@
                     android:layout_width="325dp"
                     android:layout_height="22dp"
                     android:gravity="start"
-                    android:text="@string/ph_levels__saliva_"
+                    android:text="@string/ph_levels_saliva"
                     android:textColor="#FF131036"
                     android:textSize="17sp" />
 
@@ -153,23 +153,23 @@
 
             <LinearLayout
 
-                android:id="@+id/pH_chart"
+                android:id="@+id/color_chart"
                 android:layout_width="377dp"
-                android:layout_height="105dp"
+                android:layout_height="130dp"
                 android:layout_marginStart="12dp"
                 android:orientation="horizontal">
 
 
                 <LinearLayout
-                    android:id="@+id/ph_5_0"
+                    android:id="@+id/item0"
                     android:layout_width="88dp"
-                    android:layout_height="110dp"
+                    android:layout_height="130dp"
                     android:layout_marginEnd="8dp"
                     android:orientation="vertical">
 
 
                     <LinearLayout
-                        android:id="@+id/ph_5_0_color"
+                        android:id="@+id/item0_color"
                         android:layout_width="88dp"
                         android:layout_height="82dp"
                         android:background="@color/deep_rose_light"
@@ -177,28 +177,27 @@
 
                         />
 
-
                     <TextView
-                        android:id="@+id/ph_5_0_text"
+                        android:id="@+id/item0_label"
                         android:layout_width="88dp"
-                        android:layout_height="20dp"
-                        android:gravity="center_horizontal"
-                        android:text="pH 5.0"
+                        android:layout_height="45dp"
+                        android:gravity="center"
+                        android:text="@string/ph5"
                         android:textColor="@color/text_primary"
-                        android:textSize="14.954774856567383sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
 
                 <LinearLayout
-                    android:id="@+id/ph_6_0"
+                    android:id="@+id/item1"
                     android:layout_width="88dp"
-                    android:layout_height="111dp"
+                    android:layout_height="130dp"
                     android:layout_marginEnd="8dp"
                     android:orientation="vertical">
 
 
                     <LinearLayout
-                        android:id="@+id/ph_6_0_color"
+                        android:id="@+id/item1_color"
                         android:layout_width="88dp"
                         android:layout_height="82dp"
                         android:background="#D1811537"
@@ -206,26 +205,26 @@
 
 
                     <TextView
-                        android:id="@+id/ph_6_0_text"
+                        android:id="@+id/item1_label"
                         android:layout_width="88dp"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="pH 6.0"
+                        android:layout_height="45dp"
+                        android:gravity="center"
+                        android:text="@string/ph6"
                         android:textColor="@color/text_primary"
                         android:textSize="16sp" />
                 </LinearLayout>
 
 
                 <LinearLayout
-                    android:id="@+id/ph_7_0"
+                    android:id="@+id/item2"
                     android:layout_width="88dp"
-                    android:layout_height="111dp"
+                    android:layout_height="130dp"
                     android:layout_marginEnd="8dp"
                     android:orientation="vertical">
 
 
                     <ImageView
-                        android:id="@+id/ph_7_0_color"
+                        android:id="@+id/item2_color"
                         android:layout_width="88dp"
                         android:layout_height="82dp"
                         android:background="#D1621340"
@@ -233,26 +232,25 @@
 
 
                     <TextView
-                        android:id="@+id/ph_7_0_text"
+                        android:id="@+id/item2_label"
                         android:layout_width="88dp"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="pH 7.0"
+                        android:layout_height="45dp"
+                        android:gravity="center"
+                        android:text="@string/ph7"
                         android:textColor="@color/text_primary"
                         android:textSize="16sp" />
                 </LinearLayout>
 
 
                 <LinearLayout
-                    android:id="@+id/ph_8_0"
+                    android:id="@+id/item3"
                     android:layout_width="88dp"
-                    android:layout_height="111dp"
+                    android:layout_height="130dp"
                     android:layout_marginEnd="8dp"
                     android:orientation="vertical">
 
-
                     <LinearLayout
-                        android:id="@+id/ph_8_0_color"
+                        android:id="@+id/item3_color"
                         android:layout_width="88dp"
                         android:layout_height="82dp"
                         android:background="#DB366877"
@@ -260,11 +258,11 @@
 
 
                     <TextView
-                        android:id="@+id/ph_8_0_text"
+                        android:id="@+id/item3_label"
                         android:layout_width="88dp"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="pH 8.0"
+                        android:layout_height="45dp"
+                        android:gravity="center"
+                        android:text="@string/ph8"
                         android:textColor="@color/text_primary"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -272,19 +270,16 @@
         </LinearLayout>
     </LinearLayout>
 
-
     <LinearLayout
         android:id="@+id/edit_color_modal"
         android:layout_width="398dp"
-        android:layout_height="548dp"
-        android:layout_marginTop="152dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="172dp"
         android:background="@drawable/bg_rounded_gray90_corner_12_frame"
         android:orientation="vertical"
         android:paddingLeft="31dp"
-        android:paddingTop="0dp"
         android:paddingRight="31dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/body"
+        app:layout_constraintBottom_toTopOf="@+id/tab_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/body">
@@ -387,7 +382,7 @@
         <LinearLayout
             android:id="@+id/color_picker"
             android:layout_width="334dp"
-            android:layout_height="367dp"
+            android:layout_height="347dp"
             android:background="@drawable/bg_rounded_color_picker"
             android:orientation="vertical"
             android:layout_marginTop="14dp"
@@ -730,11 +725,10 @@
 
 
             <LinearLayout
-                android:id="@+id/button_2"
+                android:id="@+id/save_button"
                 android:layout_width="53dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="269dp"
-                android:layout_marginTop="0dp"
                 android:background="@drawable/bg_rounded_button"
                 android:orientation="horizontal"
                 android:paddingLeft="9dp"
@@ -746,7 +740,7 @@
 
 
                 <TextView
-                    android:id="@+id/label_2"
+                    android:id="@+id/save_buttonlabel"
                     android:layout_width="36dp"
                     android:layout_height="18dp"
                     android:gravity="start"
@@ -757,11 +751,9 @@
 
 
             <LinearLayout
-                android:id="@+id/button_2_2"
+                android:id="@+id/cancel_button"
                 android:layout_width="68dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
                 android:background="@drawable/bg_cancel_button"
                 android:orientation="horizontal"
                 android:paddingLeft="10dp"
@@ -773,7 +765,7 @@
 
 
                 <TextView
-                    android:id="@+id/label_2_2"
+                    android:id="@+id/cancel_button_label"
                     android:layout_width="51dp"
                     android:layout_height="18dp"
                     android:gravity="start"
@@ -785,14 +777,19 @@
     </LinearLayout>
 
 
-    <!-- 783 - 828 -->
-    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/tab_bar___iphone" android:layout_width="410dp" android:layout_height="83dp" android:layout_marginStart="0dp" android:layout_marginTop="849dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
-
+    <!-- TAB SECTION -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tab_bar"
+        android:layout_width="410dp"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/chrome_material"
             android:layout_width="410dp"
-            android:layout_height="83dp"
+            android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -800,9 +797,9 @@
 
 
             <LinearLayout
-                android:id="@+id/chrome_2"
+                android:id="@+id/chrome_material2"
                 android:layout_width="420dp"
-                android:layout_height="63dp"
+                android:layout_height="match_parent"
                 android:background="#BFFFFFFF"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -812,12 +809,10 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
         <LinearLayout
             android:id="@+id/tab_bar_buttons"
             android:layout_width="410dp"
             android:layout_height="40dp"
-            android:layout_marginBottom="18dp"
             android:layout_marginEnd="14dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
@@ -833,7 +828,7 @@
 
 
                 <TextView
-                    android:id="@+id/label_3"
+                    android:id="@+id/home_label"
                     android:layout_width="146dp"
                     android:layout_height="12dp"
                     android:layout_marginTop="28dp"
@@ -847,13 +842,13 @@
 
 
                 <ImageView
-                    android:id="@+id/symbol"
+                    android:id="@+id/home_symbol"
                     android:layout_width="83dp"
                     android:layout_height="25dp"
                     android:layout_marginTop="1dp"
                     android:gravity="center_horizontal"
                     android:src="@drawable/ic_home_active"
-                    app:layout_constraintBottom_toTopOf="@+id/label_3"
+                    app:layout_constraintBottom_toTopOf="@+id/home_label"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -867,7 +862,7 @@
 
 
                 <TextView
-                    android:id="@+id/label_4"
+                    android:id="@+id/summary_label"
                     android:layout_width="146dp"
                     android:layout_height="12dp"
                     android:layout_marginTop="28dp"
@@ -881,13 +876,13 @@
 
 
                 <ImageView
-                    android:id="@+id/symbol_2"
+                    android:id="@+id/summary_symbol"
                     android:layout_width="90dp"
                     android:layout_height="21dp"
                     android:layout_marginTop="1dp"
                     android:gravity="center_horizontal"
                     android:src="@drawable/ic_summary"
-                    app:layout_constraintBottom_toTopOf="@+id/label_4"
+                    app:layout_constraintBottom_toTopOf="@+id/summary_label"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -901,7 +896,7 @@
 
 
                 <TextView
-                    android:id="@+id/label_5"
+                    android:id="@+id/profile_label"
                     android:layout_width="146dp"
                     android:layout_height="12dp"
                     android:layout_marginStart="-1dp"
@@ -915,13 +910,13 @@
 
 
                 <ImageView
-                    android:id="@+id/symbol_3"
+                    android:id="@+id/profile_symbol"
                     android:layout_width="90dp"
                     android:layout_height="21dp"
                     android:layout_marginTop="1dp"
                     android:gravity="center_horizontal"
                     android:src="@drawable/ic_profile"
-                    app:layout_constraintBottom_toTopOf="@+id/label_5"
+                    app:layout_constraintBottom_toTopOf="@+id/profile_label"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -929,7 +924,7 @@
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!-- DIMMING OVERLAY FOR CLICKABLE DROPDOWN MENU -->
+    <!-- DIMMING OVERLAY FOR CLICKABLE DROPDOWN MENU -->
     <View
         android:id="@+id/screen_dim_overlay"
         android:layout_width="0dp"

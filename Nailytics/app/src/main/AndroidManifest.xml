@@ -12,16 +12,64 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nailytics">
         <activity
-            android:name=".MainActivity"
+            android:name=".Main1_Activity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Nailytics">
+
+            <!-- The Activity with this part is the first screen that opens -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".Main2_Searching_For_Nix_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
+
+        <activity
+            android:name=".Main3_Changing_Colors_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
+
+        <activity
+            android:name=".Main4_Choosing_Nix_Device_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
+
+        <activity
+            android:name=".Main5_Analyze_Color_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
+
+        <activity
+            android:name=".Main6_Results_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
+
+
+
+
+
+        <activity
+            android:name=".Profile_Main_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
+        <activity
+            android:name=".Summary_Main_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
+
     </application>
 
 </manifest>

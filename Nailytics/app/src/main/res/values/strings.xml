@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Nailytics</string>string>
     <string name="this_app_helps_you_monitor_you">This app helps you monitor your health by analyzing the color of the fake nail’s biosensor.</string>
     <string name="ready_to_begin__click_the_butt">Ready to begin? Click the button below to start the health check now!</string>
 
@@ -7,13 +8,22 @@
     <string name="nix_connected">Nix Spectro 1 connected.</string>
     <string name="change_device"><u>Change device</u></string>
 
-    <string name="ph_levels__saliva_">pH levels (saliva)</string>
-    <string name="ph_5_0">pH 5.0</string>
-    <string name="ph_6_0">pH 6.0</string>
-    <string name="ph_7_0">pH 7.0</string>
-    <string name="ph_8_0">pH 8.0</string>
+    <string name="ph_levels_blood">pH levels (blood)</string>
+    <string name="ph_levels_urine">pH levels (urine)</string>
+    <string name="glucose_levels_blood">glucose levels (blood)</string>
+    <string name="glucose_levels_urine">glucose levels (urine)</string>
+    <string name="glucose_levels_saliva">glucose levels (saliva)</string>
+    <string name="nitrate_levels_blood">nitrate levels (blood)</string>
+    <string name="nitrate_levels_urine">nitrate levels (urine)</string>
+    <string name="nitrate_levels_saliva">nitrate levels (saliva)</string>
 
-    <string name="normal_ph_levels_range_info">Normal pH levels range between 6.8–7.4.</string>
+    <string name="ph_levels_saliva">pH levels (saliva)</string>
+    <string name="ph5">pH 5.0</string>
+    <string name="ph6">pH 6.0</string>
+    <string name="ph7">pH 7.0</string>
+    <string name="ph8">pH 8.0</string>
+
+    <string name="analyte_levels_description">Normal pH levels range between 6.8–7.4.</string>
 
     <string name="choose_nix_sensor_device_">Choose Nix Sensor Device:</string>
     <string name="nix_spectro_1">Nix Spectro 1</string>
@@ -82,22 +92,14 @@
     <string name="average_results">Average Results</string>
     <string name="above_range">Above Range</string>
     <string name="average_glucose_levels">175.5 mM</string>
-    <string name="glucose_levels_saliva">Glucose levels (saliva)</string>
     <string name="normal">Normal </string>
     <string name="_7_00">7.00</string>
     <string name="_60_mg">60 mg</string>
-    <string name="nitrate_levels__urine_">Nitrate levels  (urine)</string>
 
     <string name="charts">Charts</string>
     <string name="average">Average</string>
     <string name="_6_5">6.5</string>
     <string name="today">Today</string>
-    <string name="_7_35">7.0</string>
-    <string name="_7_45">7.6</string>
-    <string name="_8_5">8.5</string>
-    <string name="_7_0">7.0</string>
-    <string name="_5_5">5.5</string>
-    <string name="_5_0">5.0</string>
 
     <string name="summary_pattern_description">Your pH levels (saliva) have shown an increase in the past 2 weeks.</string>
     <string name="medical_disclaimer">
@@ -107,15 +109,7 @@
     <string name="pattern_description">Every weekend there is a decrease in your pH levels:</string>
 
     <string name="pattern">Pattern</string>
-    <string name="dec_8__2025___jan_8__2026">Dec 8, 2025 - Jan 8, 2026</string>
-    <string name="fri">Fri</string>
-    <string name="sat">Sat</string>
-    <string name="sun">Sun</string>
-    <string name="mon">Mon</string>
-    <string name="tue">Tue</string>
-    <string name="wed">Wed</string>
-    <string name="thu">Thu</string>
-    <string name="_4_8">4.8</string>
+    <string name="dec_8__2025_jan_8_2026">Dec 8, 2025 - Jan 8, 2026</string>
 
     <string name="what_this_means">What this means</string>
     <string name="what_this_means_description">

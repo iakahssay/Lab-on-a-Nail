@@ -145,13 +145,13 @@
 
     <style name="TextStyle_10">
         <item name="android:textSize">10sp</item>
-        <item name="android:textColor">@color/slate_blue</item>
+        <item name="android:textColor">@color/slate_purple</item>
         <item name="android:fontFamily">sans</item>
     </style>
 
     <style name="TextStyle_18">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/slate_blue</item>
+        <item name="android:textColor">@color/slate_purple</item>
         <item name="android:fontFamily">sans</item>
     </style>
 
@@ -163,7 +163,7 @@
 
     <style name="TextStyle_15">
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/slate_blue</item>
+        <item name="android:textColor">@color/slate_purple</item>
         <item name="android:fontFamily">sans</item>
     </style>
 
@@ -223,7 +223,7 @@
 
     <style name="TextStyle_14.796297073364258">
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/slate_blue</item>
+        <item name="android:textColor">@color/slate_purple</item>
         <item name="android:fontFamily">sans</item>
     </style>
 

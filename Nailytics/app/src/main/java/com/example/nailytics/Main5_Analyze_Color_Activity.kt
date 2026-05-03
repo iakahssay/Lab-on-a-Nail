@@ -2,17 +2,16 @@ package com.example.nailytics
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 
-
- class Main2_Searching_For_Nix_Activity : AppCompatActivity() {
+class Main5_Analyze_Color_Activity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // Start with your first exported screen
-        setContentView(R.layout.main2_searching_for_nix)
+        setContentView(R.layout.main5_analyze_color)
 
         //Shows the selected/update analyte color chart
         AnalyteChartUIHelper.updateColorChart(this)
@@ -26,7 +25,10 @@ import android.view.View
         moveToMain3()
 
         //Listener that will move this screen (main1) to the next (main4)
-        moveToMain4()
+        moveToMain6()
+
+        //Listener for changing Nix device (moves back to main2)
+        changeNixDevice()
 
         //Listeners for the (navigation) tab bar
         NavBar_Helper.moveToHome(this)
@@ -34,7 +36,6 @@ import android.view.View
         NavBar_Helper.moveToSummary(this)
         //For the back button on the top of the screen
         NavBar_Helper.moveToPreviousScreen(this)
-
     }
 
 //1) PAGE FLOW FUNCTIONS
@@ -44,10 +45,16 @@ import android.view.View
         }
     }
 
-     //TODO: CHANGE THIS FUNCTION TO IMMEDIATELY GO TO NEXT SCREEN ONCE CONNECTED TO NIX SENSOR
-     private fun moveToMain4(){
-         findViewById<View>(R.id.loading_image).setOnClickListener {
-             startActivity(Intent(this, Main4_Choosing_Nix_Device_Activity::class.java))
-         }
-     }
+    private fun moveToMain6() {
+        findViewById<View>(R.id.analyze_button).setOnClickListener {
+            startActivity(Intent(this, Main6_Results_Activity::class.java))
+        }
+    }
+
+    private fun changeNixDevice(){
+        findViewById<View>(R.id.change_device).setOnClickListener {
+            startActivity(Intent(this, Main2_Searching_For_Nix_Activity::class.java))
+        }
+    }
+
 }

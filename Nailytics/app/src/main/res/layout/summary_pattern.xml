@@ -7,8 +7,8 @@
         android:layout_width="410dp"
         android:layout_height="88dp"
         android:orientation="vertical"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toTopOf="@+id/profile_section"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/body"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -268,31 +268,30 @@
         </LinearLayout>
     </LinearLayout>
 
+
     <!-- TAB SECTION -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/tab_bar"
         android:layout_width="410dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="863dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/chrome_material"
             android:layout_width="410dp"
-            android:layout_height="83dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
 
             <LinearLayout
                 android:id="@+id/chrome_material2"
                 android:layout_width="420dp"
-                android:layout_height="63dp"
+                android:layout_height="match_parent"
                 android:background="#BFFFFFFF"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -307,16 +306,15 @@
             android:layout_width="410dp"
             android:layout_height="40dp"
             android:layout_marginEnd="14dp"
-            android:layout_marginBottom="18dp"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/home_button"
+                android:id="@+id/home_tab"
                 android:layout_width="143dp"
                 android:layout_height="40dp">
 
@@ -332,8 +330,7 @@
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
                 <ImageView
@@ -363,12 +360,11 @@
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Summary"
-                    android:textColor="@color/gray_350"
+                    android:textColor="@color/slate_purple"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
                 <ImageView
@@ -377,7 +373,7 @@
                     android:layout_height="21dp"
                     android:layout_marginTop="1dp"
                     android:gravity="center_horizontal"
-                    android:src="@drawable/ic_summary"
+                    android:src="@drawable/ic_summary_active"
                     app:layout_constraintBottom_toTopOf="@+id/summary_label"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -399,11 +395,10 @@
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Profile"
-                    android:textColor="@color/slate_purple"
+                    android:textColor="@color/gray_350"
                     android:textSize="10sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
                 <ImageView
@@ -412,7 +407,7 @@
                     android:layout_height="21dp"
                     android:layout_marginTop="1dp"
                     android:gravity="center_horizontal"
-                    android:src="@drawable/ic_profile_active"
+                    android:src="@drawable/ic_profile"
                     app:layout_constraintBottom_toTopOf="@+id/profile_label"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -420,4 +415,5 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

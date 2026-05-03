@@ -87,41 +87,40 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="131dp"
+        android:layout_marginBottom="101dp"
         android:background="@drawable/bg_rounded_button"
         android:gravity="center"
         android:text="Start"
         android:textColor="@color/text_on_dark"
         android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/tab_bar___iphone"
+        app:layout_constraintBottom_toTopOf="@+id/tab_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/start_prompt" />
 
-
+    <!-- TAB SECTION -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/tab_bar___iphone"
+        android:id="@+id/tab_bar"
         android:layout_width="410dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="849dp"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/chrome_material"
             android:layout_width="410dp"
-            android:layout_height="83dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
 
             <LinearLayout
-                android:id="@+id/chrome_2"
+                android:id="@+id/chrome_material2"
                 android:layout_width="420dp"
-                android:layout_height="63dp"
+                android:layout_height="match_parent"
                 android:background="#BFFFFFFF"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -131,18 +130,16 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
         <LinearLayout
             android:id="@+id/tab_bar_buttons"
             android:layout_width="410dp"
             android:layout_height="40dp"
             android:layout_marginEnd="14dp"
-            android:layout_marginBottom="18dp"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -152,13 +149,13 @@
 
 
                 <TextView
-                    android:id="@+id/label_3"
+                    android:id="@+id/home_label"
                     android:layout_width="146dp"
                     android:layout_height="12dp"
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Home"
-                    android:textColor="#FF5856D6"
+                    android:textColor="@color/slate_purple"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -166,13 +163,13 @@
 
 
                 <ImageView
-                    android:id="@+id/symbol"
+                    android:id="@+id/home_symbol"
                     android:layout_width="83dp"
                     android:layout_height="25dp"
                     android:layout_marginTop="1dp"
                     android:gravity="center_horizontal"
                     android:src="@drawable/ic_home_active"
-                    app:layout_constraintBottom_toTopOf="@+id/label_3"
+                    app:layout_constraintBottom_toTopOf="@+id/home_label"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -186,7 +183,7 @@
 
 
                 <TextView
-                    android:id="@+id/label_4"
+                    android:id="@+id/summary_label"
                     android:layout_width="146dp"
                     android:layout_height="12dp"
                     android:layout_marginTop="28dp"
@@ -200,13 +197,13 @@
 
 
                 <ImageView
-                    android:id="@+id/ic_summary"
+                    android:id="@+id/summary_symbol"
                     android:layout_width="90dp"
                     android:layout_height="21dp"
                     android:layout_marginTop="1dp"
                     android:gravity="center_horizontal"
                     android:src="@drawable/ic_summary"
-                    app:layout_constraintBottom_toTopOf="@+id/label_4"
+                    app:layout_constraintBottom_toTopOf="@+id/summary_label"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -220,7 +217,7 @@
 
 
                 <TextView
-                    android:id="@+id/label_5"
+                    android:id="@+id/profile_label"
                     android:layout_width="146dp"
                     android:layout_height="12dp"
                     android:layout_marginStart="-1dp"
@@ -234,13 +231,13 @@
 
 
                 <ImageView
-                    android:id="@+id/symbol_3"
+                    android:id="@+id/profile_symbol"
                     android:layout_width="90dp"
                     android:layout_height="21dp"
                     android:layout_marginTop="1dp"
                     android:gravity="center_horizontal"
                     android:src="@drawable/ic_profile"
-                    app:layout_constraintBottom_toTopOf="@+id/label_5"
+                    app:layout_constraintBottom_toTopOf="@+id/profile_label"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

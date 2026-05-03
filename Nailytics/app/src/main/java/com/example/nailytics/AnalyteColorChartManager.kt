@@ -1,0 +1,83 @@
+package com.example.nailytics
+
+import android.graphics.Color
+
+//Keeps track and updates all of the different analytes and their values and colors.
+object AnalyteColorChartManager {
+
+    private val analyteColorCharts: Map<Int, MutableList<ColorChartValue>> = mapOf(
+
+        R.id.item_saliva_ph to mutableListOf(
+            ColorChartValue("pH 5", 0xC9A70E3D.toInt()), //hexColor to Int
+            ColorChartValue("pH 6", 0xD1811537.toInt()),
+            ColorChartValue("pH 7", 0xD1621340.toInt()),
+            ColorChartValue("pH 8", 0xDB366877.toInt())
+        ),
+
+        R.id.item_blood_ph to mutableListOf(
+            ColorChartValue("pH 5", 0xC9A70E3D.toInt()), //hexColor to Int
+            ColorChartValue("pH 6", 0xD1811537.toInt()),
+            ColorChartValue("pH 7", 0xD1621340.toInt()),
+            ColorChartValue("pH 8", 0xDB366877.toInt())
+        ),
+
+        R.id.item_urine_ph to mutableListOf(
+            ColorChartValue("pH 5", 0xC9A70E3D.toInt()), //hexColor to Int
+            ColorChartValue("pH 6", 0xD1811537.toInt()),
+            ColorChartValue("pH 7", 0xD1621340.toInt()),
+            ColorChartValue("pH 8", 0xDB366877.toInt())
+        ),
+
+        R.id.item_blood_glucose to mutableListOf(
+            ColorChartValue("Glucose \n40 mM", Color.rgb(193,220,37)),
+            ColorChartValue("Glucose \n80 mM", Color.rgb(167,200,15)),
+            ColorChartValue("Glucose 120 mM", Color.rgb	(135,185,51)),
+            ColorChartValue("Glucose 160 mM", Color.rgb(105,168,0))
+        ),
+
+        R.id.item_urine_glucose to mutableListOf(
+            ColorChartValue("Glucose \n40 mM", Color.rgb(193,220,37)),
+            ColorChartValue("Glucose \n80 mM", Color.rgb(167,200,15)),
+            ColorChartValue("Glucose 120 mM", Color.rgb	(135,185,51)),
+            ColorChartValue("Glucose 160 mM", Color.rgb(105,168,0))
+        ),
+
+        R.id.item_saliva_glucose to mutableListOf(
+            ColorChartValue("Glucose \n40 mM", Color.rgb(193,220,37)),
+            ColorChartValue("Glucose \n80 mM", Color.rgb(167,200,15)),
+            ColorChartValue("Glucose 120 mM", Color.rgb	(135,185,51)),
+            ColorChartValue("Glucose 160 mM", Color.rgb(105,168,0))
+        ),
+
+        R.id.item_blood_nitrate to mutableListOf(
+            ColorChartValue("Nitrate \n2.5 mM", Color.rgb(255, 230, 80)),
+            ColorChartValue("Nitrate \n5.0 mM", Color.rgb(255, 220, 60)),
+            ColorChartValue("Nitrate \n7.5 mM", Color.rgb(245, 200, 60)),
+            ColorChartValue("Nitrate \n10.0 mM", Color.rgb(231,176,58))
+        ),
+
+        R.id.item_urine_nitrate to mutableListOf(
+            ColorChartValue("Nitrate \n2.5 mM", Color.rgb(255, 230, 80)),
+            ColorChartValue("Nitrate \n5.0 mM", Color.rgb(255, 220, 60)),
+            ColorChartValue("Nitrate \n7.5 mM", Color.rgb(245, 200, 60)),
+            ColorChartValue("Nitrate \n10.0 mM", Color.rgb(231,176,58))
+        ),
+
+        R.id.item_saliva_nitrate to mutableListOf(
+            ColorChartValue("Nitrate \n2.5 mM", Color.rgb(255, 230, 80)),
+            ColorChartValue("Nitrate \n5.0 mM", Color.rgb(255, 220, 60)),
+            ColorChartValue("Nitrate \n7.5 mM", Color.rgb(245, 200, 60)),
+            ColorChartValue("Nitrate \n10.0 mM", Color.rgb(231,176,58))
+        )
+    )
+
+    fun getChart(analyteId: Int): List<ColorChartValue> {
+        return analyteColorCharts[analyteId] ?: emptyList()
+    }
+
+    fun updateColor(analyteId: Int, label: String, newColor: Int) {
+        analyteColorCharts[analyteId]
+            ?.find { it.label == label }
+            ?.color = newColor
+    }
+}

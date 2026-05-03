@@ -46,7 +46,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/leading"
+                    android:id="@+id/back_button"
                     android:layout_width="44dp"
                     android:layout_height="44dp"
                     android:orientation="horizontal"
@@ -95,7 +95,7 @@
     <LinearLayout
         android:id="@+id/analyte_section"
         android:layout_width="398dp"
-        android:layout_height="247dp"
+        android:layout_height="251dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -153,23 +153,23 @@
 
         <LinearLayout
 
-            android:id="@+id/frame_1000004563_2"
+            android:id="@+id/color_chart"
             android:layout_width="377dp"
-            android:layout_height="105dp"
+            android:layout_height="130dp"
             android:layout_marginStart="12dp"
             android:orientation="horizontal">
 
 
             <LinearLayout
-                android:id="@+id/frame_1000004558"
+                android:id="@+id/item0"
                 android:layout_width="88dp"
-                android:layout_height="110dp"
+                android:layout_height="130dp"
                 android:layout_marginEnd="8dp"
                 android:orientation="vertical">
 
 
                 <LinearLayout
-                    android:id="@+id/rectangle_2"
+                    android:id="@+id/item0_color"
                     android:layout_width="88dp"
                     android:layout_height="82dp"
                     android:background="@color/deep_rose_light"
@@ -177,28 +177,27 @@
 
                     />
 
-
                 <TextView
-                    android:id="@+id/ph_5_0"
+                    android:id="@+id/item0_label"
                     android:layout_width="88dp"
-                    android:layout_height="20dp"
-                    android:gravity="center_horizontal"
-                    android:text="pH 5.0"
-                    android:textColor="#FF000000"
-                    android:textSize="14.954774856567383sp" />
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/ph5"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
             </LinearLayout>
 
 
             <LinearLayout
-                android:id="@+id/frame_1000004559"
+                android:id="@+id/item1"
                 android:layout_width="88dp"
-                android:layout_height="111dp"
+                android:layout_height="130dp"
                 android:layout_marginEnd="8dp"
                 android:orientation="vertical">
 
 
                 <LinearLayout
-                    android:id="@+id/rectangle_2_2"
+                    android:id="@+id/item1_color"
                     android:layout_width="88dp"
                     android:layout_height="82dp"
                     android:background="#D1811537"
@@ -206,26 +205,26 @@
 
 
                 <TextView
-                    android:id="@+id/ph_6_0"
+                    android:id="@+id/item1_label"
                     android:layout_width="88dp"
-                    android:layout_height="21dp"
-                    android:gravity="center_horizontal"
-                    android:text="pH 6.0"
-                    android:textColor="#FF000000"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/ph6"
+                    android:textColor="@color/text_primary"
                     android:textSize="16sp" />
             </LinearLayout>
 
 
             <LinearLayout
-                android:id="@+id/frame_1000004560"
+                android:id="@+id/item2"
                 android:layout_width="88dp"
-                android:layout_height="111dp"
+                android:layout_height="130dp"
                 android:layout_marginEnd="8dp"
                 android:orientation="vertical">
 
 
                 <ImageView
-                    android:id="@+id/rectangle_2_3"
+                    android:id="@+id/item2_color"
                     android:layout_width="88dp"
                     android:layout_height="82dp"
                     android:background="#D1621340"
@@ -233,26 +232,25 @@
 
 
                 <TextView
-                    android:id="@+id/ph_7_0"
+                    android:id="@+id/item2_label"
                     android:layout_width="88dp"
-                    android:layout_height="21dp"
-                    android:gravity="center_horizontal"
-                    android:text="pH 7.0"
-                    android:textColor="#FF000000"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/ph7"
+                    android:textColor="@color/text_primary"
                     android:textSize="16sp" />
             </LinearLayout>
 
 
             <LinearLayout
-                android:id="@+id/frame_1000004561"
+                android:id="@+id/item3"
                 android:layout_width="88dp"
-                android:layout_height="111dp"
+                android:layout_height="130dp"
                 android:layout_marginEnd="8dp"
                 android:orientation="vertical">
 
-
                 <LinearLayout
-                    android:id="@+id/rectangle_2_4"
+                    android:id="@+id/item3_color"
                     android:layout_width="88dp"
                     android:layout_height="82dp"
                     android:background="#DB366877"
@@ -260,22 +258,22 @@
 
 
                 <TextView
-                    android:id="@+id/ph_8_0"
+                    android:id="@+id/item3_label"
                     android:layout_width="88dp"
-                    android:layout_height="21dp"
-                    android:gravity="center_horizontal"
-                    android:text="pH 8.0"
-                    android:textColor="#FF000000"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/ph8"
+                    android:textColor="@color/text_primary"
                     android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
 
 
         <LinearLayout
-            android:id="@+id/frame_1000004550"
+            android:id="@+id/edit_color_option"
             android:layout_width="398dp"
             android:layout_height="56dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/bg_rounded_gray90_corner_12_frame"
             android:orientation="horizontal"
             android:paddingLeft="8dp"
@@ -295,17 +293,17 @@
 
 
             <TextView
-                android:id="@+id/normal_ph_levels_range_between_6_8_7_4_"
+                android:id="@+id/analyte_description"
                 android:layout_width="239dp"
                 android:layout_height="40dp"
                 android:gravity="start"
-                android:text="Normal pH levels range between 6.8–7.4."
-                android:textColor="#FF000000"
+                android:text="@string/analyte_levels_description"
+                android:textColor="@color/text_primary"
                 android:textSize="15sp" />
 
 
             <LinearLayout
-                android:id="@+id/button"
+                android:id="@+id/edit_color_button"
                 android:layout_width="101dp"
                 android:layout_height="34dp"
                 android:background="@drawable/bg_rounded_button"
@@ -317,12 +315,12 @@
 
 
                 <TextView
-                    android:id="@+id/label_2"
+                    android:id="@+id/edit_color_button_label"
                     android:layout_width="73dp"
                     android:layout_height="20dp"
                     android:gravity="start"
                     android:text="Edit colors"
-                    android:textColor="#FFFFFFFF"
+                    android:textColor="@color/white"
                     android:textSize="15sp" />
             </LinearLayout>
         </LinearLayout>
@@ -330,10 +328,10 @@
 
 <!-- LOADING TEXT SECTION-->
     <TextView
-        android:id="@+id/looking_for_nix_sensor_device__"
+        android:id="@+id/looking_for_nix_sensor_device"
         android:layout_width="398dp"
         android:layout_height="25dp"
-        android:layout_marginTop="416dp"
+        android:layout_marginTop="50dp"
         android:gravity="center_horizontal"
         android:text="Looking for Nix Sensor Device.."
         android:textColor="#FF000000"
@@ -343,37 +341,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/analyte_section"
         app:layout_constraintVertical_bias="0.0" />
 
 <!-- LOADING IMAGE SECTION-->
-    <LinearLayout
-        android:id="@+id/loading_image_1"
+    <ImageView
+        android:id="@+id/loading_image"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="472dp"
+        android:layout_marginTop="0dp"
         android:orientation="vertical"
+        android:src="@mipmap/img_loading"
         app:layout_constraintBottom_toTopOf="@+id/tab_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.162" />
+        app:layout_constraintTop_toBottomOf="@id/looking_for_nix_sensor_device"
+        app:layout_constraintVertical_bias="0.162"/>
 
     <!-- TAB SECTION -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/tab_bar"
         android:layout_width="410dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="849dp"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/chrome_material"
             android:layout_width="410dp"
-            android:layout_height="83dp"
+            android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -381,9 +379,9 @@
 
 
             <LinearLayout
-                android:id="@+id/chrome_2"
+                android:id="@+id/chrome_material2"
                 android:layout_width="420dp"
-                android:layout_height="63dp"
+                android:layout_height="match_parent"
                 android:background="#BFFFFFFF"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -397,7 +395,6 @@
             android:id="@+id/tab_bar_buttons"
             android:layout_width="410dp"
             android:layout_height="40dp"
-            android:layout_marginBottom="18dp"
             android:layout_marginEnd="14dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
@@ -413,7 +410,7 @@
 
 
                 <TextView
-                    android:id="@+id/label_3"
+                    android:id="@+id/home_label"
                     android:layout_width="146dp"
                     android:layout_height="12dp"
                     android:layout_marginTop="28dp"
@@ -427,13 +424,13 @@
 
 
                 <ImageView
-                    android:id="@+id/symbol"
+                    android:id="@+id/home_symbol"
                     android:layout_width="83dp"
                     android:layout_height="25dp"
                     android:layout_marginTop="1dp"
                     android:gravity="center_horizontal"
                     android:src="@drawable/ic_home_active"
-                    app:layout_constraintBottom_toTopOf="@+id/label_3"
+                    app:layout_constraintBottom_toTopOf="@+id/home_label"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -447,7 +444,7 @@
 
 
                 <TextView
-                    android:id="@+id/label_4"
+                    android:id="@+id/summary_label"
                     android:layout_width="146dp"
                     android:layout_height="12dp"
                     android:layout_marginTop="28dp"
@@ -461,13 +458,13 @@
 
 
                 <ImageView
-                    android:id="@+id/ic_summary"
+                    android:id="@+id/summary_symbol"
                     android:layout_width="90dp"
                     android:layout_height="21dp"
                     android:layout_marginTop="1dp"
                     android:gravity="center_horizontal"
                     android:src="@drawable/ic_summary"
-                    app:layout_constraintBottom_toTopOf="@+id/label_4"
+                    app:layout_constraintBottom_toTopOf="@+id/summary_label"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -481,7 +478,7 @@
 
 
                 <TextView
-                    android:id="@+id/label_5"
+                    android:id="@+id/profile_label"
                     android:layout_width="146dp"
                     android:layout_height="12dp"
                     android:layout_marginStart="-1dp"
@@ -495,13 +492,13 @@
 
 
                 <ImageView
-                    android:id="@+id/symbol_3"
+                    android:id="@+id/profile_symbol"
                     android:layout_width="90dp"
                     android:layout_height="21dp"
                     android:layout_marginTop="1dp"
                     android:gravity="center_horizontal"
                     android:src="@drawable/ic_profile"
-                    app:layout_constraintBottom_toTopOf="@+id/label_5"
+                    app:layout_constraintBottom_toTopOf="@+id/profile_label"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -509,12 +506,12 @@
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!-- DIMMING OVERLAY FOR CLICKABLE DROPDOWN MENU -->
+    <!-- DIMMING OVERLAY FOR CLICKABLE DROPDOWN MENU -->
     <View
         android:id="@+id/screen_dim_overlay"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#80000000"
+        android:background="#66000000"
         android:visibility="gone"
         android:clickable="true"
         android:focusable="true"

@@ -13,7 +13,7 @@
         android:layout_height="88dp"
         android:orientation="vertical"
         android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/profile_name_section"
+        app:layout_constraintBottom_toTopOf="@+id/bmi_section"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -177,7 +177,6 @@
             android:orientation="horizontal"
             android:paddingLeft="16dp">
 
-            \
             <LinearLayout
                 android:id="@+id/weight_left"
                 android:layout_width="170dp"
@@ -229,7 +228,6 @@
             android:orientation="horizontal"
             android:paddingLeft="16dp">
 
-            \
             <LinearLayout
                 android:id="@+id/bmi_left"
                 android:layout_width="170dp"
@@ -273,16 +271,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/tab_bar"
         android:layout_width="410dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="849dp"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/chrome_material"
             android:layout_width="410dp"
-            android:layout_height="83dp"
+            android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -292,7 +289,7 @@
             <LinearLayout
                 android:id="@+id/chrome_material2"
                 android:layout_width="420dp"
-                android:layout_height="63dp"
+                android:layout_height="match_parent"
                 android:background="#BFFFFFFF"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -306,7 +303,6 @@
             android:id="@+id/tab_bar_buttons"
             android:layout_width="410dp"
             android:layout_height="40dp"
-            android:layout_marginBottom="18dp"
             android:layout_marginEnd="14dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
@@ -316,7 +312,7 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/home_button"
+                android:id="@+id/home_tab"
                 android:layout_width="143dp"
                 android:layout_height="40dp">
 
@@ -362,7 +358,7 @@
                     android:layout_marginTop="28dp"
                     android:gravity="center_horizontal"
                     android:text="Summary"
-                    android:textColor="#FF999999"
+                    android:textColor="@color/gray_350"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

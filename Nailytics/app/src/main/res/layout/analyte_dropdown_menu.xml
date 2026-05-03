@@ -6,9 +6,7 @@
     android:layout_width="250dp"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_rounded_analyte_dropdown_menu"
-    android:orientation="vertical"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp">
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/body"
@@ -48,11 +46,17 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="✓"
-                android:textColor="@color/primary"
+                android:textColor="@color/text_primary"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:visibility="invisible" />
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_200" />
 
         <LinearLayout
             android:id="@+id/item_urine_ph"
@@ -81,11 +85,17 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="✓"
-                android:textColor="@color/primary"
+                android:textColor="@color/text_primary"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_200" />
 
         <LinearLayout
             android:id="@+id/item_saliva_ph"
@@ -114,11 +124,17 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="✓"
-                android:textColor="@color/primary"
+                android:textColor="@color/text_primary"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:visibility="visible" />
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_200" />
 
         <LinearLayout
             android:id="@+id/item_blood_glucose"
@@ -147,11 +163,17 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="✓"
-                android:textColor="@color/primary"
+                android:textColor="@color/text_primary"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_200" />
 
         <LinearLayout
             android:id="@+id/item_urine_glucose"
@@ -180,11 +202,17 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="✓"
-                android:textColor="@color/primary"
+                android:textColor="@color/text_primary"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_200" />
 
         <LinearLayout
             android:id="@+id/item_saliva_glucose"
@@ -213,11 +241,17 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="✓"
-                android:textColor="@color/primary"
+                android:textColor="@color/text_primary"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_200" />
 
         <LinearLayout
             android:id="@+id/item_blood_nitrate"
@@ -246,11 +280,17 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="✓"
-                android:textColor="@color/primary"
+                android:textColor="@color/text_primary"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_200" />
 
         <LinearLayout
             android:id="@+id/item_urine_nitrate"
@@ -279,11 +319,17 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="✓"
-                android:textColor="@color/primary"
+                android:textColor="@color/text_primary"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_200" />
 
         <LinearLayout
             android:id="@+id/item_saliva_nitrate"
@@ -312,7 +358,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="✓"
-                android:textColor="@color/primary"
+                android:textColor="@color/text_primary"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -320,3 +366,4 @@
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
