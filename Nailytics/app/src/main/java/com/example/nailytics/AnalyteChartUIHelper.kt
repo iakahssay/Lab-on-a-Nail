@@ -199,7 +199,7 @@ object AnalyteChartUIHelper {
     }
 
     // Converts dp values into pixels because PopupWindow expects pixel values.
-    private fun Int.dpToPx(activity: Activity): Int {
+    fun Int.dpToPx(activity: Activity): Int {
         // Multiplies the dp number by the screen density and returns it as an integer.
         return (this * activity.resources.displayMetrics.density).toInt()
     }

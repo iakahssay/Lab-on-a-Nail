@@ -1,0 +1,835 @@
+<?xml version='1.0' encoding='utf-8'?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main">
+
+<!-- NAV BAR SECTION-->
+    <LinearLayout
+        android:id="@+id/profile_nav_bar"
+        android:layout_width="410dp"
+        android:layout_height="88dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/profile_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nav_materials"
+            android:layout_width="410dp"
+            android:layout_height="88dp">
+
+            <LinearLayout
+                android:id="@+id/chrome"
+                android:layout_width="410dp"
+                android:layout_height="88dp"
+                android:background="@color/transparent_white"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/title_and_controls"
+                    android:layout_width="410dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="45dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/back_button"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="11dp"
+                        android:paddingBottom="11dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/title"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <ImageView
+                            android:id="@+id/chevron"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="14dp"
+                            android:gravity="start"
+                            android:rotation="0"
+                            android:src="@drawable/ic_chevron"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+                        </ImageView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="69dp"
+                        android:layout_height="22dp"
+                        android:gravity="center_horizontal"
+                        android:text="Profile"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+<!-- PROFILE PHOTO SECTION-->
+    <LinearLayout
+        android:id="@+id/profile_section"
+        android:layout_width="125dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginBottom="26dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/personal_info_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_photo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center">
+
+
+            <ImageView
+                android:id="@+id/ellipse_181"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_circle_profile_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/s"
+                android:layout_width="24dp"
+                android:layout_height="46dp"
+                android:gravity="center"
+                android:text="S"
+                android:textColor="#FFFFFFFF"
+                android:textSize="37.777sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ellipse_181"
+                app:layout_constraintEnd_toEndOf="@+id/ellipse_181"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/add_profile_photo"
+            android:layout_width="125dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:text="@string/add_profile_photo"
+            android:textColor="@color/slate_purple"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--Parent: width=386, height=176-->
+    <!-- name_row: 382, name_left: 170,  name_label: 171-->
+    <!-- name_right: 200, edit_users_name 162, -->
+<!-- PERSONAL INFO SECTION -->
+    <LinearLayout
+        android:id="@+id/personal_info_section"
+        android:layout_width="386dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="263dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/bg_rounded_white_corner_12_frame"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bmi_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- NAME ROW -->
+        <LinearLayout
+            android:id="@+id/name_row"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
+
+            <LinearLayout
+                android:id="@+id/name_left"
+                android:layout_width="170dp"
+                android:layout_height="44dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/name_label"
+                    android:layout_width="171dp"
+                    android:layout_height="26dp"
+                    android:gravity="start"
+                    android:text="Name"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/name_right"
+                android:layout_width="200dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edit_users_name"
+                    android:layout_width="162dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="7dp"
+                    android:gravity="end"
+                    android:text="@string/full_name"
+                    android:textColor="@color/dark_gray_overlay_strong"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/edit_name_chevron"
+                    android:layout_width="18dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="end"
+                    android:rotation="180"
+                    android:src="@drawable/ic_chevron"
+                    app:tint="@color/gray_250" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/name_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:background="#FFE0E0E0" />
+
+    <!-- BDAY ROW -->
+        <LinearLayout
+            android:id="@+id/bday_row"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
+
+
+            <LinearLayout
+                android:id="@+id/bday_left"
+                android:layout_width="170dp"
+                android:layout_height="44dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/bday_label"
+                    android:layout_width="171dp"
+                    android:layout_height="26dp"
+                    android:gravity="start"
+                    android:text="Birthday"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/bday_right"
+                android:layout_width="200dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edit_users_bday"
+                    android:layout_width="162dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="7dp"
+                    android:gravity="end"
+                    android:text= "@string/bday"
+                    android:textColor="@color/dark_gray_overlay_strong"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/edit_bday_chevron"
+                    android:layout_width="18dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="end"
+                    android:rotation="180"
+                    android:src="@drawable/ic_chevron"
+                    app:tint="@color/gray_250" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bday_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:background="@color/gray_150" />
+
+        <!-- GENDER ROW -->
+        <LinearLayout
+            android:id="@+id/gender_row"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
+
+
+            <LinearLayout
+                android:id="@+id/gender_left"
+                android:layout_width="170dp"
+                android:layout_height="44dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/gender_label"
+                    android:layout_width="171dp"
+                    android:layout_height="26dp"
+                    android:gravity="start"
+                    android:text="Gender"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/gender_right"
+                android:layout_width="200dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edit_users_gender"
+                    android:layout_width="162dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="7dp"
+                    android:gravity="end"
+                    android:text="@string/gender"
+                    android:textColor="@color/dark_gray_overlay_strong"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/edit_gender_chevron"
+                    android:layout_width="18dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="end"
+                    android:rotation="180"
+                    android:src="@drawable/ic_chevron"
+                    app:tint="@color/gray_250" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/gender_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:background="@color/gray_150" />
+
+        <!-- EMAIL ROW -->
+        <LinearLayout
+            android:id="@+id/email_row"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
+
+
+            <LinearLayout
+                android:id="@+id/email_left"
+                android:layout_width="170dp"
+                android:layout_height="44dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/email_label"
+                    android:layout_width="171dp"
+                    android:layout_height="26dp"
+                    android:gravity="start"
+                    android:text="Email"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/email_right"
+                android:layout_width="200dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edit_users_email"
+                    android:layout_width="162dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="7dp"
+                    android:gravity="end"
+                    android:text="@string/email"
+                    android:textColor="@color/dark_gray_overlay_strong"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/edit_email_chevron"
+                    android:layout_width="18dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="end"
+                    android:rotation="180"
+                    android:src="@drawable/ic_chevron"
+                    app:tint="@color/gray_250" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- BMI SECTION -->
+    <LinearLayout
+        android:id="@+id/bmi_section"
+        android:layout_width="386dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="463dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/bg_rounded_white_corner_12_frame"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/logout_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- HEIGHT ROW -->
+        <LinearLayout
+            android:id="@+id/height_row"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
+
+            <LinearLayout
+                android:id="@+id/height_left"
+                android:layout_width="170dp"
+                android:layout_height="44dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/height_label"
+                    android:layout_width="171dp"
+                    android:layout_height="26dp"
+                    android:gravity="start"
+                    android:text="Height"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/height_right"
+                android:layout_width="200dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edit_users_height"
+                    android:layout_width="162dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="7dp"
+                    android:gravity="end"
+                    android:text="@string/height"
+                    android:textColor="@color/dark_gray_overlay_strong"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/edit_height_chevron"
+                    android:layout_width="18dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="end"
+                    android:rotation="180"
+                    android:src="@drawable/ic_chevron"
+                    app:tint="@color/gray_250" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/height_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:background="#FFE0E0E0" />
+
+        <!-- WEIGHT ROW -->
+        <LinearLayout
+            android:id="@+id/weight_row"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
+
+
+            <LinearLayout
+                android:id="@+id/weight_left"
+                android:layout_width="170dp"
+                android:layout_height="44dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/weight_label"
+                    android:layout_width="171dp"
+                    android:layout_height="26dp"
+                    android:gravity="start"
+                    android:text="Weight"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/weight_right"
+                android:layout_width="200dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edit_users_weight"
+                    android:layout_width="162dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="7dp"
+                    android:gravity="end"
+                    android:text= "@string/weight"
+                    android:textColor="@color/dark_gray_overlay_strong"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/edit_weight_chevron"
+                    android:layout_width="18dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="end"
+                    android:rotation="180"
+                    android:src="@drawable/ic_chevron"
+                    app:tint="@color/gray_250" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/weight_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:background="@color/gray_150" />
+
+        <!-- BMI ROW -->
+        <LinearLayout
+            android:id="@+id/bmi_row"
+            android:layout_width="382dp"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
+
+
+            <LinearLayout
+                android:id="@+id/bmi_left"
+                android:layout_width="170dp"
+                android:layout_height="44dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/bmi_label"
+                    android:layout_width="171dp"
+                    android:layout_height="26dp"
+                    android:gravity="start"
+                    android:text="BMI"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/bmi_right"
+                android:layout_width="200dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edit_users_bmi"
+                    android:layout_width="162dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="7dp"
+                    android:gravity="end"
+                    android:text="@string/bmi"
+                    android:textColor="@color/dark_gray_overlay_strong"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/edit_bmi_chevron"
+                    android:layout_width="18dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="end"
+                    android:rotation="180"
+                    android:src="@drawable/ic_chevron"
+                    app:tint="@color/gray_250" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- LOGOUT BUTTON-->
+
+    <!-- TAB SECTION -->
+    <LinearLayout
+        android:id="@+id/logout_button"
+        android:layout_width="398dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_rounded_white_corner_12_frame"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="14dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/tab_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmi_section"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="355dp"
+            android:layout_height="22dp"
+            android:gravity="center"
+            android:text="Log out"
+            android:textColor="#FFFF3B30"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tab_bar"
+        android:layout_width="410dp"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chrome_material"
+            android:layout_width="410dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/chrome_material2"
+                android:layout_width="420dp"
+                android:layout_height="match_parent"
+                android:background="#BFFFFFFF"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_bar_buttons"
+            android:layout_width="410dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="14dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
+
+
+                <TextView
+                    android:id="@+id/home_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Home"
+                    android:textColor="#FF5856D6"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/home_symbol"
+                    android:layout_width="83dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_home"
+                    app:layout_constraintBottom_toTopOf="@+id/home_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/summary_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
+
+
+                <TextView
+                    android:id="@+id/summary_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Summary"
+                    android:textColor="@color/gray_350"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/summary_symbol"
+                    android:layout_width="90dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_summary"
+                    app:layout_constraintBottom_toTopOf="@+id/summary_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profile_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
+
+
+                <TextView
+                    android:id="@+id/profile_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="-1dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Profile"
+                    android:textColor="@color/slate_purple"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/profile_symbol"
+                    android:layout_width="90dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_profile_active"
+                    app:layout_constraintBottom_toTopOf="@+id/profile_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- DIMMING OVERLAY FOR CLICKABLE DROPDOWN MENU -->
+    <View
+        android:id="@+id/screen_dim_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

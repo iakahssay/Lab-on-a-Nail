@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Combines a small slide with a fade-out for a gentle Smart Animate-like exit. -->
+    <!-- android:duration -> Runs the full animation for 500 ms. -->
+    <!-- android:interpolator -> Makes the movement start gently and speed up slightly as it exits. -->
+    <!-- alpha -> Fades the outgoing screen out. -->
+        <!-- android:fromAlpha -> Starts fully visible. -->
+        <!-- android:toAlpha -> Ends fully transparent. -->
+    <!-- translate -> Slides the outgoing screen slightly to the right. -->
+        <!-- android:fromXDelta -> Starts in its normal position. -->
+        <!-- android:toXDelta -> Ends 4% to the right for subtle movement. -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="250"
+
+    android:interpolator="@android:interpolator/accelerate_quad">
+
+    <alpha
+        android:fromAlpha="1.0"
+        android:toAlpha="0.0" />
+
+    <translate
+        android:fromXDelta="0%"
+        android:toXDelta="2%" />
+</set>

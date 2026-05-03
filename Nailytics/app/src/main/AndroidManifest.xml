@@ -55,8 +55,17 @@
             android:theme="@style/Theme.Nailytics">
         </activity>
 
+        <activity
+            android:name=".Summary_Main_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
 
-
+        <activity
+            android:name=".Summary_Pattern_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
 
 
         <activity
@@ -64,11 +73,14 @@
             android:exported="true"
             android:theme="@style/Theme.Nailytics">
         </activity>
+
         <activity
-            android:name=".Summary_Main_Activity"
+            android:name=".Profile_Login_Activity"
             android:exported="true"
             android:theme="@style/Theme.Nailytics">
         </activity>
+
+
 
     </application>
 

@@ -1,0 +1,741 @@
+<?xml version='1.0' encoding='utf-8'?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background_main">
+
+    <!-- NAV BAR SECTION-->
+    <LinearLayout
+        android:id="@+id/profile_nav_bar"
+        android:layout_width="410dp"
+        android:layout_height="88dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/summary_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nav_materials"
+            android:layout_width="410dp"
+            android:layout_height="88dp">
+
+            <LinearLayout
+                android:id="@+id/chrome"
+                android:layout_width="410dp"
+                android:layout_height="88dp"
+                android:background="@color/transparent_white"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/title_and_controls"
+                    android:layout_width="410dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="45dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/back_button"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="11dp"
+                        android:paddingBottom="11dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/title"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <ImageView
+                            android:id="@+id/chevron"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="14dp"
+                            android:gravity="start"
+                            android:rotation="0"
+                            android:src="@drawable/ic_chevron"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+                        </ImageView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="80dp"
+                        android:layout_height="22dp"
+                        android:gravity="center_horizontal"
+                        android:text="Summary"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/summary_section"
+        android:layout_width="398dp"
+        android:layout_height="701dp"
+        android:layout_marginTop="114dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tab_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/average_results_section"
+            android:layout_width="398dp"
+            android:layout_height="153dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/average_results"
+                android:layout_width="398dp"
+                android:layout_height="28dp"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="12dp"
+                android:gravity="start"
+                android:text="Average results"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/average_results_cards"
+                android:layout_width="378dp"
+                android:layout_height="113dp"
+                android:layout_marginStart="12dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/average_glucose_card"
+                    android:layout_width="120dp"
+                    android:layout_height="108dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_rounded_white_corner_12_frame"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="12dp">
+
+                    <LinearLayout
+                        android:id="@+id/average_glucose"
+                        android:layout_width="95dp"
+                        android:layout_height="84dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/average_glucose_ellipse"
+                            android:layout_width="72dp"
+                            android:layout_height="16dp"
+                            android:background="@drawable/bg_rounded_orange_overlay_corner_6_frame"
+                            android:orientation="horizontal"
+                            android:paddingLeft="4.4dp"
+                            android:paddingTop="2.1dp"
+                            android:paddingRight="6.4dp"
+                            android:paddingBottom="2.1dp">
+
+                            <TextView
+                                android:id="@+id/average_glucose_ellipse_label"
+                                android:layout_width="59dp"
+                                android:layout_height="12dp"
+                                android:gravity="start"
+                                android:text="Above Range"
+                                android:textColor="@color/bright_red_alert"
+                                android:textSize="9.066667556762695sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/average_glucose_ellipse_value"
+                            android:layout_width="90dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="start"
+                            android:text="175.5 mM"
+                            android:textColor="#FF1B2128"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/average_glucose_label"
+                            android:layout_width="95dp"
+                            android:layout_height="36dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="start"
+                            android:text="Glucose levels (saliva)"
+                            android:textColor="#9E14202E"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/average_pH_card"
+                    android:layout_width="120dp"
+                    android:layout_height="108dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_rounded_white_corner_12_frame"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="12dp">
+
+                    <LinearLayout
+                        android:id="@+id/average_pH"
+                        android:layout_width="95dp"
+                        android:layout_height="84dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/average_pH_ellipse"
+                            android:layout_width="46dp"
+                            android:layout_height="16dp"
+                            android:background="@drawable/bg_rounded_orange_overlay_corner_6_frame"
+                            android:backgroundTint="@color/system_green"
+                            android:orientation="horizontal"
+                            android:paddingLeft="6.40000057220459dp"
+                            android:paddingTop="2.133333444595337dp"
+                            android:paddingRight="6.40000057220459dp"
+                            android:paddingBottom="2.133333444595337dp">
+
+                            <TextView
+                                android:id="@+id/average_pH_ellipse_label"
+                                android:layout_width="33dp"
+                                android:layout_height="12dp"
+                                android:gravity="start"
+                                android:text="Normal "
+                                android:textColor="@color/system_green"
+                                android:textSize="9.066667556762695sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/average_pH_value"
+                            android:layout_width="40dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="start"
+                            android:text="7.00"
+                            android:textColor="#FF1B2128"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/average_pH_label"
+                            android:layout_width="95dp"
+                            android:layout_height="36dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="start"
+                            android:text="pH levels (saliva)"
+                            android:textColor="#9E14202E"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/average_nitrate_card"
+                    android:layout_width="120dp"
+                    android:layout_height="108dp"
+                    android:background="@drawable/bg_rounded_white_corner_12_frame"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="12dp">
+
+                    <LinearLayout
+                        android:id="@+id/average_nitrate"
+                        android:layout_width="95dp"
+                        android:layout_height="84dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/average_nitrate_ellipse"
+                            android:layout_width="46dp"
+                            android:layout_height="16dp"
+                            android:background="@drawable/bg_rounded_orange_overlay_corner_6_frame"
+                            android:backgroundTint="@color/system_green"
+                            android:orientation="horizontal"
+                            android:paddingLeft="6.40000057220459dp"
+                            android:paddingTop="2.133333444595337dp"
+                            android:paddingRight="6.40000057220459dp"
+                            android:paddingBottom="2.133333444595337dp">
+
+                            <TextView
+                                android:id="@+id/average_nitrate_ellipse_label"
+                                android:layout_width="33dp"
+                                android:layout_height="12dp"
+                                android:gravity="start"
+                                android:text="Normal "
+                                android:textColor="@color/system_green"
+                                android:textSize="9.066667556762695sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/average_nitrate_value"
+                            android:layout_width="60dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="start"
+                            android:text="60 mg"
+                            android:textColor="#FF1B2128"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/average_nitrate_label"
+                            android:layout_width="95dp"
+                            android:layout_height="36dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="start"
+                            android:text="Nitrate levels (urine)"
+                            android:textColor="#9E14202E"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/frame_1000004582"
+            android:layout_width="398dp"
+            android:layout_height="524dp"
+            android:orientation="vertical">
+
+            <!-- SUMMARY CONTENT SECTION -->
+            <LinearLayout
+                android:id="@+id/analyte_dropdown_menu"
+                android:layout_width="398dp"
+                android:layout_height="76dp"
+                android:layout_marginTop="18dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/charts"
+                    android:layout_width="398dp"
+                    android:layout_height="28dp"
+                    android:gravity="start"
+                    android:paddingStart="6dp"
+                    android:text="Charts"
+                    android:textColor="@color/text_primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/dropDownSection"
+                    android:layout_width="398dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_rounded_white_corner_16_frame"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="0dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="0dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+
+                    <TextView
+                        android:id="@+id/analyte_type"
+                        android:layout_width="325dp"
+                        android:layout_height="22dp"
+                        android:layout_marginTop="4sp"
+                        android:gravity="start"
+                        android:text="pH levels (saliva)"
+                        android:textColor="#FF131036"
+                        android:textSize="17sp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/dropDownArrow"
+                        android:layout_width="41dp"
+                        android:layout_height="32dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:layout_marginTop="6dp">
+
+                        <ImageView
+                            android:id="@+id/chevron2"
+                            android:layout_width="17dp"
+                            android:layout_height="20dp"
+                            android:gravity="start"
+                            android:rotation="270"
+                            android:src="@drawable/ic_chevron">
+                        </ImageView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/average_today"
+                android:layout_width="398dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:paddingStart="6dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/average_title"
+                    android:layout_width="398dp"
+                    android:layout_height="18dp"
+                    android:gravity="start"
+                    android:text="Average"
+                    android:textColor="#9E14202E"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/average_value"
+                    android:layout_width="398dp"
+                    android:layout_height="32dp"
+                    android:gravity="start"
+                    android:text="6.5"
+                    android:textColor="#FF1B2128"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/today"
+                    android:layout_width="398dp"
+                    android:layout_height="14dp"
+                    android:gravity="start"
+                    android:text="Today"
+                    android:textColor="#FF8E8E93"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <!-- TIME RANGE FILTER SECTION -->
+            <LinearLayout
+                android:id="@+id/segmented_control"
+                android:layout_width="398dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_rounded_segmented_control"
+                android:orientation="horizontal"
+                android:paddingLeft="2dp"
+                android:paddingTop="2dp"
+                android:paddingRight="2dp"
+                android:paddingBottom="2dp">
+
+                <LinearLayout
+                    android:id="@+id/daily"
+                    android:layout_width="98dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/bg_rounded_white_button"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="3dp">
+
+                    <TextView
+                        android:id="@+id/daily_label"
+                        android:layout_width="78dp"
+                        android:layout_height="18dp"
+                        android:gravity="center_horizontal"
+                        android:text="Daily"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/weekly"
+                    android:layout_width="98dp"
+                    android:layout_height="28dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="3dp">
+
+                    <TextView
+                        android:id="@+id/weekly_label"
+                        android:layout_width="78dp"
+                        android:layout_height="18dp"
+                        android:gravity="center_horizontal"
+                        android:text="Weekly"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/monthly"
+                    android:layout_width="98dp"
+                    android:layout_height="28dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="3dp">
+
+                    <TextView
+                        android:id="@+id/monthly_label"
+                        android:layout_width="78dp"
+                        android:layout_height="18dp"
+                        android:gravity="center_horizontal"
+                        android:text="Monthly"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/yearly"
+                    android:layout_width="98dp"
+                    android:layout_height="28dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="3dp">
+
+                    <TextView
+                        android:id="@+id/yearly_label"
+                        android:layout_width="78dp"
+                        android:layout_height="18dp"
+                        android:gravity="center_horizontal"
+                        android:text="Yearly"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- GRAPH SECTION -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/measurement_graph"
+                android:layout_width="398dp"
+                android:layout_height="184dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_rounded_measurement_graph">
+
+                <ImageView
+                    android:id="@+id/inside_components"
+                    android:layout_width="390dp"
+                    android:layout_height="179dp"
+                    android:src="@mipmap/img_summary_measurement_graph"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/summary_pattern_description"
+                android:layout_width="398dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_rounded_orange_overlay_corner_6_frame"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingTop="4dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="6dp">
+
+                <ImageView
+                    android:id="@+id/ic_warning"
+                    android:layout_width="19dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_warning"
+                    android:textColor="@color/bright_orange"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/summary_pattern_description_label"
+                    android:layout_width="303dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="start"
+                    android:text="@string/summary_pattern_description"
+                    android:textColor="@color/text_primary"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/summary_pattern_description_chevron"
+                    android:layout_width="12dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_chevron"
+                    app:tint="@color/alert_orange"
+                    android:rotation="180" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- TAB SECTION -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tab_bar"
+        android:layout_width="410dp"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chrome_material"
+            android:layout_width="410dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/chrome_material2"
+                android:layout_width="420dp"
+                android:layout_height="match_parent"
+                android:background="#BFFFFFFF"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_bar_buttons"
+            android:layout_width="410dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="14dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
+
+
+                <TextView
+                    android:id="@+id/home_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Home"
+                    android:textColor="@color/gray_350"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/home_symbol"
+                    android:layout_width="83dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_home"
+                    app:layout_constraintBottom_toTopOf="@+id/home_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/summary_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
+
+
+                <TextView
+                    android:id="@+id/summary_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Summary"
+                    android:textColor="@color/slate_purple"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/summary_symbol"
+                    android:layout_width="90dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_summary_active"
+                    app:layout_constraintBottom_toTopOf="@+id/summary_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profile_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
+
+
+                <TextView
+                    android:id="@+id/profile_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="-1dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Profile"
+                    android:textColor="@color/gray_350"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/profile_symbol"
+                    android:layout_width="90dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_profile"
+                    app:layout_constraintBottom_toTopOf="@+id/profile_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,606 @@
+<?xml version='1.0' encoding='utf-8'?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background_main">
+
+
+    <LinearLayout
+        android:id="@+id/navigation_bar_iphone_compact_size_class"
+        android:layout_width="410dp"
+        android:layout_height="88dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/analyte_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/materials"
+            android:layout_width="410dp"
+            android:layout_height="88dp">
+
+
+            <LinearLayout
+                android:id="@+id/chrome"
+                android:layout_width="410dp"
+                android:layout_height="88dp"
+                android:background="#BFFFFFFF"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/title_and_controls"
+                    android:layout_width="410dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="45dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/back_button"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="11dp"
+                        android:paddingBottom="11dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/title"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <ImageView
+                            android:id="@+id/chevron"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="14dp"
+                            android:gravity="start"
+                            android:rotation="0"
+                            android:src="@drawable/ic_chevron"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+                        </ImageView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="69dp"
+                        android:layout_height="22dp"
+                        android:layout_marginTop="11dp"
+                        android:gravity="center_horizontal"
+                        android:text="Nailytics"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/analyte_section"
+        android:layout_width="398dp"
+        android:layout_height="271dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166">
+
+
+        <LinearLayout
+            android:id="@+id/dropDownSection"
+            android:layout_width="398dp"
+            android:layout_height="32dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_rounded_white_corner_16_frame"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingTop="0dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="0dp"
+            android:clickable="true"
+            android:focusable="true">
+
+
+            <TextView
+                android:id="@+id/analyte_type"
+                android:layout_width="325dp"
+                android:layout_height="22dp"
+                android:gravity="start"
+                android:text="pH levels (saliva)"
+                android:textColor="#FF131036"
+                android:textSize="17sp" />
+
+
+            <LinearLayout
+                android:id="@+id/dropDownArrow"
+                android:layout_width="41dp"
+                android:layout_height="32dp"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:id="@+id/chevron2"
+                    android:layout_width="17dp"
+                    android:layout_height="20dp"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:src="@drawable/ic_chevron">
+                </ImageView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:id="@+id/color_chart"
+            android:layout_width="377dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="12dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/item0"
+                android:layout_width="88dp"
+                android:layout_height="130dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/item0_color"
+                    android:layout_width="88dp"
+                    android:layout_height="82dp"
+                    android:background="@color/deep_rose_light"
+                    android:orientation="vertical"
+
+                    />
+
+                <TextView
+                    android:id="@+id/item0_label"
+                    android:layout_width="88dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/ph5"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/item1"
+                android:layout_width="88dp"
+                android:layout_height="130dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/item1_color"
+                    android:layout_width="88dp"
+                    android:layout_height="82dp"
+                    android:background="#D1811537"
+                    android:orientation="vertical" />
+
+
+                <TextView
+                    android:id="@+id/item1_label"
+                    android:layout_width="88dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/ph6"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/item2"
+                android:layout_width="88dp"
+                android:layout_height="130dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/item2_color"
+                    android:layout_width="88dp"
+                    android:layout_height="82dp"
+                    android:background="#D1621340"
+                    android:orientation="vertical" />
+
+
+                <TextView
+                    android:id="@+id/item2_label"
+                    android:layout_width="88dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/ph7"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/item3"
+                android:layout_width="88dp"
+                android:layout_height="130dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/item3_color"
+                    android:layout_width="88dp"
+                    android:layout_height="82dp"
+                    android:background="#DB366877"
+                    android:orientation="vertical" />
+
+
+                <TextView
+                    android:id="@+id/item3_label"
+                    android:layout_width="88dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/ph8"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/edit_color_option"
+            android:layout_width="398dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_gray90_corner_12_frame"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp">
+
+
+            <ImageView
+                android:id="@+id/info_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_horizontal"
+                android:src="@drawable/ic_info" />
+
+
+            <TextView
+                android:id="@+id/analyte_description"
+                android:layout_width="239dp"
+                android:layout_height="40dp"
+                android:gravity="start"
+                android:text="@string/analyte_levels_description"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+
+            <LinearLayout
+                android:id="@+id/edit_color_button"
+                android:layout_width="101dp"
+                android:layout_height="34dp"
+                android:background="@drawable/bg_rounded_button"
+                android:orientation="horizontal"
+                android:paddingLeft="14dp"
+                android:paddingTop="7dp"
+                android:paddingRight="14dp"
+                android:paddingBottom="7dp">
+
+
+                <TextView
+                    android:id="@+id/edit_color_button_label"
+                    android:layout_width="73dp"
+                    android:layout_height="20dp"
+                    android:gravity="start"
+                    android:text="Edit colors"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/choose_nix_sensor"
+        android:layout_width="398dp"
+        android:layout_height="25dp"
+        android:gravity="start"
+        android:layout_marginBottom="-20dp"
+        android:paddingLeft="12dp"
+        android:text="@string/choose_nix_sensor_device_"
+        android:textColor="#FF000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/available_devices"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/analyte_section" />
+
+
+    <LinearLayout
+        android:id="@+id/available_devices"
+        android:layout_width="398dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="200dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tab_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_nix_sensor"
+        app:layout_constraintVertical_bias="0.604">
+
+        <LinearLayout
+            android:id="@+id/device1"
+            android:layout_width="398dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_rounded_white_corner_12_frame"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp">
+
+
+            <TextView
+                android:id="@+id/device1_label"
+                android:layout_width="287dp"
+                android:layout_height="22dp"
+                android:gravity="start"
+                android:text="Nix Spectro 1"
+                android:textColor="#FF7E7E83"
+                android:textSize="17sp" />
+
+
+            <LinearLayout
+                android:id="@+id/device1_button"
+                android:layout_width="79dp"
+                android:layout_height="28dp"
+                android:background="@drawable/bg_rounded_button"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="4dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="4dp">
+
+
+                <TextView
+                    android:id="@+id/device1_button_label"
+                    android:layout_width="59dp"
+                    android:layout_height="20dp"
+                    android:gravity="start"
+                    android:text="Connect"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/device2"
+            android:layout_width="398dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_rounded_white_corner_12_frame"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp">
+
+
+            <TextView
+                android:id="@+id/device2_label"
+                android:layout_width="287dp"
+                android:layout_height="22dp"
+                android:gravity="start"
+                android:text="Nix Spectro 2"
+                android:textColor="#FF7E7E83"
+                android:textSize="17sp" />
+
+
+            <LinearLayout
+                android:id="@+id/device2_button"
+                android:layout_width="79dp"
+                android:layout_height="28dp"
+                android:background="@drawable/bg_rounded_button"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="4dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="4dp">
+
+
+                <TextView
+                    android:id="@+id/device2_button_label"
+                    android:layout_width="59dp"
+                    android:layout_height="20dp"
+                    android:gravity="start"
+                    android:text="Connect"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- TAB SECTION -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tab_bar"
+        android:layout_width="410dp"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chrome_material"
+            android:layout_width="410dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/chrome_material2"
+                android:layout_width="420dp"
+                android:layout_height="match_parent"
+                android:background="#BFFFFFFF"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_bar_buttons"
+            android:layout_width="410dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="14dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
+
+
+                <TextView
+                    android:id="@+id/home_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Home"
+                    android:textColor="@color/slate_purple"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/home_symbol"
+                    android:layout_width="83dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_home_active"
+                    app:layout_constraintBottom_toTopOf="@+id/home_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/summary_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
+
+
+                <TextView
+                    android:id="@+id/summary_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Summary"
+                    android:textColor="@color/gray_350"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/summary_symbol"
+                    android:layout_width="90dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_summary"
+                    app:layout_constraintBottom_toTopOf="@+id/summary_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profile_tab"
+                android:layout_width="143dp"
+                android:layout_height="40dp">
+
+
+                <TextView
+                    android:id="@+id/profile_label"
+                    android:layout_width="146dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="-1dp"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="Profile"
+                    android:textColor="@color/gray_350"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/profile_symbol"
+                    android:layout_width="90dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_profile"
+                    app:layout_constraintBottom_toTopOf="@+id/profile_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- DIMMING OVERLAY FOR CLICKABLE DROPDOWN MENU -->
+    <View
+        android:id="@+id/screen_dim_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
