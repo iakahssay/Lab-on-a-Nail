@@ -44,10 +44,6 @@
         "source": "/Users/imankonjo2020/.gradle/daemon/8.13/com.example.nailytics.app-main-62:/drawable/bg_rounded_frame_1000004365.xml"
     },
     {
-        "merged": "com.example.nailytics.app-debug-60:/layout_profile_login.xml.flat",
-        "source": "com.example.nailytics.app-main-62:/layout/profile_login.xml"
-    },
-    {
         "merged": "/Users/imankonjo2020/.gradle/daemon/8.13/com.example.nailytics.app-debug-60:/layout_main_5__dropdown_menu_in_analyze_color_screen.xml.flat",
         "source": "/Users/imankonjo2020/.gradle/daemon/8.13/com.example.nailytics.app-main-62:/layout/main_5__dropdown_menu_in_analyze_color_screen.xml"
     },
@@ -186,6 +182,10 @@
     {
         "merged": "/Users/imankonjo2020/.gradle/daemon/8.13/com.example.nailytics.app-debug-60:/drawable_ic_info.xml.flat",
         "source": "/Users/imankonjo2020/.gradle/daemon/8.13/com.example.nailytics.app-main-62:/drawable/ic_info.xml"
+    },
+    {
+        "merged": "com.example.nailytics.app-debug-60:/layout_profile_gender_2.xml.flat",
+        "source": "com.example.nailytics.app-main-62:/layout/profile_gender_2.xml"
     },
     {
         "merged": "/Users/imankonjo2020/.gradle/daemon/8.13/com.example.nailytics.app-debug-60:/mipmap-xxhdpi_img_choosing_bday_date_foreground.png.flat",

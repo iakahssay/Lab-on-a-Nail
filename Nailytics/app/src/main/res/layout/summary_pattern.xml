@@ -87,17 +87,19 @@
 
     <LinearLayout
         android:id="@+id/body"
-        android:layout_width="398dp"
+        android:layout_width="385dp"
         android:layout_height="728dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="114dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tab_bar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/disclaimer"
-            android:layout_width="398dp"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/bg_rounded_orange_overlay_corner_6_frame"
             android:backgroundTint="@color/bright_red_alert"
@@ -111,13 +113,13 @@
                 android:id="@+id/info"
                 android:layout_width="12dp"
                 android:layout_height="14dp"
-                android:layout_marginRight="4dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="4dp"
                 android:gravity="start"
                 android:src="@drawable/ic_info"
-                app:tint="@color/system_red"
                 android:textColor="#FFFF3B30"
-                android:textSize="13sp" />
+                android:textSize="13sp"
+                app:tint="@color/system_red" />
 
             <TextView
                 android:id="@+id/disclaimer_description"
@@ -132,15 +134,15 @@
 
         <LinearLayout
             android:id="@+id/pattern"
-            android:layout_width="398dp"
-            android:layout_height="310dp"
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/pattern_description"
-                android:layout_width="398dp"
+                android:layout_width="match_parent"
                 android:layout_height="22dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:gravity="start"
                 android:text="@string/pattern_description"
                 android:textColor="@color/text_primary"
@@ -148,9 +150,9 @@
 
             <TextView
                 android:id="@+id/pattern_title"
-                android:layout_width="398dp"
+                android:layout_width="match_parent"
                 android:layout_height="28dp"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="10dp"
                 android:gravity="start"
                 android:text="Pattern"
                 android:textColor="#FF1B2128"
@@ -159,7 +161,7 @@
 
             <TextView
                 android:id="@+id/pattern_time"
-                android:layout_width="398dp"
+                android:layout_width="match_parent"
                 android:layout_height="18dp"
                 android:layout_marginTop="6dp"
                 android:gravity="start"
@@ -169,34 +171,33 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/pattern_graph"
-                android:layout_width="378dp"
-                android:layout_height="204dp"
+                android:layout_width="358dp"
+                android:layout_height="184dp"
                 android:layout_marginTop="6dp"
                 android:background="@drawable/bg_rounded_graph">
 
                 <ImageView
                     android:id="@+id/pattern_graph_image"
-                    android:layout_width="379dp"
-                    android:layout_height="208dp"
+                    android:layout_width="359dp"
+                    android:layout_height="188dp"
                     android:layout_marginEnd="18dp"
                     android:src="@mipmap/img_summary_pattern_graph"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    />
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/what_pattern_means"
-            android:layout_width="398dp"
+            android:layout_width="match_parent"
             android:layout_height="140dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/what_this_means_title"
-                android:layout_width="398dp"
+                android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginTop="20dp"
                 android:gravity="start"
@@ -207,7 +208,7 @@
 
             <TextView
                 android:id="@+id/what_pattern_means_description"
-                android:layout_width="398dp"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="7dp"
                 android:gravity="start"
@@ -241,15 +242,15 @@
 
         <LinearLayout
             android:id="@+id/ask_your_doctor"
-            android:layout_width="398dp"
+            android:layout_width="match_parent"
             android:layout_height="216dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/ask_your_doctor_title"
-                android:layout_width="398dp"
+                android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="14dp"
                 android:gravity="start"
                 android:text="Ask your doctor"
                 android:textColor="@color/text_primary"
@@ -258,7 +259,7 @@
 
             <TextView
                 android:id="@+id/ask_your_doctor_description"
-                android:layout_width="380dp"
+                android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:layout_marginTop="7dp"
                 android:gravity="start"
@@ -275,17 +276,17 @@
         android:layout_width="410dp"
         android:layout_height="73dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/chrome_material"
             android:layout_width="410dp"
             android:layout_height="match_parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
 
             <LinearLayout
@@ -307,10 +308,10 @@
             android:layout_height="40dp"
             android:layout_marginEnd="14dp"
             android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout

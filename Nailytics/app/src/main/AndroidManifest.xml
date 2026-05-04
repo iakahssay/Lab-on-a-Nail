@@ -69,13 +69,49 @@
 
 
         <activity
-            android:name=".Profile_Main_Activity"
+            android:name=".Profile1_Main_Activity"
             android:exported="true"
             android:theme="@style/Theme.Nailytics">
         </activity>
 
         <activity
-            android:name=".Profile_Login_Activity"
+            android:name=".Profile2_Login_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
+
+        <activity
+            android:name=".Profile3_Name_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
+
+        <activity
+            android:name=".Profile4_Bday_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
+
+        <activity
+            android:name=".Profile5_Gender_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
+
+        <activity
+            android:name=".Profile6_Gender_Self_Describe_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
+
+        <activity
+            android:name=".Profile7_Email_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics">
+        </activity>
+
+        <activity
+            android:name=".Profile8_BMI_Activity"
             android:exported="true"
             android:theme="@style/Theme.Nailytics">
         </activity>

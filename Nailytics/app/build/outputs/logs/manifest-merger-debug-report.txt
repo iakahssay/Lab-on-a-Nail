@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:2:1-87:12
-INJECTED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:2:1-87:12
-INJECTED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:2:1-87:12
-INJECTED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:2:1-87:12
+ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:2:1-123:12
+INJECTED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:2:1-123:12
+INJECTED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:2:1-123:12
+INJECTED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:2:1-123:12
 MERGED from [com.google.android.material:material:1.12.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/304a1c4019fde23aa22ff7c4e91f959e/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/5e4726ef894dfb840570f7be96855c81/transformed/constraintlayout-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/7dd2bed3c0c14a0dd5759eaa3815b45f/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:2:1-7:12
@@ -87,8 +87,8 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/iman
 	xmlns:android
 		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:5:5-85:19
-INJECTED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:5:5-85:19
+ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:5:5-121:19
+INJECTED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:5:5-121:19
 MERGED from [com.google.android.material:material:1.12.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/304a1c4019fde23aa22ff7c4e91f959e/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/304a1c4019fde23aa22ff7c4e91f959e/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/5e4726ef894dfb840570f7be96855c81/transformed/constraintlayout-2.2.0/AndroidManifest.xml:7:5-20
@@ -205,22 +205,70 @@ ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab
 		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:67:13-51
 	android:name
 		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:65:13-53
-activity#com.example.nailytics.Profile_Main_Activity
+activity#com.example.nailytics.Profile1_Main_Activity
 ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:71:9-75:20
 	android:exported
 		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:73:13-36
 	android:theme
 		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:74:13-51
 	android:name
-		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:72:13-50
-activity#com.example.nailytics.Profile_Login_Activity
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:72:13-51
+activity#com.example.nailytics.Profile2_Login_Activity
 ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:77:9-81:20
 	android:exported
 		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:79:13-36
 	android:theme
 		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:80:13-51
 	android:name
-		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:78:13-51
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:78:13-52
+activity#com.example.nailytics.Profile3_Name_Activity
+ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:83:9-87:20
+	android:exported
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:85:13-36
+	android:theme
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:86:13-51
+	android:name
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:84:13-51
+activity#com.example.nailytics.Profile4_Bday_Activity
+ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:89:9-93:20
+	android:exported
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:91:13-36
+	android:theme
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:92:13-51
+	android:name
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:90:13-51
+activity#com.example.nailytics.Profile5_Gender_Activity
+ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:95:9-99:20
+	android:exported
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:97:13-36
+	android:theme
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:98:13-51
+	android:name
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:96:13-53
+activity#com.example.nailytics.Profile6_Gender_Self_Describe_Activity
+ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:101:9-105:20
+	android:exported
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:103:13-36
+	android:theme
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:104:13-51
+	android:name
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:102:13-67
+activity#com.example.nailytics.Profile7_Email_Activity
+ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:107:9-111:20
+	android:exported
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:109:13-36
+	android:theme
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:110:13-51
+	android:name
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:108:13-52
+activity#com.example.nailytics.Profile8_BMI_Activity
+ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:113:9-117:20
+	android:exported
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:115:13-36
+	android:theme
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:116:13-51
+	android:name
+		ADDED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:114:13-50
 uses-sdk
 INJECTED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml

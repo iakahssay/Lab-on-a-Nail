@@ -9,22 +9,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.PopupWindow
 import androidx.appcompat.app.AppCompatActivity
-import com.example.nailytics.AnalyteChartUIHelper.dpToPx
 
-class Profile_Main_Activity  : AppCompatActivity()  {
+class Profile1_Main_Activity  : AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // Start with the first screen
         setContentView(R.layout.profile_main)
 
-        //Listeners that will move this screen (main1) to the next (main2)
-        //moveToScreen2()
-
-        //Show the dropdown menu and the dimming overlay feature that comes with it
+        //Show the logout popup message and the dimming overlay feature that comes with it
         findViewById<View>(R.id.logout_button).setOnClickListener {
-            showLogoutPopup(this, it)
+            showLogoutPopup(this, this.findViewById<View>(R.id.personal_info_section))
         }
+
+        //Listeners that will move this screen (profile_main) to the next (profile_name, profile_bday, etc.)
+        moveToProfileName()
+        moveToProfileBday()
+        moveToProfileGender()
+        moveToProfileEmail()
+        moveToProfileBMI()
+
 
         //Listeners for the (navigation) tab bar
         NavBar_Helper.moveToHome(this)
@@ -34,12 +38,47 @@ class Profile_Main_Activity  : AppCompatActivity()  {
     }
 
 
-//PAGE FLOW FUNCTIONS
+//1) PAGE FLOW FUNCTIONS
+    private fun moveToProfileName(){
+        findViewById<View>(R.id.name_row).setOnClickListener {
+            startActivity(Intent(this, Profile3_Name_Activity::class.java))
+        }
+    }
+
+    private fun moveToProfileBday(){
+        findViewById<View>(R.id.bday_row).setOnClickListener {
+            startActivity(Intent(this, Profile4_Bday_Activity::class.java))
+        }
+    }
+
+    private fun moveToProfileGender(){
+        findViewById<View>(R.id.gender_row).setOnClickListener {
+            startActivity(Intent(this, Profile5_Gender_Activity::class.java))
+        }
+    }
+
+    private fun moveToProfileEmail(){
+        findViewById<View>(R.id.email_row).setOnClickListener {
+            startActivity(Intent(this, Profile7_Email_Activity::class.java))
+        }
+    }
+
+    private fun moveToProfileBMI(){
+        //Sets the shared onClickListener for multiple buttons
+        val goToBMI  = View.OnClickListener{
+            startActivity(Intent(this, Profile8_BMI_Activity::class.java))
+        }
+
+        //Implements that listener for the specific buttons we want
+        findViewById<View>(R.id.bmi_row).setOnClickListener(goToBMI)
+        findViewById<View>(R.id.weight_row).setOnClickListener(goToBMI)
+        findViewById<View>(R.id.height_row).setOnClickListener(goToBMI)
+    }
 
 
-//LOGOUT POPUP FUNCTION
+//2) LOGOUT POPUP FUNCTION
     // Shows the logout popup when the user taps the logout button.
-    fun showLogoutPopup(
+    private fun showLogoutPopup(
         activity: Activity, //the current class activity (ex: Main1_Activity's 'this')
         anchor: View,
     ){
@@ -49,7 +88,6 @@ class Profile_Main_Activity  : AppCompatActivity()  {
         // Converts the logout_message_popup XML layout into an actual View object.
         val popupView = LayoutInflater.from(activity)?.inflate(R.layout.logout_message_popup, null)
 
-        //TODO: FIX THIS!!! STILL LOOKS LIKE DROPDOWN!!!
         // Creates a popup window using the logout_message_popup layout.
         val popupWindow = PopupWindow(
             popupView,          // The dropdown UI.
@@ -58,13 +96,12 @@ class Profile_Main_Activity  : AppCompatActivity()  {
             true                // Allows the popup to receive focus.
         )
 
-        //TODO: FIX THIS!!!
         // Shows the popup in the middle of the screen
-        popupWindow.showAsDropDown(anchor, 0, 8.dpToPx(activity))
+        popupWindow.showAsDropDown(anchor, 30.dpToPx(activity), -80.dpToPx(activity))
 
-        // Handles the popup's logout button option.
+        // Handles the popup's logout button option -> If user decides to logout, go to profile_login screen
         popupView?.findViewById<View?>(R.id.logout_button)?.setOnClickListener {
-           startActivity(Intent(this, Profile_Login_Activity::class.java))
+           startActivity(Intent(this, Profile2_Login_Activity::class.java))
         }
 
         // Handles the popup's cancel button option.
@@ -81,7 +118,7 @@ class Profile_Main_Activity  : AppCompatActivity()  {
             overlay.visibility = View.GONE
         }
 }
-    //HELPER FUNCTIONS FOR showAnalyteDropdown()
+    //HELPER FUNCTIONS FOR showLogoutPopup()
     // Converts dp values into pixels because PopupWindow expects pixel values.
     private fun Int.dpToPx(activity: Activity): Int {
         // Multiplies the dp number by the screen density and returns it as an integer.

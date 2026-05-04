@@ -111,15 +111,15 @@
         android:id="@+id/profile_gender_section"
         android:layout_width="386dp"
         android:layout_height="314dp"
-        android:layout_marginTop="114dp"
-        android:layout_marginBottom="414dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="394dp"
         android:layout_marginEnd="2dp"
         android:background="@drawable/bg_rounded_white_corner_12_frame"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/tab_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/profile_nav_bar">
 
         <LinearLayout
             android:id="@+id/female_option"
@@ -312,7 +312,7 @@
             android:background="@color/gray_150" />
 
         <LinearLayout
-            android:id="@+id/not_to_say_option"
+            android:id="@+id/prefer_not_to_say_option"
             android:layout_width="382dp"
             android:layout_height="44dp"
             android:gravity="center_vertical"
@@ -321,7 +321,7 @@
             android:paddingRight="16dp">
 
             <TextView
-                android:id="@+id/not_to_say_option_label"
+                android:id="@+id/prefer_not_to_say_option_label"
                 android:layout_width="0dp"
                 android:layout_height="26dp"
                 android:layout_weight="1"
@@ -331,7 +331,7 @@
                 android:textSize="17sp" />
 
             <TextView
-                android:id="@+id/not_to_say_option_checkmark"
+                android:id="@+id/prefer_not_to_say_option_checkmark"
                 android:layout_width="24dp"
                 android:layout_height="26dp"
                 android:gravity="center"
@@ -343,14 +343,14 @@
         </LinearLayout>
 
         <View
-            android:id="@+id/not_to_say_option_divider"
+            android:id="@+id/prefer_not_to_say_option_divider"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="22dp"
             android:background="@color/gray_150" />
 
         <LinearLayout
-            android:id="@+id/self_describe_option"
+            android:id="@+id/prefer_to_self_describe_option"
             android:layout_width="382dp"
             android:layout_height="44dp"
             android:gravity="center_vertical"
@@ -359,7 +359,7 @@
             android:paddingRight="16dp">
 
             <TextView
-                android:id="@+id/self_describe_option_label"
+                android:id="@+id/prefer_to_self_describe_option_label"
                 android:layout_width="0dp"
                 android:layout_height="26dp"
                 android:layout_weight="1"
@@ -369,7 +369,7 @@
                 android:textSize="17sp" />
 
             <TextView
-                android:id="@+id/self_describe_option_checkmark"
+                android:id="@+id/prefer_to_self_describe_option_checkmark"
                 android:layout_width="24dp"
                 android:layout_height="26dp"
                 android:gravity="center"

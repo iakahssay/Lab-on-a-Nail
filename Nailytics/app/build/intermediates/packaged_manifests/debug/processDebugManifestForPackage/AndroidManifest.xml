@@ -76,12 +76,42 @@
             android:theme="@style/Theme.Nailytics" >
         </activity>
         <activity
-            android:name="com.example.nailytics.Profile_Main_Activity"
+            android:name="com.example.nailytics.Profile1_Main_Activity"
             android:exported="true"
             android:theme="@style/Theme.Nailytics" >
         </activity>
         <activity
-            android:name="com.example.nailytics.Profile_Login_Activity"
+            android:name="com.example.nailytics.Profile2_Login_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics" >
+        </activity>
+        <activity
+            android:name="com.example.nailytics.Profile3_Name_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics" >
+        </activity>
+        <activity
+            android:name="com.example.nailytics.Profile4_Bday_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics" >
+        </activity>
+        <activity
+            android:name="com.example.nailytics.Profile5_Gender_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics" >
+        </activity>
+        <activity
+            android:name="com.example.nailytics.Profile6_Gender_Self_Describe_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics" >
+        </activity>
+        <activity
+            android:name="com.example.nailytics.Profile7_Email_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Nailytics" >
+        </activity>
+        <activity
+            android:name="com.example.nailytics.Profile8_BMI_Activity"
             android:exported="true"
             android:theme="@style/Theme.Nailytics" >
         </activity>

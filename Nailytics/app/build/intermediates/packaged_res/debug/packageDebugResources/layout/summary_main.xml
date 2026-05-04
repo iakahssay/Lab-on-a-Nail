@@ -87,10 +87,11 @@
 
     <LinearLayout
         android:id="@+id/summary_section"
-        android:layout_width="398dp"
+        android:layout_width="385dp"
         android:layout_height="701dp"
         android:layout_marginTop="114dp"
         android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/tab_bar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,13 +100,13 @@
 
         <LinearLayout
             android:id="@+id/average_results_section"
-            android:layout_width="398dp"
+            android:layout_width="match_parent"
             android:layout_height="153dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/average_results"
-                android:layout_width="398dp"
+                android:layout_width="match_parent"
                 android:layout_height="28dp"
                 android:layout_marginBottom="10dp"
                 android:paddingStart="12dp"
@@ -120,7 +121,7 @@
                 android:id="@+id/average_results_cards"
                 android:layout_width="378dp"
                 android:layout_height="113dp"
-                android:layout_marginStart="12dp"
+                android:layout_gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -317,21 +318,22 @@
 
         <LinearLayout
             android:id="@+id/frame_1000004582"
-            android:layout_width="398dp"
+            android:layout_width="385dp"
             android:layout_height="524dp"
+            android:layout_gravity="center_horizontal"
             android:orientation="vertical">
 
             <!-- SUMMARY CONTENT SECTION -->
             <LinearLayout
                 android:id="@+id/analyte_dropdown_menu"
-                android:layout_width="398dp"
+                android:layout_width="match_parent"
                 android:layout_height="76dp"
                 android:layout_marginTop="18dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/charts"
-                    android:layout_width="398dp"
+                    android:layout_width="match_parent"
                     android:layout_height="28dp"
                     android:gravity="start"
                     android:paddingStart="6dp"
@@ -342,7 +344,7 @@
 
                 <LinearLayout
                     android:id="@+id/dropDownSection"
-                    android:layout_width="398dp"
+                    android:layout_width="match_parent"
                     android:layout_height="32dp"
                     android:layout_marginTop="14dp"
                     android:background="@drawable/bg_rounded_white_corner_16_frame"
@@ -389,7 +391,7 @@
 
             <LinearLayout
                 android:id="@+id/average_today"
-                android:layout_width="398dp"
+                android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginTop="20dp"
                 android:paddingStart="6dp"
@@ -397,7 +399,7 @@
 
                 <TextView
                     android:id="@+id/average_title"
-                    android:layout_width="398dp"
+                    android:layout_width="match_parent"
                     android:layout_height="18dp"
                     android:gravity="start"
                     android:text="Average"
@@ -406,7 +408,7 @@
 
                 <TextView
                     android:id="@+id/average_value"
-                    android:layout_width="398dp"
+                    android:layout_width="match_parent"
                     android:layout_height="32dp"
                     android:gravity="start"
                     android:text="6.5"
@@ -416,7 +418,7 @@
 
                 <TextView
                     android:id="@+id/today"
-                    android:layout_width="398dp"
+                    android:layout_width="match_parent"
                     android:layout_height="14dp"
                     android:gravity="start"
                     android:text="Today"
@@ -427,7 +429,7 @@
             <!-- TIME RANGE FILTER SECTION -->
             <LinearLayout
                 android:id="@+id/segmented_control"
-                android:layout_width="398dp"
+                android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/bg_rounded_segmented_control"
@@ -524,10 +526,11 @@
             </LinearLayout>
 
             <!-- GRAPH SECTION -->
+            <!-- android:layout_width="match_parent=385dp"-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/measurement_graph"
-                android:layout_width="398dp"
-                android:layout_height="184dp"
+                android:layout_width="match_parent"
+                android:layout_height="171dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/bg_rounded_measurement_graph">
 
@@ -546,9 +549,10 @@
 
             <LinearLayout
                 android:id="@+id/summary_pattern_description"
-                android:layout_width="398dp"
+                android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:layout_marginTop="24dp"
+                android:layout_gravity="center_horizontal"
                 android:background="@drawable/bg_rounded_orange_overlay_corner_6_frame"
                 android:orientation="horizontal"
                 android:paddingLeft="12dp"

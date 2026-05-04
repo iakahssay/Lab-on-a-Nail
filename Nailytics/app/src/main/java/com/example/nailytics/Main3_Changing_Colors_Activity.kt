@@ -20,7 +20,7 @@ class Main3_Changing_Colors_Activity : AppCompatActivity()  {
             AnalyteChartUIHelper.showAnalyteDropdown(this, it)
         }
 
-        //This screen is a bit unique as it doesn't have a 'next' screen. Instead, its more like a pop up,
+        //This screen is a bit unique as it doesn't have a 'next' screen. Instead, its more like a pop up sacreen, where it
         // saves the color change, then goes back to original screen
         moveToPreviousScreen() //Listener(s) that will move this screen (main2) back to whichever screen called on it first
 

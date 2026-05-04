@@ -20,7 +20,7 @@
 15-->[androidx.core:core:1.13.1] /Users/imankonjo2020/.gradle/caches/8.13/transforms/28ce3f78696c2c6b11f5be3f5e47a219/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
 16
 17    <application
-17-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:5:5-85:19
+17-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:5:5-121:19
 18        android:allowBackup="true"
 18-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -130,8 +130,8 @@
 77        </activity>
 78        <activity
 78-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:71:9-75:20
-79            android:name="com.example.nailytics.Profile_Main_Activity"
-79-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:72:13-50
+79            android:name="com.example.nailytics.Profile1_Main_Activity"
+79-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:72:13-51
 80            android:exported="true"
 80-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:73:13-36
 81            android:theme="@style/Theme.Nailytics" >
@@ -139,91 +139,145 @@
 82        </activity>
 83        <activity
 83-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:77:9-81:20
-84            android:name="com.example.nailytics.Profile_Login_Activity"
-84-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:78:13-51
+84            android:name="com.example.nailytics.Profile2_Login_Activity"
+84-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:78:13-52
 85            android:exported="true"
 85-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:79:13-36
 86            android:theme="@style/Theme.Nailytics" >
 86-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:80:13-51
 87        </activity>
 88        <activity
-88-->[androidx.compose.ui:ui-tooling-android:1.7.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/6917090b203230f5830628d8553d2513/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
-89            android:name="androidx.compose.ui.tooling.PreviewActivity"
-89-->[androidx.compose.ui:ui-tooling-android:1.7.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/6917090b203230f5830628d8553d2513/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
-90            android:exported="true" />
-90-->[androidx.compose.ui:ui-tooling-android:1.7.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/6917090b203230f5830628d8553d2513/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
-91        <activity
-91-->[androidx.compose.ui:ui-test-manifest:1.7.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/a2bc9b617f31cc50cb6fb510b4374228/transformed/ui-test-manifest-1.7.0/AndroidManifest.xml:23:9-25:39
-92            android:name="androidx.activity.ComponentActivity"
-92-->[androidx.compose.ui:ui-test-manifest:1.7.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/a2bc9b617f31cc50cb6fb510b4374228/transformed/ui-test-manifest-1.7.0/AndroidManifest.xml:24:13-63
-93            android:exported="true" />
-93-->[androidx.compose.ui:ui-test-manifest:1.7.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/a2bc9b617f31cc50cb6fb510b4374228/transformed/ui-test-manifest-1.7.0/AndroidManifest.xml:25:13-36
-94
-95        <provider
-95-->[androidx.emoji2:emoji2:1.3.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/bcff421f99ac154d42530e492eed838a/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
-96            android:name="androidx.startup.InitializationProvider"
-96-->[androidx.emoji2:emoji2:1.3.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/bcff421f99ac154d42530e492eed838a/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
-97            android:authorities="com.example.nailytics.androidx-startup"
-97-->[androidx.emoji2:emoji2:1.3.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/bcff421f99ac154d42530e492eed838a/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
-98            android:exported="false" >
-98-->[androidx.emoji2:emoji2:1.3.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/bcff421f99ac154d42530e492eed838a/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
-99            <meta-data
-99-->[androidx.emoji2:emoji2:1.3.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/bcff421f99ac154d42530e492eed838a/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-100                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-100-->[androidx.emoji2:emoji2:1.3.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/bcff421f99ac154d42530e492eed838a/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
-101                android:value="androidx.startup" />
-101-->[androidx.emoji2:emoji2:1.3.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/bcff421f99ac154d42530e492eed838a/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
-102            <meta-data
-102-->[androidx.lifecycle:lifecycle-process:2.8.3] /Users/imankonjo2020/.gradle/caches/8.13/transforms/6b5a3ab12b010e75c50569e1278ce38c/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:29:13-31:52
-103                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-103-->[androidx.lifecycle:lifecycle-process:2.8.3] /Users/imankonjo2020/.gradle/caches/8.13/transforms/6b5a3ab12b010e75c50569e1278ce38c/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:30:17-78
-104                android:value="androidx.startup" />
-104-->[androidx.lifecycle:lifecycle-process:2.8.3] /Users/imankonjo2020/.gradle/caches/8.13/transforms/6b5a3ab12b010e75c50569e1278ce38c/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:31:17-49
-105            <meta-data
-105-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
-106                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-106-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
-107                android:value="androidx.startup" />
-107-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
-108        </provider>
-109
-110        <receiver
-110-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
-111            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-111-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
-112            android:directBootAware="false"
-112-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
-113            android:enabled="true"
-113-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
-114            android:exported="true"
-114-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
-115            android:permission="android.permission.DUMP" >
-115-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
-116            <intent-filter>
-116-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
-117                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-117-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
-117-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
-118            </intent-filter>
-119            <intent-filter>
-119-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
-120                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-120-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
-120-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
-121            </intent-filter>
-122            <intent-filter>
-122-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
-123                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-123-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
-123-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
-124            </intent-filter>
-125            <intent-filter>
-125-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
-126                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-126-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
-126-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
-127            </intent-filter>
-128        </receiver>
-129    </application>
-130
-131</manifest>
+88-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:83:9-87:20
+89            android:name="com.example.nailytics.Profile3_Name_Activity"
+89-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:84:13-51
+90            android:exported="true"
+90-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:85:13-36
+91            android:theme="@style/Theme.Nailytics" >
+91-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:86:13-51
+92        </activity>
+93        <activity
+93-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:89:9-93:20
+94            android:name="com.example.nailytics.Profile4_Bday_Activity"
+94-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:90:13-51
+95            android:exported="true"
+95-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:91:13-36
+96            android:theme="@style/Theme.Nailytics" >
+96-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:92:13-51
+97        </activity>
+98        <activity
+98-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:95:9-99:20
+99            android:name="com.example.nailytics.Profile5_Gender_Activity"
+99-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:96:13-53
+100            android:exported="true"
+100-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:97:13-36
+101            android:theme="@style/Theme.Nailytics" >
+101-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:98:13-51
+102        </activity>
+103        <activity
+103-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:101:9-105:20
+104            android:name="com.example.nailytics.Profile6_Gender_Self_Describe_Activity"
+104-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:102:13-67
+105            android:exported="true"
+105-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:103:13-36
+106            android:theme="@style/Theme.Nailytics" >
+106-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:104:13-51
+107        </activity>
+108        <activity
+108-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:107:9-111:20
+109            android:name="com.example.nailytics.Profile7_Email_Activity"
+109-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:108:13-52
+110            android:exported="true"
+110-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:109:13-36
+111            android:theme="@style/Theme.Nailytics" >
+111-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:110:13-51
+112        </activity>
+113        <activity
+113-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:113:9-117:20
+114            android:name="com.example.nailytics.Profile8_BMI_Activity"
+114-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:114:13-50
+115            android:exported="true"
+115-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:115:13-36
+116            android:theme="@style/Theme.Nailytics" >
+116-->/Users/imankonjo2020/Documents/2_UC_Davis/1_Interactive_Organisms_Lab/Microfluidics_Fake_Nail_Project/Github_Repo/Lab-on-a-Nail/Nailytics/app/src/main/AndroidManifest.xml:116:13-51
+117        </activity>
+118        <activity
+118-->[androidx.compose.ui:ui-tooling-android:1.7.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/6917090b203230f5830628d8553d2513/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+119            android:name="androidx.compose.ui.tooling.PreviewActivity"
+119-->[androidx.compose.ui:ui-tooling-android:1.7.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/6917090b203230f5830628d8553d2513/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+120            android:exported="true" />
+120-->[androidx.compose.ui:ui-tooling-android:1.7.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/6917090b203230f5830628d8553d2513/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+121        <activity
+121-->[androidx.compose.ui:ui-test-manifest:1.7.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/a2bc9b617f31cc50cb6fb510b4374228/transformed/ui-test-manifest-1.7.0/AndroidManifest.xml:23:9-25:39
+122            android:name="androidx.activity.ComponentActivity"
+122-->[androidx.compose.ui:ui-test-manifest:1.7.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/a2bc9b617f31cc50cb6fb510b4374228/transformed/ui-test-manifest-1.7.0/AndroidManifest.xml:24:13-63
+123            android:exported="true" />
+123-->[androidx.compose.ui:ui-test-manifest:1.7.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/a2bc9b617f31cc50cb6fb510b4374228/transformed/ui-test-manifest-1.7.0/AndroidManifest.xml:25:13-36
+124
+125        <provider
+125-->[androidx.emoji2:emoji2:1.3.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/bcff421f99ac154d42530e492eed838a/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+126            android:name="androidx.startup.InitializationProvider"
+126-->[androidx.emoji2:emoji2:1.3.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/bcff421f99ac154d42530e492eed838a/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+127            android:authorities="com.example.nailytics.androidx-startup"
+127-->[androidx.emoji2:emoji2:1.3.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/bcff421f99ac154d42530e492eed838a/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+128            android:exported="false" >
+128-->[androidx.emoji2:emoji2:1.3.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/bcff421f99ac154d42530e492eed838a/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+129            <meta-data
+129-->[androidx.emoji2:emoji2:1.3.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/bcff421f99ac154d42530e492eed838a/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+130                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+130-->[androidx.emoji2:emoji2:1.3.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/bcff421f99ac154d42530e492eed838a/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+131                android:value="androidx.startup" />
+131-->[androidx.emoji2:emoji2:1.3.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/bcff421f99ac154d42530e492eed838a/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+132            <meta-data
+132-->[androidx.lifecycle:lifecycle-process:2.8.3] /Users/imankonjo2020/.gradle/caches/8.13/transforms/6b5a3ab12b010e75c50569e1278ce38c/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:29:13-31:52
+133                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+133-->[androidx.lifecycle:lifecycle-process:2.8.3] /Users/imankonjo2020/.gradle/caches/8.13/transforms/6b5a3ab12b010e75c50569e1278ce38c/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:30:17-78
+134                android:value="androidx.startup" />
+134-->[androidx.lifecycle:lifecycle-process:2.8.3] /Users/imankonjo2020/.gradle/caches/8.13/transforms/6b5a3ab12b010e75c50569e1278ce38c/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:31:17-49
+135            <meta-data
+135-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+136                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+136-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+137                android:value="androidx.startup" />
+137-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+138        </provider>
+139
+140        <receiver
+140-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+141            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+141-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+142            android:directBootAware="false"
+142-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+143            android:enabled="true"
+143-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+144            android:exported="true"
+144-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+145            android:permission="android.permission.DUMP" >
+145-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+146            <intent-filter>
+146-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+147                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+147-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+147-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+148            </intent-filter>
+149            <intent-filter>
+149-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+150                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+150-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+150-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+151            </intent-filter>
+152            <intent-filter>
+152-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+153                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+153-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+153-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+154            </intent-filter>
+155            <intent-filter>
+155-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+156                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+156-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+156-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imankonjo2020/.gradle/caches/8.13/transforms/d53a61b946063b06f7cd53b18ef1adb0/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+157            </intent-filter>
+158        </receiver>
+159    </application>
+160
+161</manifest>
