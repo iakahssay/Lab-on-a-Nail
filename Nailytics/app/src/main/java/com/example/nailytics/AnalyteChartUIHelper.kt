@@ -8,12 +8,23 @@ import android.view.View
 import android.widget.PopupWindow
 import android.widget.TextView
 
-public var selectedAnalyteId: Int = R.id.item_saliva_ph
-public var selectedAnalyteName: String = "pH levels (saliva)"
 object AnalyteChartUIHelper {
+//For the analyte TYPE dropdown menu (in pages main2-mainRESULTS)
+    // Tracks which analyte TYPE is currently selected.
+    // Example: pH levels, Glucose levels, Nitrate levels, etc
+    var selectedAnalyteId: Int = R.id.item_saliva_ph
+    var selectedAnalyteName: String = "pH levels (saliva)"
 
-    //1) COLOR CHART UI FUNCTION
+//For the analyte VALUE dropdown menu (in main3 screen)
+    // Tracks which analyte VALUE is currently selected.
+    // Ex: pH 5, ph 6, ph 7, etc.
+    var selectedAnalyteValueIndex: Int = 0
+    var selectedAnalyteValueName: String = AnalyteColorChartManager.getChart(selectedAnalyteId)[0].label
+
+
+//1) COLOR CHART UI FUNCTION
     //Updates the analyte color chart shown on the main screen
+    //-> Is used/called on in selectAnalyte()
     fun updateColorChart(activity:Activity) {
         val values = AnalyteColorChartManager.getChart(selectedAnalyteId)  //returns the list of items in the analyteMap[analyteID]
 
@@ -38,9 +49,13 @@ object AnalyteChartUIHelper {
 
         //Initializes the analyte selector text on the main screen (on the top of the chart)
         activity.findViewById<TextView>(R.id.analyte_type).text = selectedAnalyteName
+
+        //Initializes/updates selected analyte_value if screen has analyte_value (which will only be true in Main3 Activity).
+        // Does nothing on screens that don't.
+        resetSelectedAnalyteValue(activity)
     }
 
-    //2) DROPDOWN FUNCTION
+//2) ANALYTE TYPE DROPDOWN FUNCTION
     // Shows the analyte dropdown menu when the user taps the analyte selector.
     fun showAnalyteDropdown(
             activity:Activity, //the current class activity (ex: Main1_Activity's 'this')
@@ -188,7 +203,7 @@ object AnalyteChartUIHelper {
         itemId: Int,
         labelText: String,
         popupView: View,
-        popupWindow: PopupWindow
+        popupWindow: PopupWindow,
     ) {
         selectedAnalyteId = itemId
         selectedAnalyteName = labelText
@@ -236,6 +251,121 @@ object AnalyteChartUIHelper {
             R.id.item_saliva_nitrate -> popupView?.findViewById<View?>(R.id.checkmark_saliva_nitrate)?.visibility = View.VISIBLE
         }
     }
+
+
+//3) ANALYTE VALUE DROPDOWN OPTION
+    fun showAnalyteValueDropdown(
+        activity:Activity, //the current class activity (ex: Main1_Activity's 'this')
+        anchor: View,
+    ){
+
+        val overlay = activity.findViewById<View?>(R.id.screen_dim_overlay) // Finds the dark overlay view from the current screen layout.
+        overlay?.visibility = View.VISIBLE // Makes the overlay visible so the screen looks dimmed behind the dropdown.
+
+        // Converts the dropdown XML layout into an actual View object.
+        val popupView = LayoutInflater.from(activity)?.inflate(R.layout.analyte_value_dropdown_menu, null)
+
+        // Creates a popup window using the dropdown layout.
+        val popupWindow = PopupWindow(
+            popupView,          // The dropdown UI.
+            250.dpToPx(activity),       // Popup width.
+            204.dpToPx(activity),       // Popup height.
+            true                // Allows the popup to receive focus.
+        )
+
+        // Shows the dropdown directly below the tapped button/view.
+        popupWindow.showAsDropDown(anchor, 0, 8.dpToPx(activity))
+
+        // Get the current analyte chart.
+        // This automatically changes depending on selectedAnalyteId.
+        val chart = AnalyteColorChartManager.getChart(selectedAnalyteId)
+
+       // Update the analyte value dropdown items (based on whichever analyte type was picked)
+        val itemViews = listOf(
+            popupView?.findViewById<View>(R.id.item0),
+            popupView?.findViewById<View>(R.id.item1),
+            popupView?.findViewById<View>(R.id.item2),
+            popupView?.findViewById<View>(R.id.item3)
+        )
+
+        val labelViews = listOf(
+            popupView?.findViewById<TextView>(R.id.item0_label),
+            popupView?.findViewById<TextView>(R.id.item1_label),
+            popupView?.findViewById<TextView>(R.id.item2_label),
+            popupView?.findViewById<TextView>(R.id.item3_label)
+        )
+
+        // Fill dropdown rows using the current analyte's chart labels.
+        // Example: pH chart shows pH 5–pH 8.
+        // Glucose chart shows 40 mM–160 mM.
+        for (i in chart.indices) {
+            labelViews[i]?.text = chart[i].label
+
+            itemViews[i]?.setOnClickListener {
+                selectedValue(
+                    activity = activity,
+                    index = i,
+                    labelText = chart[i].label,
+                    popupWindow = popupWindow
+                )
+            }
+        }
+
+        /*
+        Similar to this, but for every R.id.item#:
+            // Handles the first dropdown option.
+            popupView?.findViewById<View?>(R.id.item0)?.setOnClickListener {
+                selectValue(
+                    activity,
+                    0,
+                    chart[0].label,
+                    popupWindow
+                )
+            }
+        */
+
+        // Allows the user to tap outside the popup to close it.
+        popupWindow.isOutsideTouchable = true
+        // Gives the popup a transparent background so outside-tap dismissal works correctly.
+        popupWindow.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        // Runs this code whenever the popup closes.
+        popupWindow.setOnDismissListener {
+            // Hides the dark overlay after the dropdown is dismissed.
+            overlay.visibility = View.GONE
+        }
+    }
+
+    private fun selectedValue(
+        activity: Activity,
+        index: Int,
+        labelText: String,
+        popupWindow: PopupWindow
+    ) {
+        // Save which chart item the user is editing.
+        selectedAnalyteValueIndex = index
+        selectedAnalyteValueName = labelText
+
+        // Update the selected value text on Main3.
+        activity.findViewById<TextView>(R.id.analyte_value).text = selectedAnalyteValueName
+        // Closes the dropdown menu after am analyte has been selected
+        popupWindow.dismiss()
+    }
+
+    // Whenever the analyte TYPE changes, this function resets the selected VALUE to the first item.
+    // Example: if user switches from pH saliva to glucose saliva,
+    // the selected value should change from "pH 5" to "40 mM".
+    fun resetSelectedAnalyteValue(activity: Activity) {
+        selectedAnalyteValueIndex = 0
+
+        val chart = AnalyteColorChartManager.getChart(selectedAnalyteId)
+        selectedAnalyteValueName = chart[0].label
+
+        // Safe: only Main3 has this TextView.
+        // Other screens return null, so no crash.
+        activity.findViewById<TextView?>(R.id.analyte_value)?.text = selectedAnalyteValueName
+    }
+
 
 }
 

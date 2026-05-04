@@ -38,6 +38,14 @@ class Main5_Analyze_Color_Activity: AppCompatActivity() {
         NavBar_Helper.moveToPreviousScreen(this)
     }
 
+    override fun onResume() {
+        super.onResume()
+
+        // Refreshes the chart whenever this screen becomes visible again.
+        // This is important after returning from Main3 using finish() (ie after returning from editing the analyte's color)
+        AnalyteChartUIHelper.updateColorChart(this)
+    }
+
 //1) PAGE FLOW FUNCTIONS
     private fun moveToMain3() {
         findViewById<View>(R.id.edit_color_button).setOnClickListener {

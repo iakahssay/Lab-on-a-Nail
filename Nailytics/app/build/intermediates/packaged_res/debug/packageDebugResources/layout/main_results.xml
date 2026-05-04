@@ -128,13 +128,11 @@
 
 
         <LinearLayout
-
             android:id="@+id/color_chart"
             android:layout_width="377dp"
             android:layout_height="130dp"
             android:layout_marginStart="12dp"
             android:orientation="horizontal">
-
 
             <LinearLayout
                 android:id="@+id/item0"
@@ -155,8 +153,9 @@
 
                 <TextView
                     android:id="@+id/item0_label"
-                    android:layout_width="88dp"
+                    android:layout_width="74dp"
                     android:layout_height="45dp"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:text="@string/ph5"
                     android:textColor="@color/text_primary"
@@ -182,8 +181,9 @@
 
                 <TextView
                     android:id="@+id/item1_label"
-                    android:layout_width="88dp"
+                    android:layout_width="74dp"
                     android:layout_height="45dp"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:text="@string/ph6"
                     android:textColor="@color/text_primary"
@@ -209,8 +209,9 @@
 
                 <TextView
                     android:id="@+id/item2_label"
-                    android:layout_width="88dp"
+                    android:layout_width="74dp"
                     android:layout_height="45dp"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:text="@string/ph7"
                     android:textColor="@color/text_primary"
@@ -235,8 +236,9 @@
 
                 <TextView
                     android:id="@+id/item3_label"
-                    android:layout_width="88dp"
+                    android:layout_width="74dp"
                     android:layout_height="45dp"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:text="@string/ph8"
                     android:textColor="@color/text_primary"

@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/ph5"
+            android:id="@+id/item0"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:clickable="true"
@@ -31,7 +31,7 @@
             android:paddingEnd="16dp">
 
             <TextView
-                android:id="@+id/pH5_label"
+                android:id="@+id/item0_label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -48,7 +48,7 @@
             android:background="@color/gray_200" />
 
         <LinearLayout
-            android:id="@+id/ph6"
+            android:id="@+id/item1"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:clickable="true"
@@ -59,7 +59,7 @@
             android:paddingEnd="16dp">
 
             <TextView
-                android:id="@+id/pH6_label"
+                android:id="@+id/item1_label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -76,7 +76,7 @@
             android:background="@color/gray_200" />
 
         <LinearLayout
-            android:id="@+id/ph7"
+            android:id="@+id/item2"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:clickable="true"
@@ -87,7 +87,7 @@
             android:paddingEnd="16dp">
 
             <TextView
-                android:id="@+id/pH7_label"
+                android:id="@+id/item2_label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -104,7 +104,7 @@
             android:background="@color/gray_200" />
 
         <LinearLayout
-            android:id="@+id/ph8"
+            android:id="@+id/item3"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:clickable="true"
@@ -115,7 +115,7 @@
             android:paddingEnd="16dp">
 
             <TextView
-                android:id="@+id/pH8_label"
+                android:id="@+id/item3_label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

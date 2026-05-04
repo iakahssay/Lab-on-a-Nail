@@ -152,13 +152,11 @@
 
 
             <LinearLayout
-
                 android:id="@+id/color_chart"
                 android:layout_width="377dp"
                 android:layout_height="130dp"
                 android:layout_marginStart="12dp"
                 android:orientation="horizontal">
-
 
                 <LinearLayout
                     android:id="@+id/item0"
@@ -179,8 +177,9 @@
 
                     <TextView
                         android:id="@+id/item0_label"
-                        android:layout_width="88dp"
+                        android:layout_width="74dp"
                         android:layout_height="45dp"
+                        android:layout_gravity="center"
                         android:gravity="center"
                         android:text="@string/ph5"
                         android:textColor="@color/text_primary"
@@ -206,8 +205,9 @@
 
                     <TextView
                         android:id="@+id/item1_label"
-                        android:layout_width="88dp"
+                        android:layout_width="74dp"
                         android:layout_height="45dp"
+                        android:layout_gravity="center"
                         android:gravity="center"
                         android:text="@string/ph6"
                         android:textColor="@color/text_primary"
@@ -233,8 +233,9 @@
 
                     <TextView
                         android:id="@+id/item2_label"
-                        android:layout_width="88dp"
+                        android:layout_width="74dp"
                         android:layout_height="45dp"
+                        android:layout_gravity="center"
                         android:gravity="center"
                         android:text="@string/ph7"
                         android:textColor="@color/text_primary"
@@ -259,14 +260,16 @@
 
                     <TextView
                         android:id="@+id/item3_label"
-                        android:layout_width="88dp"
+                        android:layout_width="74dp"
                         android:layout_height="45dp"
+                        android:layout_gravity="center"
                         android:gravity="center"
                         android:text="@string/ph8"
                         android:textColor="@color/text_primary"
                         android:textSize="16sp" />
                 </LinearLayout>
             </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 
@@ -334,7 +337,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/updatingColor"
+                android:id="@+id/analyte_value_dropDown"
                 android:layout_width="336dp"
                 android:layout_height="32dp"
                 android:background="@drawable/bg_rounded_white_corner_16_frame"
@@ -345,7 +348,7 @@
 
 
                 <TextView
-                    android:id="@+id/ph_5_0_2_2"
+                    android:id="@+id/analyte_value"
                     android:layout_width="263dp"
                     android:layout_height="22dp"
                     android:gravity="start"
@@ -357,7 +360,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/add_2_2"
+                    android:id="@+id/analyte_value_dropDownArrow"
                     android:layout_width="41dp"
                     android:layout_height="32dp"
                     android:layout_marginTop="4dp"
@@ -367,7 +370,7 @@
                     android:paddingBottom="0dp">
 
                     <ImageView
-                        android:id="@+id/pHDropDownArrow"
+                        android:id="@+id/analyte_value_dropDownArrow_label"
                         android:layout_width="17dp"
                         android:layout_height="20dp"
                         android:gravity="start"
@@ -506,7 +509,7 @@
 
 
             <LinearLayout
-                android:id="@+id/hex_2_rgb"
+                android:id="@+id/color_value_inputs"
                 android:layout_width="280dp"
                 android:layout_height="60dp"
                 android:orientation="horizontal"
@@ -516,15 +519,15 @@
 
 
                 <LinearLayout
-                    android:id="@+id/hex_2"
+                    android:id="@+id/hex_color_section"
                     android:layout_width="90dp"
                     android:layout_height="62dp"
                     android:orientation="vertical">
 
 
                     <TextView
-                        android:id="@+id/hex_2_2"
-                        android:layout_width="90dp"
+                        android:id="@+id/hex_color_label"
+                        android:layout_width="match_parent"
                         android:layout_height="19dp"
                         android:gravity="center_horizontal"
                         android:text="HEX"
@@ -535,182 +538,149 @@
 
 
                     <LinearLayout
-                        android:id="@+id/text_field_4"
-                        android:layout_width="90dp"
+                        android:id="@+id/hex_color_input_box"
+                        android:layout_width="match_parent"
                         android:layout_height="38dp"
-                        android:orientation="vertical">
+                        android:gravity="center">
 
-
-                        <LinearLayout
-                            android:id="@+id/input_4"
-                            android:layout_width="90dp"
-                            android:layout_height="38dp"
-                            android:orientation="horizontal"
-                            android:paddingLeft="10.614035606384277dp"
-                            android:paddingTop="5.307017803192139dp"
-                            android:paddingRight="10.614035606384277dp"
-                            android:paddingBottom="5.307017803192139dp">
-
-                            <TextView
-                                android:id="@+id/_9b123a"
-                                android:layout_width="69dp"
-                                android:layout_height="27dp"
-                                android:gravity="center_horizontal"
+                            <EditText
+                                android:id="@+id/hex_color_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="38dp"
+                                android:gravity="center"
+                                android:inputType="textCapCharacters"
+                                android:autofillHints="hexadecimal"
+                                android:maxLength="9"
                                 android:text="#9B123A"
-                                android:textColor="#FF212121"
+                                android:textColor="@color/text_primary"
                                 android:textSize="16sp" />
-                        </LinearLayout>
+
                     </LinearLayout>
                 </LinearLayout>
 
 
                 <LinearLayout
-                    android:id="@+id/rgb"
+                    android:id="@+id/rgb_section"
                     android:layout_width="194dp"
                     android:layout_height="62dp"
                     android:orientation="horizontal">
 
 
                     <LinearLayout
-                        android:id="@+id/value_3"
+                        android:id="@+id/r_section"
                         android:layout_width="65dp"
                         android:layout_height="62dp"
                         android:orientation="vertical">
 
 
                         <TextView
-                            android:id="@+id/r"
-                            android:layout_width="65dp"
+                            android:id="@+id/r_label"
+                            android:layout_width="match_parent"
                             android:layout_height="19dp"
                             android:gravity="center_horizontal"
                             android:text="R"
-                            android:textColor="#FF000000"
-                            android:textSize="16sp" />
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="6dp"
+                            />
 
 
                         <LinearLayout
-                            android:id="@+id/text_field_4_2"
-                            android:layout_width="65dp"
+                            android:id="@+id/r_input_box"
+                            android:layout_width="match_parent"
                             android:layout_height="38dp"
-                            android:orientation="vertical">
+                            android:gravity="center">
 
-
-                            <LinearLayout
-                                android:id="@+id/input_4_2"
-                                android:layout_width="65dp"
-                                android:layout_height="38dp"
-                                android:orientation="horizontal"
-                                android:paddingLeft="10.614035606384277dp"
-                                android:paddingTop="5.307017803192139dp"
-                                android:paddingRight="10.614035606384277dp"
-                                android:paddingBottom="5.307017803192139dp">
-
-
-                                <TextView
-                                    android:id="@+id/r_value"
-                                    android:layout_width="43dp"
-                                    android:layout_height="27dp"
-                                    android:gravity="center_horizontal"
-                                    android:text="155"
-                                    android:textColor="#FF212121"
-                                    android:textSize="16sp" />
-                            </LinearLayout>
+                            <EditText
+                                android:id="@+id/r_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="38dp"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:text="155"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
 
-
                     <LinearLayout
-                        android:id="@+id/value_3_2"
+                        android:id="@+id/g_section"
                         android:layout_width="65dp"
                         android:layout_height="62dp"
                         android:orientation="vertical">
 
 
                         <TextView
-                            android:id="@+id/g"
-                            android:layout_width="65dp"
+                            android:id="@+id/g_label"
+                            android:layout_width="match_parent"
                             android:layout_height="19dp"
                             android:gravity="center_horizontal"
                             android:text="G"
-                            android:textColor="#FF000000"
-                            android:textSize="16sp" />
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="6dp"
+                            />
 
 
                         <LinearLayout
-                            android:id="@+id/text_field_4_3"
-                            android:layout_width="65dp"
+                            android:id="@+id/g_input_box"
+                            android:layout_width="match_parent"
                             android:layout_height="38dp"
-                            android:orientation="vertical">
+                            android:gravity="center">
 
-
-                            <LinearLayout
-                                android:id="@+id/input_4_3"
-                                android:layout_width="65dp"
-                                android:layout_height="38dp"
-                                android:orientation="horizontal"
-                                android:paddingLeft="10.614035606384277dp"
-                                android:paddingTop="5.307017803192139dp"
-                                android:paddingRight="10.614035606384277dp"
-                                android:paddingBottom="5.307017803192139dp">
-
-
-                                <TextView
-                                    android:id="@+id/g_value"
-                                    android:layout_width="43dp"
-                                    android:layout_height="27dp"
-                                    android:gravity="center_horizontal"
-                                    android:text="18"
-                                    android:textColor="#FF212121"
-                                    android:textSize="16sp" />
-                            </LinearLayout>
+                            <EditText
+                                android:id="@+id/g_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="38dp"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:text="18"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
 
-
                     <LinearLayout
-                        android:id="@+id/value_3_3"
+                        android:id="@+id/b_section"
                         android:layout_width="65dp"
                         android:layout_height="62dp"
                         android:orientation="vertical">
 
 
                         <TextView
-                            android:id="@+id/b"
-                            android:layout_width="65dp"
+                            android:id="@+id/b_label"
+                            android:layout_width="match_parent"
                             android:layout_height="19dp"
                             android:gravity="center_horizontal"
                             android:text="B"
-                            android:textColor="#FF000000"
-                            android:textSize="16sp" />
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="6dp"
+                            />
 
 
                         <LinearLayout
-                            android:id="@+id/text_field_4_4"
-                            android:layout_width="65dp"
+                            android:id="@+id/b_input_box"
+                            android:layout_width="match_parent"
                             android:layout_height="38dp"
-                            android:orientation="vertical">
+                            android:gravity="center">
 
-
-                            <LinearLayout
-                                android:id="@+id/input_4_4"
-                                android:layout_width="65dp"
-                                android:layout_height="38dp"
-                                android:orientation="horizontal"
-                                android:paddingLeft="10.614035606384277dp"
-                                android:paddingTop="5.307017803192139dp"
-                                android:paddingRight="10.614035606384277dp"
-                                android:paddingBottom="5.307017803192139dp">
-
-
-                                <TextView
-                                    android:id="@+id/b_value"
-                                    android:layout_width="43dp"
-                                    android:layout_height="27dp"
-                                    android:gravity="center_horizontal"
-                                    android:text="58"
-                                    android:textColor="#FF212121"
-                                    android:textSize="16sp" />
-                            </LinearLayout>
+                            <EditText
+                                android:id="@+id/b_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="38dp"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:text="58"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -721,7 +691,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/button_2s"
             android:layout_width="322dp"
-            android:layout_height="25dp">
+            android:layout_height="25dp"
+            android:layout_marginTop="2dp">
 
 
             <LinearLayout

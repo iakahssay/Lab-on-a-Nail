@@ -29,45 +29,45 @@ object AnalyteColorChartManager {
         ),
 
         R.id.item_blood_glucose to mutableListOf(
-            ColorChartValue("Glucose \n40 mM", Color.rgb(193,220,37)),
-            ColorChartValue("Glucose \n80 mM", Color.rgb(167,200,15)),
+            ColorChartValue("Glucose 40 mM", Color.rgb(193,220,37)),
+            ColorChartValue("Glucose 80 mM", Color.rgb(167,200,15)),
             ColorChartValue("Glucose 120 mM", Color.rgb	(135,185,51)),
             ColorChartValue("Glucose 160 mM", Color.rgb(105,168,0))
         ),
 
         R.id.item_urine_glucose to mutableListOf(
-            ColorChartValue("Glucose \n40 mM", Color.rgb(193,220,37)),
-            ColorChartValue("Glucose \n80 mM", Color.rgb(167,200,15)),
+            ColorChartValue("Glucose 40 mM", Color.rgb(193,220,37)),
+            ColorChartValue("Glucose 80 mM", Color.rgb(167,200,15)),
             ColorChartValue("Glucose 120 mM", Color.rgb	(135,185,51)),
             ColorChartValue("Glucose 160 mM", Color.rgb(105,168,0))
         ),
 
         R.id.item_saliva_glucose to mutableListOf(
-            ColorChartValue("Glucose \n40 mM", Color.rgb(193,220,37)),
-            ColorChartValue("Glucose \n80 mM", Color.rgb(167,200,15)),
+            ColorChartValue("Glucose 40 mM", Color.rgb(193,220,37)),
+            ColorChartValue("Glucose 80 mM", Color.rgb(167,200,15)),
             ColorChartValue("Glucose 120 mM", Color.rgb	(135,185,51)),
             ColorChartValue("Glucose 160 mM", Color.rgb(105,168,0))
         ),
 
         R.id.item_blood_nitrate to mutableListOf(
-            ColorChartValue("Nitrate \n2.5 mM", Color.rgb(255, 230, 80)),
-            ColorChartValue("Nitrate \n5.0 mM", Color.rgb(255, 220, 60)),
-            ColorChartValue("Nitrate \n7.5 mM", Color.rgb(245, 200, 60)),
-            ColorChartValue("Nitrate \n10.0 mM", Color.rgb(231,176,58))
+            ColorChartValue("Nitrate 2.5 mM", Color.rgb(255, 230, 80)),
+            ColorChartValue("Nitrate 5.0 mM", Color.rgb(255, 220, 60)),
+            ColorChartValue("Nitrate 7.5 mM", Color.rgb(245, 200, 60)),
+            ColorChartValue("Nitrate 10.0 mM", Color.rgb(231,176,58))
         ),
 
         R.id.item_urine_nitrate to mutableListOf(
-            ColorChartValue("Nitrate \n2.5 mM", Color.rgb(255, 230, 80)),
-            ColorChartValue("Nitrate \n5.0 mM", Color.rgb(255, 220, 60)),
-            ColorChartValue("Nitrate \n7.5 mM", Color.rgb(245, 200, 60)),
-            ColorChartValue("Nitrate \n10.0 mM", Color.rgb(231,176,58))
+            ColorChartValue("Nitrate 2.5 mM", Color.rgb(255, 230, 80)),
+            ColorChartValue("Nitrate 5.0 mM", Color.rgb(255, 220, 60)),
+            ColorChartValue("Nitrate 7.5 mM", Color.rgb(245, 200, 60)),
+            ColorChartValue("Nitrate 10.0 mM", Color.rgb(231,176,58))
         ),
 
         R.id.item_saliva_nitrate to mutableListOf(
-            ColorChartValue("Nitrate \n2.5 mM", Color.rgb(255, 230, 80)),
-            ColorChartValue("Nitrate \n5.0 mM", Color.rgb(255, 220, 60)),
-            ColorChartValue("Nitrate \n7.5 mM", Color.rgb(245, 200, 60)),
-            ColorChartValue("Nitrate \n10.0 mM", Color.rgb(231,176,58))
+            ColorChartValue("Nitrate 2.5 mM", Color.rgb(255, 230, 80)),
+            ColorChartValue("Nitrate 5.0 mM", Color.rgb(255, 220, 60)),
+            ColorChartValue("Nitrate 7.5 mM", Color.rgb(245, 200, 60)),
+            ColorChartValue("Nitrate 10.0 mM", Color.rgb(231,176,58))
         )
     )
 
