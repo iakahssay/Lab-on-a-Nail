@@ -28,14 +28,14 @@ object AnalyteChartUIHelper {
     fun updateColorChart(activity:Activity) {
         val values = AnalyteColorChartManager.getChart(selectedAnalyteId)  //returns the list of items in the analyteMap[analyteID]
 
-        val colorViews = listOf(
+        val colorViews: List<Int?> = listOf(
                 R.id.item0_color,
                 R.id.item1_color,
                 R.id.item2_color,
                 R.id.item3_color
         )
 
-        val labelViews = listOf(
+        val labelViews: List<Int?> = listOf(
                 R.id.item0_label,
                 R.id.item1_label,
                 R.id.item2_label,
@@ -43,12 +43,12 @@ object AnalyteChartUIHelper {
         )
 
         for (i in values.indices) {
-            activity.findViewById<View> (colorViews[i]).setBackgroundColor(values[i].color)
-            activity.findViewById<TextView> (labelViews[i]).text = values[i].label
+            colorViews[i]?.let { activity.findViewById<View?> (it)?.setBackgroundColor(values[i].color) }
+            labelViews[i]?.let { activity.findViewById<TextView?> (it)?.text = values[i].label}
         }
 
         //Initializes the analyte selector text on the main screen (on the top of the chart)
-        activity.findViewById<TextView>(R.id.analyte_type).text = selectedAnalyteName
+        activity.findViewById<TextView?>(R.id.analyte_type).text = selectedAnalyteName
 
         //Initializes/updates selected analyte_value if screen has analyte_value (which will only be true in Main3 Activity).
         // Does nothing on screens that don't.
@@ -189,7 +189,7 @@ object AnalyteChartUIHelper {
         // Runs this code whenever the popup closes.
         popupWindow.setOnDismissListener {
             // Hides the dark overlay after the dropdown is dismissed.
-            overlay.visibility = View.GONE
+            overlay?.visibility = View.GONE
         }
 
     }
@@ -332,7 +332,7 @@ object AnalyteChartUIHelper {
         // Runs this code whenever the popup closes.
         popupWindow.setOnDismissListener {
             // Hides the dark overlay after the dropdown is dismissed.
-            overlay.visibility = View.GONE
+            overlay?.visibility = View.GONE
         }
     }
 
