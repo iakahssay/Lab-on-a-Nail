@@ -1,3 +1,13 @@
+import java.util.Properties
+import java.io.FileInputStream
+
+val nixProperties = Properties()
+val nixPropertiesFile = rootProject.file("nix.properties")
+
+if (nixPropertiesFile.exists()) {
+    nixProperties.load(FileInputStream(nixPropertiesFile))
+}
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -16,6 +26,23 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildFeatures {
+            buildConfig = true
+        }
+
+        //For Nix setup properties (its option and signature)
+        buildConfigField(
+            "String",
+            "NIX_LICENSE_OPTIONS",
+            "\"${nixProperties["NIX_LICENSE_OPTIONS"]}\""
+        )
+
+        buildConfigField(
+            "String",
+            "NIX_LICENSE_SIGNATURE",
+            "\"${nixProperties["NIX_LICENSE_SIGNATURE"]}\""
+        )
     }
 
     buildTypes {
@@ -61,4 +88,11 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    // Nix Universal SDK
+    implementation("com.nixsensor:universalsdk:4.2.3")
+
+    // Optional: Enables USB support in Nix Universal SDK
+    implementation("com.github.mik3y:usb-serial-for-android:v3.8.1")
+
 }
+

@@ -24,7 +24,7 @@ class Main5_Analyze_Color_Activity: AppCompatActivity() {
         //Listener for editing analyte's color (does that in main2 screen)
         moveToMain3()
 
-        //Listener that will move this screen (main1) to the next (main4)
+        //Listener that will move this screen (main5) to the next (main6)
         moveToMain6()
 
         //Listener for changing Nix device (moves back to main2)
