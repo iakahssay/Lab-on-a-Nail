@@ -279,13 +279,14 @@
         </LinearLayout>
     </LinearLayout>
 
+    <!--android:layout_marginStart="16dp" -->
     <LinearLayout
         android:id="@+id/result_body"
         android:layout_width="398dp"
         android:layout_height="494dp"
         android:orientation="vertical"
-        android:layout_marginTop="275dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="245dp"
+        android:layout_marginStart="0dp"
         app:layout_constraintBottom_toTopOf="@+id/tab_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -333,7 +334,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/frame_1000004576"
+            android:id="@+id/analyte_result_section"
             android:layout_width="378dp"
             android:layout_height="100dp"
             android:orientation="horizontal"
@@ -341,32 +342,16 @@
 
 
             <LinearLayout
-                android:id="@+id/frame_1000004559_2_2"
+                android:id="@+id/analyte_result_color"
                 android:layout_width="94dp"
-                android:layout_height="94dp"
-                android:orientation="vertical">
-
-
-            <LinearLayout
-                android:id="@+id/frame_1000004558_2_2"
-                android:layout_width="94dp"
-                android:layout_height="94dp"
-                android:background="#8FA70E3D"
-                android:orientation="vertical">
-
-
-                <LinearLayout
-                    android:id="@+id/analyte_result_color"
-                    android:layout_width="94dp"
-                    android:layout_height="94dp"
-                    android:background="#FFAD447A"
-                    android:orientation="horizontal" />
-                </LinearLayout>
+                android:layout_height="96dp"
+                android:orientation="horizontal"
+                android:background="#FFAD447A">
             </LinearLayout>
 
 
             <LinearLayout
-                android:id="@+id/frame_1000004577_2"
+                android:id="@+id/analyte_result_description_section"
                 android:layout_width="281dp"
                 android:layout_height="100dp"
                 android:orientation="vertical"
@@ -374,37 +359,37 @@
 
 
                 <TextView
-                    android:id="@+id/ph__4___highly_acidic"
+                    android:id="@+id/analyte_result"
                     android:layout_width="281dp"
                     android:layout_height="20dp"
                     android:gravity="start"
                     android:text="pH: 4 - Highly Acidic "
-                    android:textColor="#FF000000"
-                    android:textSize="15.945409774780273sp"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
 
                 <TextView
-                    android:id="@+id/your_saliva_is_more_acidic_than_the_typical_healthy_range__this_can_occur_temporarily_due_to_recent_food_or_drink__dehydration__stress__or_acid_reflux_"
+                    android:id="@+id/analyte_result_description"
                     android:layout_width="281dp"
                     android:layout_height="72dp"
                     android:gravity="start"
                     android:text="Your saliva is more acidic than the typical healthy range. This can occur temporarily due to recent food or drink, dehydration, stress, or acid reflux. "
-                    android:textColor="#FF000000"
-                    android:textSize="15.007444381713867sp" />
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp" />
             </LinearLayout>
         </LinearLayout>
 
 
         <TextView
-            android:id="@+id/added_to_your_health_history_"
+            android:id="@+id/added_to_your_health_history"
             android:layout_width="398dp"
             android:layout_height="22dp"
             android:gravity="start"
             android:text="Added to your Health History."
             android:textColor="#FF7E7E83"
             android:textSize="17sp"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="20dp"/>
 
 
         <LinearLayout
@@ -419,20 +404,20 @@
                 android:layout_height="19dp"
                 android:gravity="start"
                 android:text="Recommended Actions"
-                android:textColor="#FF000000"
-                android:textSize="14.468981742858887sp"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="6dp"/>
 
 
             <TextView
                 android:id="@+id/recommended_actions_body"
                 android:layout_width="398dp"
-                android:layout_height="170dp"
+                android:layout_height="200dp"
                 android:gravity="start"
                 android:text="@string/recommended_actions_body"
-                android:textColor="#FF000000"
-                android:textSize="13.617865562438965sp"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
                 android:layout_marginBottom="4dp"/>
 
             <LinearLayout

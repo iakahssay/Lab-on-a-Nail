@@ -15,6 +15,8 @@ import com.nixsensor.universalsdk.OnDeviceResultListener
 import com.nixsensor.universalsdk.ScanMode
 import kotlin.math.pow
 import kotlin.math.sqrt
+import android.os.Handler
+import android.os.Looper
 
 /*
 Handles the Nix scanning, connecting, and measuring.
@@ -89,7 +91,6 @@ object NixSensorManager {
 
         // Creates listener for discovered Nix devices.
         val deviceFoundListener = object : IDeviceScanner.OnDeviceFoundListener {
-
             // Runs whenever the scanner discovers a nearby Nix device.
             override fun onScanResult(
                 sender: IDeviceScanner,
@@ -107,13 +108,17 @@ object NixSensorManager {
                 // Stop scanning because we only want the first nearby device.
                 stopScan()
 
-                // Connect to the discovered device.
-                connectToDevice(
-                    device = device,
-                    onConnected = onConnected,
-                    onDisconnected = onDisconnected,
-                    onError = onError
-                )
+                // Wait briefly before connecting.
+                // Some BLE devices need a moment after scan discovery before connection.
+                Handler(Looper.getMainLooper()).postDelayed({
+
+                    connectToDevice(
+                        device = device,
+                        onConnected = onConnected,
+                        onDisconnected = onDisconnected,
+                        onError = onError
+                    )
+                }, 500)
             }
         }
 
@@ -144,6 +149,8 @@ object NixSensorManager {
         onError: (String) -> Unit
     ) {
         try {
+            Log.d(TAG, "Attempting connection to ${device.name} (${device.id})")
+
             // Calls the Nix SDK connect function.
             device.connect(object : IDeviceCompat.OnDeviceStateChangeListener {
 
@@ -185,7 +192,7 @@ object NixSensorManager {
                     sender: IDeviceCompat,
                     newState: Int
                 ) {
-                    Log.d(TAG, "Battery state changed: $newState")
+                    Log.d(TAG, "${sender.name}'s Battery changed: $newState")
                 }
 
                 // Runs when external power state changes.
@@ -193,7 +200,7 @@ object NixSensorManager {
                     sender: IDeviceCompat,
                     newState: Boolean
                 ) {
-                    Log.d(TAG, "External power state changed: $newState")
+                    Log.d(TAG, "${sender.name}'s External power changed: $newState")
                 }
             })
 
@@ -202,6 +209,7 @@ object NixSensorManager {
             isConnecting = false
 
             // Send readable error message back to Main2.
+            Log.e(TAG, "Connection exception", e)
             onError("Could not connect to ${device.name}: ${e.message}")
         }
     }
@@ -232,7 +240,7 @@ object NixSensorManager {
         // Get the device that Main2 connected to earlier.
         val device = connectedDevice
 
-        // If no device is connected, we cannot measure.
+        // If no device is connected, then we can't measure.
         if (device == null) {
             onError("No Nix device connected.")
             return
@@ -268,12 +276,12 @@ object NixSensorManager {
                 // Find the closest color value in the currently selected analyte chart.
                 val closestMatch = findClosestColorMatch(measuredColor)
 
-                // Return the final matched result back to Main5.
+                // Sends the final matched result back to Main5.
                 onSuccess(
                     NixColorMatchResult(
                         measuredColor = measuredColor,
-                        closestLabel = closestMatch.closestValue.label,
-                        closestColor = closestMatch.closestValue.color
+                        closestLabel = closestMatch!!.closestValue.label,
+                        closestColor = closestMatch!!.closestValue.color
                     )
                 )
             }
@@ -299,28 +307,27 @@ object NixSensorManager {
         )
     }
 
-/* 2. Extracts one RGB color from the Nix measurement map.
+/*
+2. Extracts one RGB color from the Nix measurement map.
        -> Nix docs state that all Nix devices provide color data for D50/2° reference white,
        while D65 availability depends on the device type. D50/2° is the safest cross-device choice.
 
    Observer.CIE1931 = 2 degrees = standard human vision model
    Illuminant = assumed standard lighting condition used to compute color values
    Reference white point = the white baseline paired with that illuminant/observer
-   */
+*/
     private fun extractRgbColorFromMeasurements(
         measurements: Map<ScanMode, IMeasurementData>
     ): IntArray? {
         // Go through each measurement returned by the Nix sensor.
         for (measurement in measurements.values) {
             // Check whether this measurement contains color data.
-            // D65 + 2 degree observer are standard/default color science settings.
+            // (TODO: change this later if readings are innacurate: D65 + 2 degree observer are standard/default color science settings.
             if ( measurement.providesColor(illuminant = Illuminant.D50, observer = Observer.CIE1931) ) {
                 // Convert measurement into Nix color data.
                 val colorData = measurement.toColorData(illuminant = Illuminant.D50, observer = Observer.CIE1931)
 
-                // Return measured RGB color array.
-                // Example:
-                // [155, 82, 41]
+                // Return measured RGB color array. Ex: [155, 82, 41]
                 return colorData?.rgbValue
             }
         }
@@ -330,23 +337,21 @@ object NixSensorManager {
     }
 
 //3. Finds the closest color in the currently selected analyte chart.
-    private fun findClosestColorMatch(
-        measuredColor: Int
-    ): ColorMatchResult {
+    private fun findClosestColorMatch(measuredColor: Int): ColorMatchResult? {
         // Gets the color chart for the currently selected analyte.
-        val currentChart = AnalyteColorChartManager.getChart( AnalyteChartUIHelper.selectedAnalyteId )
+        val currentAnalyteColorChart = AnalyteColorChartManager.getChart( AnalyteChartUIHelper.selectedAnalyteId )
 
         // Stores the best match found so far.
         var bestMatch: ColorMatchResult? = null
 
         // Loops through every value/color in the selected analyte chart.
-        for (chartValue in currentChart) {
+        for (analyteValue in currentAnalyteColorChart) {
 
             // Calculates RGB Euclidean distance.
-            val rgbDistance = calculateRgbDistance(measuredColor, chartValue.color)
+            val rgbDistance = calculateRgbDistance(measuredColor, analyteValue.color)
 
-            // Calculates LAB color distance.
-            val labDistance = calculateLabDistance(measuredColor, chartValue.color)
+            // Calculates converted LAB color Euclidean distance.
+            val labDistance = calculateLabDistance(measuredColor, analyteValue.color)
 
             // Normalizes RGB distance to approximately 0.0–1.0.
             // Max RGB distance is sqrt(255^2 + 255^2 + 255^2) ≈ 441.67.
@@ -356,39 +361,96 @@ object NixSensorManager {
             // 100 is a practical scale factor for Delta E style distances.
             val normalizedLabDistance: Double = labDistance / 100.0
 
-            // Combines both distances into one score.
-            // Lower score = closer match.
-            val combinedScore = (0.4 * normalizedRgbDistance) + (0.6 * normalizedLabDistance)
+            // Weighted average of RGB and LAB distances to combine both distances into one score.
+            // LAB score is intentionally weighted more because LAB color distance is usually more
+            // meaningful for human-perceived color differences.
+            val combinedDistanceScore = (0.4 * normalizedRgbDistance) + (0.6 * normalizedLabDistance)
 
             // Prints RGB distance for debugging.
-            Log.d( TAG, "RGB distance to ${chartValue.label}: $rgbDistance" )
-
+            Log.d( TAG, "RGB distance to ${analyteValue.label}: $rgbDistance" )
             // Prints LAB distance for debugging.
-            Log.d( TAG, "LAB distance to ${chartValue.label}: $labDistance" )
-
+            Log.d( TAG, "LAB distance to ${analyteValue.label}: $labDistance" )
             // Prints combined score for debugging.
-            Log.d( TAG, "Combined score to ${chartValue.label}: $combinedScore" )
+            Log.d( TAG, "Combined score to ${analyteValue.label}: $combinedDistanceScore" )
 
             // Creates a result object for this chart value.
             val currentResult = ColorMatchResult(
-                closestValue = chartValue,
+                closestValue = analyteValue,
                 rgbDistance = rgbDistance,
                 labDistance = labDistance,
-                combinedScore = combinedScore
+                combinedDistanceScore = combinedDistanceScore
             )
 
             // If this is the first result OR this result is better, save it.
-            if (bestMatch == null || currentResult.combinedScore < bestMatch!!.combinedScore) {
+            // Lower distance score = better/closer match.
+            if (bestMatch == null || currentResult.combinedDistanceScore < bestMatch!!.combinedDistanceScore) {
                 bestMatch = currentResult
             }
         }
 
-        // Returns the best match.
+        // If no match was found, return null.
+        if (bestMatch == null) return null
+
+        // Checks if the color is lower than the lowest value in our analyte range and higher than the highest value.
+        bestMatch = calculateForOutliers (measuredColor,bestMatch, currentAnalyteColorChart)
+
+        // Returns the normal best match.
         return bestMatch!!
     }
 
+    //Checks if the measured color is lower than the lowest value in our analyte range and higher than the highest value.
+    //Ex: If measurement is bright pink, the results should say in Main6 that it's pH4- (not pH5), and
+    // if the measurement is dark blue, the results should say in Main6 that it's pH9+ (not pH8).
+    private fun calculateForOutliers (
+        measuredColor: Int,
+        bestMatch: ColorMatchResult?,
+        currentAnalyteColorChart: List<ColorChartValue>
+    ): ColorMatchResult {
+        val finalBestMatch = bestMatch!!
+
+        val firstChartItem = currentAnalyteColorChart.first()
+        val lastChartItem = currentAnalyteColorChart.last()
+
+        /*
+        TODO:0.55 is a reasonable starting threshold because it would catch a pretty bad/outlier
+         match like that. Might need to tune it slightly:
+            - If it marks too many values as LOW/HIGH, raise it to: outlierThreshold = 0.65
+            - If it does not catch enough outliers, lower it to: outlierThreshold = 0.45, and so on.
+        */
+        val outlierThreshold = 0.35
+
+        //Checks if the measured color is lower than the lowest value in our analyte range
+        if (
+            finalBestMatch.combinedDistanceScore > outlierThreshold &&
+            finalBestMatch.closestValue == firstChartItem
+        ) {
+            return ColorMatchResult(
+                closestValue = ColorChartValue("LOW", measuredColor),
+                rgbDistance = finalBestMatch.rgbDistance,
+                labDistance = finalBestMatch.labDistance,
+                combinedDistanceScore = finalBestMatch.combinedDistanceScore
+            )
+        }
+
+        //Checks if the measured color is higher than the highest value in our analyte range
+        if (
+            finalBestMatch.combinedDistanceScore > outlierThreshold &&
+            finalBestMatch.closestValue == lastChartItem
+        ) {
+            return ColorMatchResult(
+                closestValue = ColorChartValue("HIGH", measuredColor),
+                rgbDistance = finalBestMatch.rgbDistance,
+                labDistance = finalBestMatch.labDistance,
+                combinedDistanceScore = finalBestMatch.combinedDistanceScore
+            )
+        }
+
+        // Returns the best match.
+        return finalBestMatch
+    }
+
     // Calculates RGB distance between two colors.
-// Smaller value means the colors are more similar.
+    // Smaller value means the colors are more similar.
     private fun calculateRgbDistance(
         colorA: Int,
         colorB: Int
@@ -505,5 +567,5 @@ private data class ColorMatchResult(
     val closestValue: ColorChartValue,  // The analyte color chart value that matched best.
     val rgbDistance: Double,  // RGB Euclidean distance between measured color and chart color.
     val labDistance: Double,  // LAB/Delta-E-style distance between measured color and chart color.
-    val combinedScore: Double  // Combined normalized score used to choose the closest match.
+    val combinedDistanceScore: Double  // Combined normalized score used to choose the closest match.
 )

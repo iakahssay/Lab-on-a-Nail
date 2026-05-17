@@ -17,22 +17,12 @@ object NavBar_Helper {
     }
 
     fun moveToProfile(activity: Activity) {
-        /*
-       val intent = Intent(activity, Profile1_Main_Activity::class.java)
-       activity.startActivity(intent)
-       */
-
         activity.findViewById<View?>(R.id.profile_tab)?.setOnClickListener {
             activity.startActivity(Intent(activity, Profile1_Main_Activity::class.java))
         }
     }
 
     fun moveToSummary(activity: Activity) {
-        /*
-        val intent = Intent(activity, Summary_Main_Activity::class.java)
-        activity.startActivity(intent)
-        */
-
         activity.findViewById<View?>(R.id.summary_tab)?.setOnClickListener {
             activity.startActivity(Intent(activity, Summary_Main_Activity::class.java))
         }

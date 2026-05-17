@@ -5,6 +5,7 @@ import android.util.Log
 import com.example.nailytics.BuildConfig
 import com.nixsensor.universalsdk.LicenseManager
 import com.nixsensor.universalsdk.LicenseManagerState
+import kotlin.concurrent.thread
 
 //GLOBAL STARTUP CLASS
 //-> guarantees the NIX SDK is set up (or initialized) even if the app later opens from a
@@ -14,7 +15,11 @@ class NailyticsApp : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        activateNixLicense()
+        // Runs Nix license activation in the background so app
+        // startup doesn't freeze the UI thread.
+        thread {
+            activateNixLicense()
+        }
     }
 
     //Turn on the Nix SDK license when the app starts.

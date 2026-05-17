@@ -5,7 +5,7 @@
     <string name="ready_to_begin__click_the_butt">Ready to begin? Click the button below to start the health check now!</string>
 
     <string name="looking_for_nix_sensor_device_">Looking for Nix Sensor Device..</string>
-    <string name="nix_connected">Nix Spectro 1 connected.</string>
+    <string name="nix_connected">Nix Spectro 2 connected.</string>
     <string name="change_device"><u>Change device</u></string>
 
     <string name="ph_levels_blood">pH levels (blood)</string>
@@ -58,14 +58,15 @@
     <string name="recommended_actions_body">
         • Rinse &amp; Retest: Rinse your mouth with water and retest in\n\t
           30–60 minutes, avoiding food or acidic drinks beforehand.\n
-        • Hydrate: Drinking water helps restore saliva’s natural buffering\n\t
-          ability.\n
-        • Notice Patterns: Frequent low pH readings may be associated\n\t
-          with acid reflux, dry mouth, or dietary habits.\n
-        • Seek Care if Persistent: Frequent acidity may increase the risk\n\t
-          of enamel erosion and oral discomfort; consider consulting a\n\t
-          dentist or healthcare provider if you experience persistent\n\t
-          acidic readings, tooth sensitivity, or heartburn.
+        • Hydrate: Drinking water helps restore saliva’s natural\n\t
+          buffering ability.\n
+        • Notice Patterns: Frequent low pH readings may be\n\t
+          associated with acid reflux, dry mouth, or dietary habits.\n
+        • Seek Care if Persistent: Frequent acidity may increase the\n\t
+          risk of enamel erosion and oral discomfort; consider\n\t
+          consulting a dentist or healthcare provider if you\n\t
+          experience persistent acidic readings, tooth sensitivity, or\n\t
+          heartburn.
     </string>
 
     <!--PROFILE PAGE-->

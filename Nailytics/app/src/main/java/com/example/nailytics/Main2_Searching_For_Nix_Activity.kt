@@ -1,5 +1,6 @@
 package com.example.nailytics
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -91,20 +92,22 @@ class Main2_Searching_For_Nix_Activity : AppCompatActivity() {
          intent.putExtra("device_name", nixDevice.name)
          intent.putExtra("device_id", nixDevice.id)
 
-         startActivity(intent)
+         startActivity(intent) //Go to Main5
+
+         // Remove Main2 from the back stack after successful connection
+         // This way, after the Nix connects successfully, the app moves forward
+         // to Main5 and cannot accidentally fall back to the searching screen. (found this bug during testing)
+         finish()
      }
 
- //2) NIX SENSING HELPER FUNCTIONS
- // Checks permissions first, then starts Nix scanning/connection.
+//2) NIX SENSING HELPER FUNCTIONS
+// Checks Bluetooth permissions, then starts Nix scanning.
  private fun startNixPermissionFlow() {
-     if (NixSensorManager.hasBluetoothPermissions(this)) {
-         // Permissions already exist, so begin scanning and connecting.
-         startNixSearchAndConnect()
+     if (NixSensorManager.hasBluetoothPermissions(this)) {  // If permissions already exist:
+         startNixSearchAndConnect()  // Begin scanning/connecting immediately.
      } else {
-         // Ask the user for the Bluetooth permissions required by the Nix SDK.
-         nixPermissionLauncher.launch(
-             NixSensorManager.requiredBluetoothPermissions()
-         )
+         //Otherwise, ask the user for the Bluetooth permissions required by the Nix SDK.
+         nixPermissionLauncher.launch( NixSensorManager.requiredBluetoothPermissions() )
      }
  }
 
@@ -148,7 +151,7 @@ class Main2_Searching_For_Nix_Activity : AppCompatActivity() {
                      Toast.makeText(
                          this,
                          "Found ${device.name}. Connecting...",
-                         Toast.LENGTH_SHORT
+                         Toast.LENGTH_LONG
                      ).show()
                  }
              },
@@ -161,7 +164,7 @@ class Main2_Searching_For_Nix_Activity : AppCompatActivity() {
                      Toast.makeText(
                          this,
                          "Connected to ${device.name}",
-                         Toast.LENGTH_SHORT
+                         Toast.LENGTH_LONG
                      ).show()
 
                      // MOVE DIRECTLY TO MAIN5 AFTER CONNECTION SUCCEEDS
@@ -172,13 +175,13 @@ class Main2_Searching_For_Nix_Activity : AppCompatActivity() {
              // Runs if the device disconnects.
              onDisconnected = { device, status ->
                  runOnUiThread {
-                     hideNixLoadingState()
-
                      Toast.makeText(
                          this,
                          "${device.name} disconnected: $status",
                          Toast.LENGTH_LONG
                      ).show()
+
+                     hideNixLoadingState()
                  }
              },
 

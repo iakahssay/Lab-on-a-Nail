@@ -276,7 +276,7 @@
     <LinearLayout
         android:id="@+id/edit_color_modal"
         android:layout_width="398dp"
-        android:layout_height="500dp"
+        android:layout_height="540dp"
         android:layout_marginTop="172dp"
         android:background="@drawable/bg_rounded_gray90_corner_12_frame"
         android:orientation="vertical"
@@ -291,7 +291,7 @@
         <LinearLayout
             android:id="@+id/instructions"
             android:layout_width="365dp"
-            android:layout_height="108dp"
+            android:layout_height="128dp"
             android:orientation="vertical">
 
 
@@ -312,7 +312,7 @@
                 android:layout_height="40dp"
                 android:background="@drawable/bg_rounded_gray90_corner_12_frame"
                 android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="16dp"
                 >
 
 
@@ -385,10 +385,10 @@
         <LinearLayout
             android:id="@+id/color_picker"
             android:layout_width="334dp"
-            android:layout_height="347dp"
+            android:layout_height="357dp"
             android:background="@drawable/bg_rounded_color_picker"
             android:orientation="vertical"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="10dp"
             >
 
 
@@ -513,7 +513,7 @@
                 android:layout_width="280dp"
                 android:layout_height="60dp"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="14dp"
                 android:layout_marginStart="20dp"
                 >
 
@@ -692,7 +692,7 @@
             android:id="@+id/button_2s"
             android:layout_width="322dp"
             android:layout_height="25dp"
-            android:layout_marginTop="2dp">
+            android:layout_marginTop="8dp">
 
 
             <LinearLayout

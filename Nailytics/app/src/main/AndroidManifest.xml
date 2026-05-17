@@ -17,6 +17,13 @@
 
     <!-- Older coarse location permission used by some Bluetooth scanning APIs. -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Allows Nix SDK to contact Nix servers during device authorization. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Optional but useful for checking network state. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <!-- ========================================================= -->
 
     <application
@@ -25,8 +32,8 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/hero_image"
+        android:roundIcon="@mipmap/hero_image_round"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nailytics">
 
