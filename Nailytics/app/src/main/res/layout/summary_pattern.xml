@@ -100,21 +100,21 @@
         <LinearLayout
             android:id="@+id/disclaimer"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="72dp"
             android:background="@drawable/bg_rounded_orange_overlay_corner_6_frame"
             android:backgroundTint="@color/bright_red_alert"
             android:orientation="horizontal"
-            android:paddingLeft="12dp"
+            android:paddingLeft="10dp"
             android:paddingTop="6dp"
-            android:paddingRight="12dp"
+            android:paddingRight="10dp"
             android:paddingBottom="6dp">
 
             <ImageView
                 android:id="@+id/info"
-                android:layout_width="12dp"
-                android:layout_height="14dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="4dp"
+                android:layout_width="14dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="4dp"
                 android:gravity="start"
                 android:src="@drawable/ic_info"
                 android:textColor="#FFFF3B30"
@@ -124,12 +124,12 @@
             <TextView
                 android:id="@+id/disclaimer_description"
                 android:layout_width="346dp"
-                android:layout_height="31dp"
+                android:layout_height="54dp"
                 android:layout_marginTop="4dp"
                 android:gravity="start"
                 android:text="@string/medical_disclaimer"
                 android:textColor="#FFFF3B30"
-                android:textSize="11sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -167,7 +167,7 @@
                 android:gravity="start"
                 android:text="Dec 8, 2025 - Jan 8, 2026"
                 android:textColor="#FF8E8E93"
-                android:textSize="10sp" />
+                android:textSize="14sp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/pattern_graph"
@@ -192,14 +192,14 @@
         <LinearLayout
             android:id="@+id/what_pattern_means"
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/what_this_means_title"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginTop="20dp"
                 android:gravity="start"
                 android:text="What this means"
                 android:textColor="@color/text_primary"
@@ -209,7 +209,7 @@
             <TextView
                 android:id="@+id/what_pattern_means_description"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="58dp"
                 android:layout_marginTop="7dp"
                 android:gravity="start"
                 android:text="@string/what_this_means_description"
@@ -244,13 +244,13 @@
             android:id="@+id/ask_your_doctor"
             android:layout_width="match_parent"
             android:layout_height="216dp"
+            android:layout_marginTop="14dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/ask_your_doctor_title"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginTop="14dp"
                 android:gravity="start"
                 android:text="Ask your doctor"
                 android:textColor="@color/text_primary"
@@ -265,7 +265,7 @@
                 android:gravity="start"
                 android:text="@string/ask_your_doctor_description"
                 android:textColor="@color/text_primary"
-                android:textSize="13.5sp" />
+                android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
 

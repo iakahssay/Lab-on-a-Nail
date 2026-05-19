@@ -25,7 +25,7 @@
     <color name="light_gray_overlay">#33F7F7F7</color>
     <color name="orange_overlay_medium">#33FF9500</color>
     <color name="indigo_overlay">#365856D6</color>
-    <color name="icon_transparent_background">#F4F3F6</color>
+    <color name="icon_transparent_background">#FBF9FD</color>
 
     <!-- Dark overlays -->
     <color name="black_overlay_25">#40000000</color>

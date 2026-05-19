@@ -183,7 +183,7 @@
                             android:gravity="start"
                             android:text="Glucose levels (saliva)"
                             android:textColor="#9E14202E"
-                            android:textSize="13sp" />
+                            android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -247,7 +247,7 @@
                             android:gravity="start"
                             android:text="pH levels (saliva)"
                             android:textColor="#9E14202E"
-                            android:textSize="13sp" />
+                            android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -310,7 +310,7 @@
                             android:gravity="start"
                             android:text="Nitrate levels (urine)"
                             android:textColor="#9E14202E"
-                            android:textSize="13sp" />
+                            android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -404,7 +404,7 @@
                     android:gravity="start"
                     android:text="Average"
                     android:textColor="#9E14202E"
-                    android:textSize="13sp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/average_value"
@@ -423,7 +423,7 @@
                     android:gravity="start"
                     android:text="Today"
                     android:textColor="#FF8E8E93"
-                    android:textSize="10sp" />
+                    android:textSize="13sp" />
             </LinearLayout>
 
             <!-- TIME RANGE FILTER SECTION -->
@@ -550,7 +550,7 @@
             <LinearLayout
                 android:id="@+id/summary_pattern_description"
                 android:layout_width="match_parent"
-                android:layout_height="46dp"
+                android:layout_height="54dp"
                 android:layout_marginTop="24dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/bg_rounded_orange_overlay_corner_6_frame"
@@ -574,19 +574,19 @@
                 <TextView
                     android:id="@+id/summary_pattern_description_label"
                     android:layout_width="303dp"
-                    android:layout_height="36dp"
+                    android:layout_height="40dp"
                     android:layout_marginEnd="12dp"
-                    android:gravity="start"
+                    android:layout_gravity="center_vertical"
                     android:text="@string/summary_pattern_description"
                     android:textColor="@color/text_primary"
-                    android:textSize="13sp" />
+                    android:textSize="15sp" />
 
                 <ImageView
                     android:id="@+id/summary_pattern_description_chevron"
                     android:layout_width="12dp"
                     android:layout_height="20dp"
                     android:gravity="center"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/ic_chevron"
                     app:tint="@color/alert_orange"
                     android:rotation="180" />

@@ -104,7 +104,7 @@
 
     <string name="summary_pattern_description">Your pH levels (saliva) have shown an increase in the past 2 weeks.</string>
     <string name="medical_disclaimer">
-        Disclaimer: This is not a medical diagnosis. For an accurate assessment, please consult a licensed healthcare
+        Disclaimer: This is not a medical diagnosis. For an accurate assessment, please consult a medical health
         professional.
     </string>
     <string name="pattern_description">Every weekend there is a decrease in your pH levels:</string>
@@ -123,10 +123,11 @@
         • Could this pattern indicate an underlying condition I should
           \n\t be concerned about? Here is my family history…\n
         • Could my habits (diet, alcohol, sleep, or stress) be
-          \n\t contributing to these changes? What adjustments would help?\n
-        • Are there specific foods in my culture that I should avoid
-          \n\t or can still include in my diet? Here are some…\n
-        • What other biomarkers, symptoms, or warning signs should I
-          \n\t monitor, and when should I seek medical or dental care?
+          \n\t contributing to these changes? What adjustments would\n\t
+          help?\n
+        • Are there specific foods in my culture that I should avoid or\n\t
+          can still include in my diet? Here are some…\n
+        • What other biomarkers, symptoms, or warning signs should\n\t
+          I monitor, and when should I seek medical or dental care?
     </string>
 </resources>

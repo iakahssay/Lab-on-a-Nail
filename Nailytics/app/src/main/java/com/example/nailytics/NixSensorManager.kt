@@ -408,22 +408,29 @@ object NixSensorManager {
     ): ColorMatchResult {
         val finalBestMatch = bestMatch!!
 
-        val firstChartItem = currentAnalyteColorChart.first()
-        val lastChartItem = currentAnalyteColorChart.last()
+        val measuredLab = rgbToLab(measuredColor)
+        val firstLab = rgbToLab(currentAnalyteColorChart.first().color)
+        val lastLab = rgbToLab(currentAnalyteColorChart.last().color)
+
+        val measuredLightness = measuredLab[0]
+        val firstLightness = firstLab[0]
+        val lastLightness = lastLab[0]
+
+        //TODO: Might not need this -> Check if you can get rid of this
+        val lightestChartLightness = maxOf(firstLightness, lastLightness)
+        val darkestChartLightness = minOf(firstLightness, lastLightness)
 
         /*
-        TODO:0.55 is a reasonable starting threshold because it would catch a pretty bad/outlier
-         match like that. Might need to tune it slightly:
-            - If it marks too many values as LOW/HIGH, raise it to: outlierThreshold = 0.65
-            - If it does not catch enough outliers, lower it to: outlierThreshold = 0.45, and so on.
+            TODO: If pale/off-white still does not become LOW, lower lightOutlierThreshold to 5.0
+                  If navy/violet still does not become HIGH, lower darkOutlierThreshold to 5.0
         */
-        val outlierThreshold = 0.35
+        val lightOutlierThreshold = 8.0
+        val darkOutlierThreshold = 8.0
 
-        //Checks if the measured color is lower than the lowest value in our analyte range
-        if (
-            finalBestMatch.combinedDistanceScore > outlierThreshold &&
-            finalBestMatch.closestValue == firstChartItem
-        ) {
+        //Checks if the measured color is much lighter/brighter than the chart range -> LOW
+        if (measuredLightness > lightestChartLightness + lightOutlierThreshold) {
+            Log.d(TAG, "Detected bright/light pH outlier. Mapping to LOW.")
+
             return ColorMatchResult(
                 closestValue = ColorChartValue("LOW", measuredColor),
                 rgbDistance = finalBestMatch.rgbDistance,
@@ -432,11 +439,10 @@ object NixSensorManager {
             )
         }
 
-        //Checks if the measured color is higher than the highest value in our analyte range
-        if (
-            finalBestMatch.combinedDistanceScore > outlierThreshold &&
-            finalBestMatch.closestValue == lastChartItem
-        ) {
+        //Checks if the measured color is much darker than the chart range -> HIGH
+        if (measuredLightness < darkestChartLightness - darkOutlierThreshold) {
+            Log.d(TAG, "Detected dark pH outlier. Mapping to HIGH.")
+
             return ColorMatchResult(
                 closestValue = ColorChartValue("HIGH", measuredColor),
                 rgbDistance = finalBestMatch.rgbDistance,
@@ -445,7 +451,7 @@ object NixSensorManager {
             )
         }
 
-        // Returns the best match.
+        // Otherwise -> use normalized closest match
         return finalBestMatch
     }
 
