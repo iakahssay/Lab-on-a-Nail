@@ -335,7 +335,7 @@
         android:layout_height="25dp"
         android:layout_marginTop="60dp"
         android:gravity="center_horizontal"
-        android:text="Looking for Nix Sensor Device.."
+        android:text="Looking for Nix Sensor Device..."
         android:textColor="#FF000000"
         android:textSize="20sp"
         android:textStyle="bold"

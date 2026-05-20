@@ -53,7 +53,7 @@ object AnalyteColorChartManager {
         R.id.item_blood_nitrate to mutableListOf(
             ColorChartValue("Nitrate 2.5 mM", Color.rgb(229, 181, 144)),
             ColorChartValue("Nitrate 5.0 mM", Color.rgb(224, 170, 166)),
-            ColorChartValue("Nitrate 7.5 mM", Color.rgb(216, 164, 188)),
+            ColorChartValue("Nitrate 7.5 mM", Color.rgb(226, 142, 177)),
             ColorChartValue("Nitrate 10.0 mM", Color.rgb(214, 124, 161)),
         ),
 
@@ -68,7 +68,7 @@ object AnalyteColorChartManager {
         R.id.item_saliva_nitrate to mutableListOf(
             ColorChartValue("Nitrate 2.5 mM", Color.rgb(229, 181, 144)),
             ColorChartValue("Nitrate 5.0 mM", Color.rgb(224, 170, 166)),
-            ColorChartValue("Nitrate 7.5 mM", Color.rgb(216, 164, 188)),
+            ColorChartValue("Nitrate 7.5 mM", Color.rgb(226, 142, 177)),
             ColorChartValue("Nitrate 10.0 mM", Color.rgb(214, 124, 161)),
         )
     )

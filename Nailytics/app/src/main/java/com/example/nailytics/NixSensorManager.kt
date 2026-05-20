@@ -222,9 +222,11 @@ object NixSensorManager {
 
     // Disconnects from the current Nix device.
     fun disconnect() {
-        connectedDevice?.disconnect()
-        connectedDevice = null
-        isConnecting = false
+        Log.d(TAG, "Disconnecting from Nix sensor and clearing connection state")
+        stopScan() // Stop scanning first so the scanner does not keep running while disconnecting.
+        connectedDevice?.disconnect() // Disconnect from the currently connected Nix device, if one exists.
+        connectedDevice = null // Clear the saved connected device reference.
+        isConnecting = false // Reset the connecting flag so future connection attempts are allowed.
     }
 
 

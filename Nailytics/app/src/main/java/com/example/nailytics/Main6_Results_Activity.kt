@@ -78,8 +78,41 @@ class Main6_Results_Activity: AppCompatActivity() {
         // Ex: "pH 5", "40 mM", "2.5 mM"
         val closestLabel = intent.getStringExtra("closest_label") ?: "Unknown"
 
-        // Shows interpretation text for the measured analyte value.
-        displayPHInterpretation(closestLabel)
+        // Gets the currently selected analyte name from AnalyteChartUIHelper.
+        // Examples: "pH", "Glucose", or "Nitrate".
+        val selectedAnalyteName = AnalyteChartUIHelper.selectedAnalyteValueName
+
+        // Extracts the analyte type from the selected label.
+        // Examples: "pH 5" -> "pH", "Glucose 40 mM" -> "Glucose", "Nitrate 2.5 mM" -> "Nitrate".
+        val analyte = listOf("pH", "Glucose", "Nitrate").firstOrNull{
+            selectedAnalyteName.contains(it, ignoreCase = true) } ?: "Unknown"
+
+        // Shows interpretation text for the selected analyte's measured value.
+        when (analyte) {
+
+            // If the selected analyte is pH, display pH-specific result text.
+            "pH" -> {
+                displayPHInterpretation(closestLabel)
+            }
+
+            // If the selected analyte is glucose, display glucose-specific result text.
+            "Glucose" -> {
+                displayGlucoseInterpretation(closestLabel)
+            }
+
+            // If the selected analyte is nitrate, display nitrate-specific result text.
+            "Nitrate" -> {
+                displayNitrateInterpretation(closestLabel)
+            }
+
+            // If the selected analyte name is unknown or unsupported,
+            // show a fallback result instead of crashing.
+            else -> {
+                findViewById<TextView>(R.id.analyte_result).text = "$closestLabel: Unknown Analyte"
+
+                findViewById<TextView>(R.id.analyte_result_description).text = "The measured analyte value could not be interpreted."
+            }
+        }
 
         // Gets the closest chart color from Main5.
         //val closestColor = intent.getIntExtra("closest_color", Color.TRANSPARENT)
@@ -103,59 +136,209 @@ class Main6_Results_Activity: AppCompatActivity() {
         when (analyteValue) {
 
             "LOW" -> {
-                resultTitle = "pH 4- - Highly Acidic"
+                resultTitle = "pH 4-: Highly Acidic"
 
                 resultDescription =
-                    "Your saliva is more acidic than the typical healthy range. " +
-                    "This can occur temporarily due to recent food or drink, dehydration, stress, or acid reflux."
+                    "Your pH level is more acidic than the typical healthy range. " +
+                    "This may be due to recent food or drink, hydration, or oral bacteria activity."
             }
 
             "pH 5" -> {
-                resultTitle = "pH 5 - Acidic"
+                resultTitle = "pH 5: Acidic"
 
                 resultDescription =
-                    "Your saliva appears more acidic than the typical healthy range. " +
-                    "This can occur temporarily due to recent food or drink, dehydration, stress, or oral bacteria activity."
+                    "Your pH level appears more acidic than the typical healthy range. " +
+                    "This may be due to recent food or drink, hydration, or oral bacteria activity."
             }
 
             "pH 6" -> {
-                resultTitle = "pH 6 - Slightly Acidic"
+                resultTitle = "pH 6: Slightly Acidic"
 
                 resultDescription =
-                    "Your saliva appears slightly acidic. Mild fluctuations throughout the day are " +
-                    "common and may be influenced by diet, hydration, or recent meals."
+                    "Your pH level appears slightly acidic. Mild fluctuations like this is common " +
+                     "and may vary with diet, hydration, or recent meals."
             }
 
             "pH 7" -> {
-                resultTitle = "pH 7 - Neutral"
+                resultTitle = "pH 7: Neutral"
 
                 resultDescription =
-                    "Your saliva is within a typical neutral range, which is commonly associated with " +
-                    "a balanced oral environment and healthy salivary conditions."
+                    "Your pH level is within a typical neutral range."
             }
 
             "pH 8" -> {
-                resultTitle = "pH 8 - Slightly Alkaline"
+                resultTitle = "pH 8: Slightly Alkaline"
 
                 resultDescription =
-                    "Your saliva appears slightly alkaline. This may occur temporarily due to hydration, diet, " +
-                    "antacid use, or natural variation in saliva composition. Mild alkalinity is generally not uncommon and may help reduce oral acidity."
+                "Your pH level appears slightly alkaline. Mild alkalinity is generally not uncommon " +
+                "and may be due to hydration, diet, antacid use, sample type, or temporary biological variation."
             }
 
             "HIGH" -> {
-                resultTitle = "pH 9+ - Highly Alkaline"
+                resultTitle = "pH 9+: Highly Alkaline"
 
                 resultDescription =
-                    "Your saliva appears more alkaline than the typical healthy range. " +
-                    "Elevated alkalinity may occur due to changes in saliva composition, bacterial activity, " +
-                    "supplements or antacid use, or temporary oral environment shifts."
+                    "Your pH level appears more alkaline than the typical healthy range. " +
+                    "This may be due to bacterial activity, supplements, or antacid use."
+
             }
 
             else -> {
-                resultTitle = "$analyteValue - Unknown"
+                resultTitle = "$analyteValue: Unknown"
 
                 resultDescription =
                     "The measured analyte value could not be interpreted."
+            }
+        }
+
+        // Displays the final result title.
+        findViewById<TextView>(R.id.analyte_result).text = resultTitle
+
+        // Displays the explanation/interpretation.
+        findViewById<TextView>(R.id.analyte_result_description).text = resultDescription
+    }
+
+    // Displays interpretation text for the measured glucose value.
+    private fun displayGlucoseInterpretation(
+        analyteValue: String
+    ) {
+        // Stores the title shown at the top.
+        var resultTitle = ""
+
+        // Stores the explanation text shown underneath.
+        var resultDescription = ""
+
+        // Chooses interpretation based on measured glucose value.
+        when (analyteValue) {
+
+            "LOW" -> {
+                resultTitle = "Glucose < 40 mM: Very Low"
+
+                resultDescription =
+                    "Your glucose level appears below the typical healthy range. " +
+                    "This may be due to prolonged fasting, increased exercise, glucose-lowering medication, or alcohol use."
+            }
+
+            "Glucose 40 mM" -> {
+                resultTitle = "Glucose 40 mM: Low"
+
+                resultDescription =
+                    "Your glucose level appears near the lower end of the typical range. " +
+                    "This may be due to physical activity or temporary changes in glucose regulation or hydration."
+            }
+
+            "Glucose 80 mM" -> {
+                resultTitle = "Glucose 80 mM: Normal"
+
+                resultDescription =
+                    "Your glucose level appears within a typical healthy range. " +
+                    "This is commonly associated with balanced glucose intake & regulation."
+            }
+
+            "Glucose 120 mM" -> {
+                resultTitle = "Glucose 120 mM: Slightly Elevated"
+
+                resultDescription =
+                    "Your glucose level appears slightly above the typical range. " +
+                    "This may be due to recent food or drink intake, reduced activity, or stress."
+            }
+
+            "Glucose 160 mM" -> {
+                resultTitle = "Glucose 160 mM: Elevated"
+
+                resultDescription =
+                    "Your glucose level appears elevated compared with the typical range. " +
+                    "This may be due to recent food or drink intake, glucose regulation changes, reduced activity, stress,or  illness."
+            }
+
+            "HIGH" -> {
+                resultTitle = "Glucose > 160 mM: Very High"
+
+                resultDescription =
+                    "Your glucose level appears above the typical healthy range. " +
+                    "This may be due to recent food or drink intake, glucose regulation changes, medication effects, stress, or illness."
+            }
+
+            else -> {
+                resultTitle = "$analyteValue: Unknown"
+
+                resultDescription =
+                    "The measured glucose value could not be interpreted."
+            }
+        }
+
+        // Displays the final result title.
+        findViewById<TextView>(R.id.analyte_result).text = resultTitle
+
+        // Displays the explanation/interpretation.
+        findViewById<TextView>(R.id.analyte_result_description).text = resultDescription
+    }
+
+    // Displays interpretation text for the measured nitrate value.
+    private fun displayNitrateInterpretation(
+        analyteValue: String
+    ) {
+        // Stores the title shown at the top.
+        var resultTitle = ""
+
+        // Stores the explanation text shown underneath.
+        var resultDescription = ""
+
+        // Chooses interpretation based on measured nitrate value.
+        when (analyteValue) {
+
+            "LOW" -> {
+                resultTitle = "Nitrate < 2.5 mM: Very Low"
+
+                resultDescription =
+                    "Your nitrate level appears below the typical range. " +
+                    "This may be due to low intake of nitrate-rich foods, hydration, sample type, or temporary biological variation."
+            }
+
+            "Nitrate 2.5 mM" -> {
+                resultTitle = "Nitrate 2.5 mM: Low"
+
+                resultDescription =
+                    "Your nitrate level appears near the lower end of the typical range. " +
+                    "This may be due to diet, hydration, sample type, or temporary biological variation."
+            }
+
+            "Nitrate 5.0 mM" -> {
+                resultTitle = "Nitrate 5.0 mM: Moderate"
+
+                resultDescription =
+                    "Your nitrate level appears within a typical moderate range. "
+            }
+
+            "Nitrate 7.5 mM" -> {
+                resultTitle = "Nitrate 7.5 mM: Slightly Elevated"
+
+                resultDescription =
+                    "Your nitrate level appears slightly elevated within the typical range. " +
+                    "This may be due to recent nitrate-rich foods, sample type, or temporary biological variation."
+            }
+
+            "Nitrate 10.0 mM" -> {
+                resultTitle = "Nitrate 10.0 mM: Elevated"
+
+                resultDescription =
+                    "Your nitrate level appears near the higher end of the typical range. " +
+                    "This may be due to recent nitrate-rich foods, oral microbiome activity, hydration, or temporary biological variation."
+            }
+
+            "HIGH" -> {
+                resultTitle = "Nitrate > 10.0 mM: Very High"
+
+                resultDescription =
+                    "Your nitrate level appears above the typical range. " +
+                    "This may be due to nitrate-rich foods, supplements, sample type, or temporary biological variation."
+            }
+
+            else -> {
+                resultTitle = "$analyteValue: Unknown"
+
+                resultDescription =
+                    "The measured nitrate value could not be interpreted."
             }
         }
 

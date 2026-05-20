@@ -58,7 +58,7 @@ class Main2_Searching_For_Nix_Activity : AppCompatActivity() {
         NavBar_Helper.moveToProfile(this)
         NavBar_Helper.moveToSummary(this)
         //For the back button on the top of the screen
-        NavBar_Helper.moveToPreviousScreen(this)
+        moveToPreviousScreen()
     }
 
      override fun onResume() {
@@ -83,7 +83,7 @@ class Main2_Searching_For_Nix_Activity : AppCompatActivity() {
         }
     }
 
-     //Once connected to a Nix device, this function will be called on to move to next screen (Main5)
+    //Once connected to a Nix device, this function will be called on to move to next screen (Main5)
     private fun moveToMain5(nixDevice: IDeviceCompat){
          // MOVE DIRECTLY TO MAIN5 AFTER CONNECTION SUCCEEDS
          val intent = Intent(this, Main5_Analyze_Color_Activity::class.java)
@@ -99,6 +99,23 @@ class Main2_Searching_For_Nix_Activity : AppCompatActivity() {
          // to Main5 and cannot accidentally fall back to the searching screen. (found this bug during testing)
          finish()
      }
+
+    private fun moveToPreviousScreen() {
+        findViewById<View>(R.id.back_button).setOnClickListener {
+            // Stop searching and disconnect from Nix because the user is leaving
+            // the Nix connection flow and returning to the home screen.
+            NixSensorManager.disconnect()
+
+            val intent = Intent(this, Main1_Activity::class.java)
+
+            // Return to the existing Main1 screen if it is already in the back stack,
+            // clear any screens above it, and avoid creating a duplicate Main1.
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+
+            startActivity(intent)
+            finish()
+        }
+    }
 
 //2) NIX SENSING HELPER FUNCTIONS
 // Checks Bluetooth permissions, then starts Nix scanning.
@@ -127,6 +144,9 @@ class Main2_Searching_For_Nix_Activity : AppCompatActivity() {
      private fun startNixSearchAndConnect() {
          // Show spinner immediately.
          showNixLoadingState()
+
+         // Clear any stale previous Nix connection before starting a new scan.
+         NixSensorManager.disconnect()
 
          // Ask NixSensorManager to scan and auto-connect.
          NixSensorManager.startScan(
