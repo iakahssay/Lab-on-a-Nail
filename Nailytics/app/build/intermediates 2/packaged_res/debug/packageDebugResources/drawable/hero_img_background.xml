@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval">
-    <!-- This makes the inside transparent -->
-    <solid android:color="@android:color/transparent" />
-    <!-- Note: corners radius is not needed for 'oval' as it's automatically circular -->
-
-</shape>
-

@@ -233,6 +233,10 @@ object NixSensorManager {
 /***************************************************************************************************
 *                     SECTION THAT MEASURES & MAPS COLOR TO ANALYTE VALUE                          *
 ****************************************************************************************************/
+// Measurement mode for curved acrylic/resin nail sensing.
+// M2 is used because it excludes UV, which will help reduce unwanted optical effects from the resin/acrylic nail.
+    private val measurementMode = ScanMode.M2
+
 // Measures color using the connected Nix device, then
 // compares the measured RGB color to the current analyte chart.
     fun measureAndMatchCurrentAnalyte(
@@ -248,7 +252,8 @@ object NixSensorManager {
             return
         }
 
-        // Start Nix measurement.
+        // Start Nix measurement using only the selected final measurement mode (M2).
+        // Passing measurementMode tells the SDK to return only M2 instead of measuring every available mode.
         device.measure(object : OnDeviceResultListener {
 
             // This runs when the Nix SDK returns measurement data.
@@ -262,8 +267,7 @@ object NixSensorManager {
                     return
                 }
 
-
-                // Extract measured RGB array from Nix measurement.
+                // Extract measured RGB array from the M2 measurement.
                 val measuredRgbArray = extractRgbColorFromMeasurements(measurements)
 
                 // If no RGB color was found, stop and return error.
@@ -278,16 +282,26 @@ object NixSensorManager {
                 // Find the closest color value in the currently selected analyte chart.
                 val closestMatch = findClosestColorMatch(measuredColor)
 
+                // DEBUG: Prints the actual RGB value measured by the Nix sensor.
+                // -> Helps debug whether the Nix is reading the paper color darker, greener, or bluer than expected.
+                Log.d(
+                    TAG,
+                    "Measured RGB = (${Color.red(measuredColor)}, ${Color.green(measuredColor)}, ${Color.blue(measuredColor)})"
+                )
+
                 // Sends the final matched result back to Main5.
                 onSuccess(
                     NixColorMatchResult(
-                        measuredColor = measuredColor,
-                        closestLabel = closestMatch!!.closestValue.label,
-                        closestColor = closestMatch!!.closestValue.color
+                        measuredColor = measuredColor,  // Stores the measured M2 color.
+                        closestLabel = closestMatch!!.closestValue.label,  // Stores the closest analyte label, such as "pH 5".
+                        closestColor = closestMatch!!.closestValue.color // Stores the closest chart color for displaying the result.
                     )
                 )
             }
-        })
+        },
+
+        // This tells the Nix SDK to measure ONLY in M2 mode.
+        measurementMode )
     }
     
 //HELPER FUNCTIONS TO measureAndMatchCurrentAnalyte()
@@ -310,7 +324,7 @@ object NixSensorManager {
     }
 
 /*
-2. Extracts one RGB color from the Nix measurement map.
+2. Extracts one RGB color from the M2 Nix measurement map.
        -> Nix docs state that all Nix devices provide color data for D50/2° reference white,
        while D65 availability depends on the device type. D50/2° is the safest cross-device choice.
 
@@ -321,21 +335,28 @@ object NixSensorManager {
     private fun extractRgbColorFromMeasurements(
         measurements: Map<ScanMode, IMeasurementData>
     ): IntArray? {
-        // Go through each measurement returned by the Nix sensor.
-        for (measurement in measurements.values) {
-            // Check whether this measurement contains color data.
-            // (TODO: change this later if readings are innacurate: D65 + 2 degree observer are standard/default color science settings.
-            if ( measurement.providesColor(illuminant = Illuminant.D50, observer = Observer.CIE1931) ) {
-                // Convert measurement into Nix color data.
-                val colorData = measurement.toColorData(illuminant = Illuminant.D50, observer = Observer.CIE1931)
+        // Gets only the M2 measurement from the measurement map.
+        val measurement = measurements[measurementMode]
 
-                // Return measured RGB color array. Ex: [155, 82, 41]
-                return colorData?.rgbValue
-            }
+        // If the SDK did not return M2 data, stop and return null.
+        if (measurement == null) {
+            Log.e(TAG, "No M2 measurement was returned by the Nix sensor.")
+            return null
+        } else if (!measurement.providesColor(illuminant = Illuminant.D50, observer = Observer.CIE1931)) {
+            // If the M2 measurement does not contains D50/2° color data, return null
+            // (TODO: change this later if readings are innacurate: D65 + 2 degree observer are standard/default color science settings.
+            Log.e(TAG, "M2 measurement does not provide D50/2° color data.")
+            return null
+        } else { //Otherwise, grab the color data from Nix sensor
+            // Convert the M2 measurement into Nix color data using D50/2°.
+            val colorData =
+                measurement.toColorData(illuminant = Illuminant.D50, observer = Observer.CIE1931)
+
+            // Return the measured RGB color array from M2.
+            // Example return value: [155, 82, 41]
+            return colorData?.rgbValue
         }
 
-        // No usable color measurement was found.
-        return null
     }
 
 //3. Finds the closest color in the currently selected analyte chart.
@@ -366,8 +387,22 @@ object NixSensorManager {
             // Weighted average of RGB and LAB distances to combine both distances into one score.
             // LAB score is intentionally weighted more because LAB color distance is usually more
             // meaningful for human-perceived color differences.
+
+            /*
+            TODO: TEMP DEBUG:
+             1. Use only RGB distance to check whether LAB weighting is causing Glucose 120 mM to be misclassified as Glucose 160 mM.
+                -> val combinedDistanceScore = normalizedRgbDistance
+            2. Then test the same matte paper again.
+                - If it maps correctly to 120 mM, then the bug is caused by the LAB weighting.
+                    -> Change the final weighting to something less aggressive on RBG, like:
+                        val combinedDistanceScore = (0.6 * normalizedRgbDistance) + (0.4 * normalizedLabDistance)
+                - If it still maps to 160 mM, then the issue is probably the stored chart colors
+                    (colors in chart are too close/similar in color) or the Nix-measured RGB values.
+            */
             val combinedDistanceScore = (0.4 * normalizedRgbDistance) + (0.6 * normalizedLabDistance)
 
+            // Prints each chart color so I can compare the stored chart RGB values against the measured Nix RGB value.
+            Log.d( TAG, "Chart color ${analyteValue.label} RGB = (${Color.red(analyteValue.color)}, ${Color.green(analyteValue.color)}, ${Color.blue(analyteValue.color)})")
             // Prints RGB distance for debugging.
             Log.d( TAG, "RGB distance to ${analyteValue.label}: $rgbDistance" )
             // Prints LAB distance for debugging.
