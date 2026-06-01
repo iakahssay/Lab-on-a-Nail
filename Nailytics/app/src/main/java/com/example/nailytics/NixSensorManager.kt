@@ -24,9 +24,9 @@ Handles the Nix scanning, connecting, and measuring.
 
 object NixSensorManager {
 
-/***************************************************************************************************
-*                             SECTION THAT CONNECTS TO NIX SENSOR                                  *
-****************************************************************************************************/
+    /***************************************************************************************************
+     *                             SECTION THAT CONNECTS TO NIX SENSOR                                  *
+     ****************************************************************************************************/
     // Tag used for Logcat messages.
     private const val TAG = "NixSensorManager"
 
@@ -230,14 +230,14 @@ object NixSensorManager {
     }
 
 
-/***************************************************************************************************
-*                     SECTION THAT MEASURES & MAPS COLOR TO ANALYTE VALUE                          *
-****************************************************************************************************/
+    /***************************************************************************************************
+     *                     SECTION THAT MEASURES & MAPS COLOR TO ANALYTE VALUE                          *
+     ****************************************************************************************************/
 // Measurement mode for curved acrylic/resin nail sensing.
 // M2 is used because it excludes UV, which will help reduce unwanted optical effects from the resin/acrylic nail.
     private val measurementMode = ScanMode.M2
 
-// Measures color using the connected Nix device, then
+    // Measures color using the connected Nix device, then
 // compares the measured RGB color to the current analyte chart.
     fun measureAndMatchCurrentAnalyte(
         onSuccess: (NixColorMatchResult) -> Unit,
@@ -300,11 +300,11 @@ object NixSensorManager {
             }
         },
 
-        // This tells the Nix SDK to measure ONLY in M2 mode.
-        measurementMode )
+            // This tells the Nix SDK to measure ONLY in M2 mode.
+            measurementMode )
     }
-    
-//HELPER FUNCTIONS TO measureAndMatchCurrentAnalyte()
+
+    //HELPER FUNCTIONS TO measureAndMatchCurrentAnalyte()
 //1. Converts RGB IntArray into Android Color Int.
     private fun rgbArrayToColorInt(rgb: IntArray): Int {
 
@@ -323,15 +323,15 @@ object NixSensorManager {
         )
     }
 
-/*
-2. Extracts one RGB color from the M2 Nix measurement map.
-       -> Nix docs state that all Nix devices provide color data for D50/2° reference white,
-       while D65 availability depends on the device type. D50/2° is the safest cross-device choice.
+    /*
+    2. Extracts one RGB color from the M2 Nix measurement map.
+           -> Nix docs state that all Nix devices provide color data for D50/2° reference white,
+           while D65 availability depends on the device type. D50/2° is the safest cross-device choice.
 
-   Observer.CIE1931 = 2 degrees = standard human vision model
-   Illuminant = assumed standard lighting condition used to compute color values
-   Reference white point = the white baseline paired with that illuminant/observer
-*/
+       Observer.CIE1931 = 2 degrees = standard human vision model
+       Illuminant = assumed standard lighting condition used to compute color values
+       Reference white point = the white baseline paired with that illuminant/observer
+    */
     private fun extractRgbColorFromMeasurements(
         measurements: Map<ScanMode, IMeasurementData>
     ): IntArray? {
@@ -359,7 +359,7 @@ object NixSensorManager {
 
     }
 
-//3. Finds the closest color in the currently selected analyte chart.
+    //3. Finds the closest color in the currently selected analyte chart.
     private fun findClosestColorMatch(measuredColor: Int): ColorMatchResult? {
         // Gets the color chart for the currently selected analyte.
         val currentAnalyteColorChart = AnalyteColorChartManager.getChart( AnalyteChartUIHelper.selectedAnalyteId )
@@ -376,6 +376,16 @@ object NixSensorManager {
             // Calculates converted LAB color Euclidean distance.
             val labDistance = calculateLabDistance(measuredColor, analyteValue.color)
 
+            // Calculates chromaticity distance.
+            // Chromaticity compares the *ratio* of R/G/B instead of the raw brightness.
+            // This helps when the Nix reads the same sample darker or lighter than expected.
+            val chromaticityDistance = calculateChromaticityDistance(measuredColor, analyteValue.color)
+
+            // Calculates opponent-channel distance.
+            // Opponent channels compare relationships like R-G, R-B, and G-B.
+            // This helps detect subtle shifts between purple, red-gray, blue-gray, and green-gray colors.
+            val opponentDistance = calculateOpponentDistance(measuredColor, analyteValue.color)
+
             // Normalizes RGB distance to approximately 0.0–1.0.
             // Max RGB distance is sqrt(255^2 + 255^2 + 255^2) ≈ 441.67.
             val normalizedRgbDistance: Double = rgbDistance / 441.67
@@ -384,22 +394,30 @@ object NixSensorManager {
             // 100 is a practical scale factor for Delta E style distances.
             val normalizedLabDistance: Double = labDistance / 100.0
 
-            // Weighted average of RGB and LAB distances to combine both distances into one score.
-            // LAB score is intentionally weighted more because LAB color distance is usually more
-            // meaningful for human-perceived color differences.
+            // Chromaticity values are already small because they are based on ratios.
+            // The largest realistic distance is usually below 1.0, so this keeps it on a similar scale.
+            val normalizedChromaticityDistance: Double = chromaticityDistance / 1.0
 
-            /*
-            TODO: TEMP DEBUG:
-             1. Use only RGB distance to check whether LAB weighting is causing Glucose 120 mM to be misclassified as Glucose 160 mM.
-                -> val combinedDistanceScore = normalizedRgbDistance
-            2. Then test the same matte paper again.
-                - If it maps correctly to 120 mM, then the bug is caused by the LAB weighting.
-                    -> Change the final weighting to something less aggressive on RBG, like:
-                        val combinedDistanceScore = (0.6 * normalizedRgbDistance) + (0.4 * normalizedLabDistance)
-                - If it still maps to 160 mM, then the issue is probably the stored chart colors
-                    (colors in chart are too close/similar in color) or the Nix-measured RGB values.
-            */
-            val combinedDistanceScore = (0.4 * normalizedRgbDistance) + (0.6 * normalizedLabDistance)
+            // Normalizes opponent distance similarly to RGB.
+            // Opponent values are based on RGB channel differences, so 441.67 is a reasonable scale.
+            val normalizedOpponentDistance: Double = opponentDistance / 441.67
+
+            // Combines multiple color similarity scores into one final score.
+            // Lower score = better match.
+            //
+            // Why this is better than only RGB + LAB:
+            // - RGB catches raw sensor similarity.
+            // - LAB catches perceptual similarity.
+            // - Chromaticity reduces the effect of overall darkness/brightness.
+            // - Opponent distance catches subtle channel relationships between close dark colors.
+            //
+            // The weights are balanced so LAB does not dominate too much.
+            val combinedDistanceScore =
+                (0.25 * normalizedRgbDistance) +
+                        (0.30 * normalizedLabDistance) +
+                        (0.25 * normalizedChromaticityDistance) +
+                        (0.20 * normalizedOpponentDistance)
+
 
             // Prints each chart color so I can compare the stored chart RGB values against the measured Nix RGB value.
             Log.d( TAG, "Chart color ${analyteValue.label} RGB = (${Color.red(analyteValue.color)}, ${Color.green(analyteValue.color)}, ${Color.blue(analyteValue.color)})")
@@ -407,6 +425,12 @@ object NixSensorManager {
             Log.d( TAG, "RGB distance to ${analyteValue.label}: $rgbDistance" )
             // Prints LAB distance for debugging.
             Log.d( TAG, "LAB distance to ${analyteValue.label}: $labDistance" )
+            // Prints chromaticity distance for debugging.
+            // Lower chromaticity distance means the R/G/B ratios are closer, even if one color is overall darker or lighter.
+            Log.d(TAG, "Chromaticity distance to ${analyteValue.label}: $chromaticityDistance")
+            // Prints opponent-channel distance for debugging.
+            // Lower opponent distance means the color-channel relationships are closer.
+            Log.d(TAG, "Opponent distance to ${analyteValue.label}: $opponentDistance")
             // Prints combined score for debugging.
             Log.d( TAG, "Combined score to ${analyteValue.label}: $combinedDistanceScore" )
 
@@ -435,7 +459,7 @@ object NixSensorManager {
         return bestMatch!!
     }
 
-    //Checks if the measured color is lower than the lowest value in our analyte range and higher than the highest value.
+    /*Checks if the measured color is lower than the lowest value in our analyte range and higher than the highest value.
     //Ex: If measurement is bright pink, the results should say in Main6 that it's pH4- (not pH5), and
     // if the measurement is dark blue, the results should say in Main6 that it's pH9+ (not pH8).
     private fun calculateForOutliers (
@@ -461,8 +485,8 @@ object NixSensorManager {
             TODO: If pale/off-white still does not become LOW, lower lightOutlierThreshold to 5.0
                   If navy/violet still does not become HIGH, lower darkOutlierThreshold to 5.0
         */
-        val lightOutlierThreshold = 8.0
-        val darkOutlierThreshold = 8.0
+        val lightOutlierThreshold = 1.2
+        val darkOutlierThreshold = 2.0
 
         //Checks if the measured color is much lighter/brighter than the chart range -> LOW
         if (measuredLightness > lightestChartLightness + lightOutlierThreshold) {
@@ -489,6 +513,99 @@ object NixSensorManager {
         }
 
         // Otherwise -> use normalized closest match
+        return finalBestMatch
+    }
+    */
+
+    /* Checks whether a measured color is outside the calibrated analyte range.
+        Important:
+        This version does NOT classify LOW/HIGH based only on brightness.
+        That is safer because real Nix readings can look darker due to shadows, nail thickness, sensor placement, or paper position.
+
+        Instead, it only returns LOW/HIGH when:
+        1. The closest match is already the first or last chart value.
+        2. The measured color is unusually far from that edge value.ws
+     */
+    private fun calculateForOutliers(
+        measuredColor: Int,
+        bestMatch: ColorMatchResult?,
+        currentAnalyteColorChart: List<ColorChartValue>
+    ): ColorMatchResult {
+        val finalBestMatch = bestMatch!!
+
+        // If the chart has fewer than 2 values, there is not enough information
+        // to calculate an edge threshold safely.
+        if (currentAnalyteColorChart.size < 2) {
+            return finalBestMatch
+        }
+
+        // First/lowest chart value.
+        // Example for pH: pH 5.
+        val firstValue = currentAnalyteColorChart.first()
+
+        // Last/highest chart value.
+        // Example for pH: pH 8.
+        val lastValue = currentAnalyteColorChart.last()
+
+        // Calculates how far the measured color is from the first chart value.
+        val distanceToFirst = calculateLabDistance(measuredColor, firstValue.color)
+
+        // Calculates how far the measured color is from the last chart value.
+        val distanceToLast = calculateLabDistance(measuredColor, lastValue.color)
+
+        // Calculates normal spacing between the first and second chart values.
+        // This helps estimate what a normal color step looks like near the LOW end.
+        val firstToSecondDistance = calculateLabDistance(
+            currentAnalyteColorChart[0].color,
+            currentAnalyteColorChart[1].color
+        )
+
+        // Calculates normal spacing between the second-to-last and last chart values.
+        // This helps estimate what a normal color step looks like near the HIGH end.
+        val secondLastToLastDistance = calculateLabDistance(
+            currentAnalyteColorChart[currentAnalyteColorChart.size - 2].color,
+            currentAnalyteColorChart.last().color
+        )
+
+        // Outlier thresholds are based on the chart's own spacing.
+        // Multiplying by 1.35 means:
+        // "Only call this an outlier if it is noticeably farther than a normal chart step."
+        val lowOutlierThreshold = firstToSecondDistance * 1.35
+        val highOutlierThreshold = secondLastToLastDistance * 1.35
+
+        // LOW outlier:
+        // Only return LOW if the closest match is already the first chart value
+        // AND the measured color is farther from that value than expected.
+        if (finalBestMatch.closestValue.label == firstValue.label &&
+            distanceToFirst > lowOutlierThreshold
+        ) {
+            Log.d(TAG, "Detected possible LOW outlier.")
+
+            return ColorMatchResult(
+                closestValue = ColorChartValue("LOW", measuredColor),
+                rgbDistance = finalBestMatch.rgbDistance,
+                labDistance = finalBestMatch.labDistance,
+                combinedDistanceScore = finalBestMatch.combinedDistanceScore
+            )
+        }
+
+        // HIGH outlier:
+        // Only return HIGH if the closest match is already the last chart value
+        // AND the measured color is farther from that value than expected.
+        if (finalBestMatch.closestValue.label == lastValue.label &&
+            distanceToLast > highOutlierThreshold
+        ) {
+            Log.d(TAG, "Detected possible HIGH outlier.")
+
+            return ColorMatchResult(
+                closestValue = ColorChartValue("HIGH", measuredColor),
+                rgbDistance = finalBestMatch.rgbDistance,
+                labDistance = finalBestMatch.labDistance,
+                combinedDistanceScore = finalBestMatch.combinedDistanceScore
+            )
+        }
+
+        // Otherwise, keep the normal closest match.
         return finalBestMatch
     }
 
@@ -546,6 +663,7 @@ object NixSensorManager {
         )
     }
 
+
     // Converts Android RGB color Int to LAB using AndroidX ColorUtils.
     private fun rgbToLab(
         color: Int
@@ -567,6 +685,105 @@ object NixSensorManager {
         // lab[1] = a*
         // lab[2] = b*
         return lab
+    }
+
+    // Calculates distance between brightness-normalized RGB ratios.
+// This is useful for real Nix readings because the sensor may read the same sample
+// darker or lighter depending on nail thickness, paper placement, shadows, or sensor angle.
+//
+// Example:
+// RGB(80, 60, 70) and RGB(40, 30, 35) are different raw RGB values,
+// but they have similar R/G/B proportions.
+// Chromaticity helps the app notice that they are still similar colors.
+    private fun calculateChromaticityDistance(
+        colorA: Int,
+        colorB: Int
+    ): Double {
+        // Extract RGB channels from the measured color.
+        val rA = Color.red(colorA).toDouble()
+        val gA = Color.green(colorA).toDouble()
+        val bA = Color.blue(colorA).toDouble()
+
+        // Extract RGB channels from the chart/reference color.
+        val rB = Color.red(colorB).toDouble()
+        val gB = Color.green(colorB).toDouble()
+        val bB = Color.blue(colorB).toDouble()
+
+        // Calculate total brightness for each color.
+        // This is used to convert raw RGB into RGB ratios.
+        val sumA = rA + gA + bA
+        val sumB = rB + gB + bB
+
+        // Safety check to avoid dividing by zero.
+        // This should almost never happen unless the color is pure black.
+        if (sumA == 0.0 || sumB == 0.0) {
+            return Double.MAX_VALUE
+        }
+
+        // Convert measured RGB into ratios.
+        // These ratios describe the color balance instead of total brightness.
+        val rRatioA = rA / sumA
+        val gRatioA = gA / sumA
+        val bRatioA = bA / sumA
+
+        // Convert chart RGB into ratios.
+        val rRatioB = rB / sumB
+        val gRatioB = gB / sumB
+        val bRatioB = bB / sumB
+
+        // Calculate ratio differences.
+        val rDiff = rRatioA - rRatioB
+        val gDiff = gRatioA - gRatioB
+        val bDiff = bRatioA - bRatioB
+
+        // Return Euclidean distance between RGB ratio values.
+        // Lower value = more similar color proportions.
+        return sqrt(
+            rDiff.pow(2.0) +
+                    gDiff.pow(2.0) +
+                    bDiff.pow(2.0)
+        )
+    }
+
+    // Calculates distance between opponent color channels.
+// Instead of only comparing R, G, and B directly, this compares relationships between channels:
+//
+// - R - G: helps detect red vs. green balance
+// - R - B: helps detect red vs. blue balance
+// - G - B: helps detect green vs. blue balance
+//
+// This is helpful when colors are very dark and close together because the important difference
+// may be a subtle channel shift, not a large raw RGB distance.
+    private fun calculateOpponentDistance(
+        colorA: Int,
+        colorB: Int
+    ): Double {
+        // Extract RGB channels from the measured color.
+        val rA = Color.red(colorA)
+        val gA = Color.green(colorA)
+        val bA = Color.blue(colorA)
+
+        // Extract RGB channels from the chart/reference color.
+        val rB = Color.red(colorB)
+        val gB = Color.green(colorB)
+        val bB = Color.blue(colorB)
+
+        // Compare the R-G relationship between the measured color and chart color.
+        val redGreenDiff = ((rA - gA) - (rB - gB)).toDouble()
+
+        // Compare the R-B relationship between the measured color and chart color.
+        val redBlueDiff = ((rA - bA) - (rB - bB)).toDouble()
+
+        // Compare the G-B relationship between the measured color and chart color.
+        val greenBlueDiff = ((gA - bA) - (gB - bB)).toDouble()
+
+        // Return Euclidean distance between channel relationship differences.
+        // Lower value = more similar color-channel pattern.
+        return sqrt(
+            redGreenDiff.pow(2.0) +
+                    redBlueDiff.pow(2.0) +
+                    greenBlueDiff.pow(2.0)
+        )
     }
 
 }
