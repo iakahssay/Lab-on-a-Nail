@@ -354,7 +354,7 @@ where `Main1_Activity` is the launcher Activity.
 - Key dependencies: AppCompat, ConstraintLayout, Material Components, AndroidX Core graphics utilities, and the Nix Universal SDK
 - Nix license configuration: expected through generated `BuildConfig` fields
 
-## Current Notes / TODOs
+## Future Work
 - Color matching is actively being tuned. The current formula combines RGB, LAB, chromaticity, and opponent-channel distances, but very dark and very similar chart colors may still be difficult to separate reliably. Using more sensory channels from the Nix Spectro device can help increase the color-to-analyte value accuracy.
 - Main4 still exists as an older/manual device selection screen, but the current Main2 flow automatically connects to the first discovered Nix device and moves directly to Main5. For future work, Main 4 can be reimplemented to include scanning for multiple Nix devices, and letting the user choose which Nix device to connect to.
 - Profile edit screens are now registered and navigable, but they mostly return to the profile screen rather than persisting long-term profile data.
